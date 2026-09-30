@@ -75,13 +75,11 @@ export default function AboutPage() {
               About Me
             </p>
 
-            <h1 className="mt-4 text-[2.7rem] font-black leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl">
-              Technology Should Make
-              <br className="hidden sm:block" />
-              the Operation Stronger
-            </h1>
+            <h1 className="mt-4 max-w-5xl text-[2.7rem] font-black leading-[0.98] tracking-tight sm:text-5xl lg:text-6xl">
+  Technology Should Make the Operation Stronger
+</h1>
 
-            <p className="mt-6 max-w-3xl text-base leading-7 text-white/70 sm:text-xl sm:leading-8">
+            <p className="mt-6 max-w-4xl text-base leading-7 text-white/70 sm:text-xl sm:leading-8">
               I work at the intersection of IT operations, infrastructure,
               leadership, and security — with a growing focus on identity,
               automation, cloud security, and private AI.
