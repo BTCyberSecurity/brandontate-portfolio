@@ -9,7 +9,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative mx-auto grid min-h-[590px] max-w-7xl items-center gap-16 px-6 pb-16 pt-32 lg:grid-cols-[1.1fr_.9fr] lg:px-8">
+      <div className="relative mx-auto grid min-h-[540px] max-w-7xl items-center gap-16 px-6 pb-16 pt-16 lg:min-h-[590px] lg:grid-cols-[1.1fr_.9fr] lg:px-8 lg:pt-32">
         {/* Hero copy */}
         <div className="max-w-2xl">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[#D6A85F]">
@@ -23,12 +23,12 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-xl leading-relaxed text-white/90 sm:text-2xl">
+          <p className="mt-4 max-w-xl text-xl leading-relaxed text-white/90 sm:text-2xl">
             I build, secure, automate, and operate technology
             environments where downtime isn&apos;t an option.
           </p>
 
-          <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/70">
+          <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/70">
             <span>Infrastructure</span>
 
             <span className="text-[#D6A85F]">
@@ -53,14 +53,14 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="rounded-md bg-[#E5B45E] px-7 py-3.5 text-sm font-bold text-[#102F46] shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:bg-[#F0C574]"
+              className="rounded-md bg-[#E5B45E] px-7 py-3 text-sm font-bold text-[#102F46] shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:bg-[#F0C574]"
             >
               View My Work →
             </a>
 
             <a
               href="#about"
-              className="rounded-md border border-white/60 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="rounded-md border border-white/60 px-7 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
             >
               About Me
             </a>

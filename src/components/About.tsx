@@ -33,8 +33,11 @@ const strengths = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-[#F4F1EA]">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[.9fr_1.1fr] lg:px-8">
+    <section
+      id="about"
+      className="scroll-mt-24 bg-[#F4F1EA]"
+    >
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-16 lg:grid-cols-[.9fr_1.1fr] lg:px-8 lg:py-16">
         {/* About copy */}
         <div>
           <div className="flex items-center gap-2">
@@ -65,7 +68,7 @@ export default function About() {
           </p>
 
           <a
-            href="#"
+            href="/about"
             className="mt-7 inline-flex rounded-md border border-[#2F6F9F] px-6 py-3 text-sm font-bold text-[#102F46] transition hover:bg-[#102F46] hover:text-white"
           >
             Read My Story →
