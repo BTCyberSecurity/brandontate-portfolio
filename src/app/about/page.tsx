@@ -60,7 +60,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0F3046] px-6 pb-20 pt-24 text-white sm:pt-32 lg:px-8">
+      <section className="relative overflow-hidden bg-[#0F3046] px-5 pb-20 pt-24 text-white sm:px-6 sm:pt-32 lg:px-8">
         <div
           className="absolute inset-0 opacity-20"
           style={{
@@ -75,7 +75,7 @@ export default function AboutPage() {
               About Me
             </p>
 
-            <h1 className="mt-4 max-w-5xl text-[2.7rem] font-black leading-[0.98] tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-4 max-w-5xl text-[2.35rem] font-black leading-[0.98] tracking-tight min-[420px]:text-[2.6rem] sm:text-5xl lg:text-6xl">
   Technology Should Make the Operation Stronger
 </h1>
 
