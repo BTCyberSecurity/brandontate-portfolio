@@ -15,22 +15,22 @@ const workflow = [
   {
     number: "01",
     title: "Collect",
-    text: "Bring relevant security events, logs, alerts, or structured data into a workflow that can be reviewed consistently.",
+    text: "Bring relevant security events, logs, alerts, or structured data into a repeatable workflow for review.",
   },
   {
     number: "02",
-    title: "Classify",
-    text: "Explore whether local AI can help group, label, prioritize, or summarize events without replacing analyst judgment.",
+    title: "Normalize",
+    text: "Convert raw inputs into a more consistent format so events can be compared, summarized, and analyzed more effectively.",
   },
   {
     number: "03",
-    title: "Investigate",
-    text: "Use structured prompts and supporting context to help surface relationships, questions, and possible next investigative steps.",
+    title: "Analyze",
+    text: "Use local AI to assist with classification, summarization, correlation, and investigative questions without replacing source evidence.",
   },
   {
     number: "04",
     title: "Respond",
-    text: "Explore repeatable workflows that assist documentation, containment planning, communication, and follow-up actions.",
+    text: "Use structured output to support documentation, timelines, containment planning, communication, and repeatable response workflows.",
   },
 ];
 
@@ -38,39 +38,80 @@ const useCases = [
   {
     status: "Research",
     title: "Event Classification",
-    text: "Explore whether local models can help categorize security events into useful buckets for analyst review.",
+    text: "Test whether locally hosted models can categorize security events into useful buckets for analyst review.",
   },
   {
     status: "Research",
     title: "Log Summarization",
-    text: "Condense large amounts of technical event data into shorter summaries while preserving the original evidence for validation.",
+    text: "Explore whether long technical logs can be reduced into concise summaries without losing important context or source evidence.",
   },
   {
     status: "Research",
-    title: "Incident Assistance",
-    text: "Use AI as a supporting tool for investigative questions, documentation, timelines, and response checklists.",
+    title: "Incident Timeline Support",
+    text: "Use AI to help organize sequences of events, timestamps, actions, and observations into a more readable incident timeline.",
+  },
+  {
+    status: "Research",
+    title: "Investigation Assistance",
+    text: "Test prompts that help generate follow-up questions, identify missing context, and suggest areas an analyst may want to validate.",
   },
   {
     status: "Planned",
-    title: "Python Automation",
-    text: "Develop small Python utilities for processing structured data, normalizing inputs, and connecting parts of the workflow.",
+    title: "Python Processing",
+    text: "Build small Python utilities to parse, normalize, enrich, and prepare structured security data before model analysis.",
   },
   {
     status: "Planned",
     title: "PowerShell Automation",
-    text: "Explore repeatable Windows and Microsoft security administration tasks that can be safely scripted.",
+    text: "Explore safe automation for repeatable Windows and Microsoft security administration tasks.",
+  },
+];
+
+const guardrails = [
+  {
+    number: "01",
+    title: "Human Validation",
+    text: "Model output is treated as assistance that requires verification rather than authoritative security evidence.",
   },
   {
-    status: "Planned",
-    title: "Local Model Testing",
-    text: "Compare model behavior across security prompts while keeping sensitive lab data inside locally controlled infrastructure.",
+    number: "02",
+    title: "Preserve Source Data",
+    text: "Original logs, events, and technical evidence remain available so AI-generated summaries can always be checked against the source.",
   },
+  {
+    number: "03",
+    title: "Local Processing",
+    text: "Local models provide a way to experiment with sensitive lab data without automatically sending it to an external provider.",
+  },
+  {
+    number: "04",
+    title: "Controlled Automation",
+    text: "Automated actions should remain narrow, understandable, reversible, and separated from unrestricted model decision-making.",
+  },
+];
+
+const researchQuestions = [
+  "Which security tasks benefit from summarization without losing important technical context?",
+  "How reliably can local models classify structured security events?",
+  "Where does AI reduce repetitive analyst work, and where does it introduce uncertainty?",
+  "How should prompts and outputs be structured so results remain repeatable and reviewable?",
+  "What security data should remain local instead of being sent to a hosted model provider?",
+];
+
+const nextSteps = [
+  "Define a repeatable event-input format",
+  "Build sample security datasets for testing",
+  "Compare local models across the same prompts",
+  "Prototype log-summary workflows",
+  "Create Python preprocessing utilities",
+  "Explore safe PowerShell automation",
+  "Document model limitations and failure cases",
 ];
 
 export const metadata = {
   title: "SentinelForge",
   description:
-    "SentinelForge is a research project exploring local AI, security event classification, log summarization, incident-response assistance, and automation.",
+    "SentinelForge is a security operations research project exploring local AI, event classification, log summarization, incident-response assistance, and controlled automation.",
 };
 
 export default function SentinelForgePage() {
@@ -79,7 +120,7 @@ export default function SentinelForgePage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0F3046] px-6 pb-16 pt-24 text-white sm:pb-20 sm:pt-32 lg:px-8">
+      <section className="relative overflow-hidden bg-[#0F3046] px-5 pb-16 pt-24 text-white sm:px-6 sm:pb-20 sm:pt-32 lg:px-8">
         <div
           className="absolute inset-0 opacity-25"
           style={{
@@ -112,7 +153,8 @@ export default function SentinelForgePage() {
             <p className="mt-5 max-w-3xl text-base leading-7 text-white/70 sm:text-xl sm:leading-8">
               A research project exploring how locally controlled AI can assist
               security operations through event classification, log
-              summarization, incident-response workflows, and automation.
+              summarization, incident-response workflows, and controlled
+              automation.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-2">
@@ -148,10 +190,10 @@ export default function SentinelForgePage() {
 
           <div className="space-y-5 text-base leading-8 text-[#5E7685]">
             <p>
-              Security teams often work with large amounts of repetitive,
-              technical information. Logs, alerts, event timelines,
-              documentation, and investigation notes can consume significant
-              analyst time.
+              Security teams often work with large volumes of repetitive,
+              technical information. Logs, alerts, event timelines, incident
+              notes, and investigation data can consume significant analyst
+              time.
             </p>
 
             <p>
@@ -162,10 +204,9 @@ export default function SentinelForgePage() {
             </p>
 
             <p>
-              The project is deliberately positioned as research. The objective
-              is to test useful patterns, understand limitations, and build
-              small repeatable workflows before treating anything as an
-              operational security capability.
+              The goal is to identify useful patterns, understand limitations,
+              and build small repeatable workflows before treating anything as
+              an operational security capability.
             </p>
           </div>
         </div>
@@ -207,7 +248,7 @@ export default function SentinelForgePage() {
         </div>
       </section>
 
-      {/* Research areas */}
+      {/* Research Areas */}
       <section className="px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.7fr_1.3fr]">
           <div>
@@ -230,12 +271,12 @@ export default function SentinelForgePage() {
 
             <div className="mt-8 rounded-xl border-l-2 border-[#D6A85F] bg-[#F7F8F6] p-4 sm:p-5">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F6F9F]">
-                Project Status
+                Current State
               </p>
 
               <p className="mt-2 text-sm leading-6 text-[#456174]">
-                SentinelForge is currently a research project. Planned
-                capabilities on this page represent areas for experimentation,
+                SentinelForge is a research and prototype project. The
+                capabilities below represent areas being tested or planned,
                 not production security controls.
               </p>
             </div>
@@ -273,37 +314,25 @@ export default function SentinelForgePage() {
       {/* Guardrails */}
       <section className="bg-[#102F46] px-6 py-20 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#79B8AE]">
-            Guardrails
-          </p>
+          <div className="flex items-center gap-2">
+            <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
+
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#79B8AE]">
+              Guardrails
+            </p>
+          </div>
 
           <h2 className="mt-4 max-w-4xl text-4xl font-black tracking-tight">
             AI Assistance Still Needs Evidence
           </h2>
 
+          <p className="mt-5 max-w-3xl leading-7 text-white/65">
+            The project is deliberately designed around assistance rather than
+            autonomous decision-making.
+          </p>
+
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                number: "01",
-                title: "Human Validation",
-                text: "Model output is treated as assistance that requires verification rather than authoritative security evidence.",
-              },
-              {
-                number: "02",
-                title: "Source Preservation",
-                text: "Original logs and event data remain available so summaries can always be checked against the underlying evidence.",
-              },
-              {
-                number: "03",
-                title: "Local Processing",
-                text: "Local models provide an opportunity to experiment with sensitive lab data without automatically sending it to external providers.",
-              },
-              {
-                number: "04",
-                title: "Controlled Automation",
-                text: "Automated actions should be narrow, understandable, reversible, and separated from unrestricted model decision-making.",
-              },
-            ].map((item) => (
+            {guardrails.map((item) => (
               <article
                 key={item.number}
                 className="rounded-2xl border border-white/10 bg-white/[0.04] p-5"
@@ -331,37 +360,102 @@ export default function SentinelForgePage() {
         </div>
       </section>
 
-      {/* Next steps */}
+      {/* Research Questions */}
+      <section className="px-6 py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.75fr_1.25fr]">
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
+
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+                Research Questions
+              </p>
+            </div>
+
+            <h2 className="mt-4 text-4xl font-black tracking-tight">
+              What I Want to Validate
+            </h2>
+
+            <p className="mt-5 max-w-lg leading-7 text-[#5E7685]">
+              The project is useful only if the experiments produce evidence
+              about where local AI actually helps.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {researchQuestions.map((item, index) => (
+              <div
+                key={item}
+                className="flex gap-4 rounded-xl border border-[#D7DEDF] bg-white p-4 sm:p-5"
+              >
+                <span className="text-xs font-black tracking-[0.18em] text-[#D6A85F]">
+                  0{index + 1}
+                </span>
+
+                <p className="text-sm leading-6 text-[#456174]">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Relationship to Private AI */}
+      <section className="bg-[#E9ECE8] px-6 py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.8fr_1.2fr]">
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
+
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+                Infrastructure
+              </p>
+            </div>
+
+            <h2 className="mt-4 text-4xl font-black tracking-tight">
+              Built on My Private AI Environment
+            </h2>
+          </div>
+
+          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+            <p>
+              SentinelForge is intentionally connected to my Private AI
+              Infrastructure project rather than being built as an isolated
+              concept.
+            </p>
+
+            <p>
+              The local AI server provides the model runtime, GPU acceleration,
+              Docker environment, browser-based access, and private remote
+              connectivity needed to experiment with security workflows while
+              keeping selected data under local control.
+            </p>
+
+            <a
+              href="/projects/private-ai-infrastructure"
+              className="inline-flex text-sm font-bold text-[#936D27] transition hover:text-[#102F46]"
+            >
+              Explore Private AI Infrastructure →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Next Steps */}
       <section className="px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
-              Research Goals
+              Direction
             </p>
 
             <h2 className="mt-4 text-4xl font-black tracking-tight">
-              What I Want to Learn
+              From Research to Prototype
             </h2>
 
-            <div className="mt-8 space-y-5">
-              {[
-                "Which security tasks benefit from summarization without losing important technical context.",
-                "How reliably local models can classify structured security events.",
-                "Where automation can improve consistency without creating unsafe autonomous behavior.",
-                "How local AI infrastructure can support privacy-sensitive security workflows.",
-              ].map((item, index) => (
-                <div
-                  key={item}
-                  className="flex gap-4 border-b border-[#D9E0E2] pb-5"
-                >
-                  <span className="text-xs font-black tracking-[0.18em] text-[#D6A85F]">
-                    0{index + 1}
-                  </span>
-
-                  <p className="text-sm leading-6 text-[#456174]">{item}</p>
-                </div>
-              ))}
-            </div>
+            <p className="mt-5 max-w-xl leading-7 text-[#5E7685]">
+              The next stage is moving from broad experimentation into smaller
+              workflows that can be tested repeatedly against the same inputs.
+            </p>
           </div>
 
           <div className="rounded-2xl bg-[#102F46] p-6 text-white sm:p-8">
@@ -369,19 +463,8 @@ export default function SentinelForgePage() {
               Next Steps
             </p>
 
-            <h2 className="mt-4 text-3xl font-black tracking-tight">
-              From Research to Prototype
-            </h2>
-
             <div className="mt-8 space-y-4">
-              {[
-                "Build a repeatable event-input format",
-                "Test classification prompts across local models",
-                "Prototype log-summary workflows",
-                "Create small Python processing utilities",
-                "Explore safe PowerShell automation",
-                "Document model limitations and failure cases",
-              ].map((item, index) => (
+              {nextSteps.map((item, index) => (
                 <div
                   key={item}
                   className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-4 sm:gap-4"
@@ -398,7 +481,7 @@ export default function SentinelForgePage() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer CTA */}
       <section className="bg-[#0F3046] px-6 py-14 text-white lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 sm:flex-row sm:items-center">
           <div>
