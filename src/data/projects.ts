@@ -51,7 +51,7 @@ export const projects: Project[] = [
     href: "/projects/private-ai-infrastructure",
   },
   {
-    title: "Enterprise Infrastructure Lab",
+    title: "Infrastructure & Systems Lab",
     shortTitle: "Infrastructure",
     description:
       "A hands-on environment for storage, networking, Linux, containers, remote access, monitoring, resilience, and troubleshooting infrastructure failures.",
@@ -65,7 +65,7 @@ export const projects: Project[] = [
       "Docker",
       "Networking",
     ],
-    href: "/projects/enterprise-infrastructure",
+    href: "/projects/infrastructure-systems",
   },
   {
     title: "AI-Assisted Security Operations",

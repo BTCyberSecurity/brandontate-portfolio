@@ -203,7 +203,7 @@ export const metadata = {
     "A hands-on infrastructure lab built around TrueNAS, ZFS, Linux, containers, media services, networking, storage, troubleshooting, and recovery.",
 };
 
-export default function EnterpriseInfrastructurePage() {
+export default function InfrastructureSystemsPage() {
   return (
     <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
