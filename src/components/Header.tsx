@@ -6,12 +6,12 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
-  { label: "About", href: "/#about" },
-  { label: "Experience", href: "/#experience" },
+  { label: "About", href: "/about" },
+  { label: "Security", href: "/security" },
   { label: "Projects", href: "/#projects" },
-  { label: "Security", href: "/#security" },
-  { label: "Writing", href: "/#writing" },
-  { label: "Certifications", href: "/#certifications" },
+  { label: "Experience", href: "/experience" },
+  { label: "Writing", href: "/writing" },
+  { label: "Certifications", href: "/certifications" },
   { label: "Contact", href: "/#contact" },
 ];
 
