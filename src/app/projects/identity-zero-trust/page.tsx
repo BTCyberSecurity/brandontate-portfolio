@@ -179,7 +179,7 @@ export default function IdentityZeroTrustPage() {
             href="/projects"
             className="text-sm font-bold text-[#D6A85F] transition hover:text-white"
           >
-            â† Back to Projects
+           ← Back to Projects
           </a>
 
           <div className="mt-10 max-w-4xl">
@@ -445,9 +445,9 @@ export default function IdentityZeroTrustPage() {
 
           <div className="mt-12 border-l-2 border-[#D6A85F] pl-5">
             <p className="max-w-3xl font-serif text-xl italic leading-8 text-[#456174]">
-              â€œIdentity should answer more than who you are. It should help
-              determine what you can reach, under what conditions, and for how
-              long.â€
+              “Identity should answer more than who you are. It should help
+determine what you can reach, under what conditions, and for how
+long.”
             </p>
           </div>
         </div>
@@ -525,7 +525,7 @@ export default function IdentityZeroTrustPage() {
             href="/projects"
             className="w-fit rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
           >
-            Back to Projects â†’
+            Back to Projects →
           </a>
         </div>
       </section>

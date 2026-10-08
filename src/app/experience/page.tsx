@@ -61,11 +61,11 @@ const hardware = [
   },
   {
     label: "Administration",
-    value: "SSH Â· Tailscale",
+    value: "SSH · Tailscale",
   },
   {
     label: "AI Stack",
-    value: "Ollama Â· Docker Â· Open WebUI",
+    value: "Ollama · Docker · Open WebUI",
   },
 ];
 
@@ -128,7 +128,7 @@ const modelTesting = [
   {
     number: "03",
     title: "Observed Throughput",
-    value: "~55â€“56 tok/s",
+    value: "~55–56 tok/s",
     text: "Observed strong local inference performance during testing with the selected quantized model.",
   },
   {
@@ -266,7 +266,7 @@ export default function PrivateAIInfrastructurePage() {
             href="/projects"
             className="text-sm font-bold text-[#D6A85F] transition hover:text-white"
           >
-            â† Back to Projects
+            →Back to Projects
           </a>
 
           <div className="mt-10 max-w-4xl">
@@ -331,7 +331,7 @@ export default function PrivateAIInfrastructurePage() {
 
             <p>
               My goal is not simply to run models locally. I want to understand
-              the full system around them â€” hardware, operating system,
+              the full system around them — hardware, operating system,
               networking, security, deployment, monitoring, performance, and
               recovery.
             </p>
@@ -560,7 +560,7 @@ export default function PrivateAIInfrastructurePage() {
 
             <p>
               This makes the server behave more like infrastructure than a
-              desktop PC â€” something that can remain running, managed, tested,
+              desktop PC — something that can remain running, managed, tested,
               and improved independently.
             </p>
           </div>
@@ -790,7 +790,7 @@ export default function PrivateAIInfrastructurePage() {
             href="/projects"
             className="w-fit rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
           >
-            Back to Projects â†’
+            Back to Projects →
           </a>
         </div>
       </section>

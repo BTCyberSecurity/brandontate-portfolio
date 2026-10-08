@@ -1,0 +1,12 @@
+﻿C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\private-ai-infrastructure\page.tsx:113:               the full system around them â€” hardware, operating system,
+C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\private-ai-infrastructure\page.tsx:226:   value: "Ollama Â· Docker Â· Open WebUI",
+C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\private-ai-infrastructure\page.tsx:494:               â€œThe goal is not just to make the system work. It is to
+C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\private-ai-infrastructure\page.tsx:496:               the next failure easier to diagnose.â€
+C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\private-ai-infrastructure\page.tsx:670:     â€œThe objective is not to make a lab complicated. It is to make
+C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\private-ai-infrastructure\page.tsx:671:     every layer understandable, controllable, and recoverable.â€
+C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\private-ai-infrastructure\page.tsx:816:             Back to Projects â†’
+C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\sentinelforge\page.tsx:137:             â† Back to Projects
+C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\sentinelforge\page.tsx:355:               â€œThe useful question is not whether AI can make a security
+C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\sentinelforge\page.tsx:357:               evidence and judgment intact.â€
+C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\sentinelforge\page.tsx:437:               Explore Private AI Infrastructure â†’
+C:\Users\Brand\Projects\brandontate-portfolio\src\app\projects\sentinelforge\page.tsx:501:             Back to Projects â†’

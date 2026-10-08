@@ -8,7 +8,7 @@ export default function NotFound() {
       <section className="flex min-h-screen items-center px-6 py-32 lg:px-8">
         <div className="mx-auto w-full max-w-7xl">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#79B8AE]">
-            404 Â· Not Found
+            404 · Not Found
           </p>
 
           <div className="mt-6 max-w-4xl">

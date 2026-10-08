@@ -81,7 +81,7 @@ export default function AboutPage() {
 
             <p className="mt-6 max-w-4xl text-base leading-7 text-white/70 sm:text-xl sm:leading-8">
               I work at the intersection of IT operations, infrastructure,
-              leadership, and security â€” with a growing focus on identity,
+              leadership, and security — with a growing focus on identity,
               automation, cloud security, and private AI.
             </p>
           </div>
@@ -244,8 +244,8 @@ export default function AboutPage() {
 
           <div className="mt-12 border-l-2 border-[#D6A85F] pl-5">
             <p className="max-w-3xl font-serif text-xl italic leading-8 text-white/70">
-              â€œThe best technology decisions connect architecture, security,
-              operations, and people.â€
+              “The best technology decisions connect architecture, security,
+operations, and people.”
             </p>
           </div>
         </div>
@@ -268,7 +268,7 @@ export default function AboutPage() {
             href="/projects"
             className="w-fit rounded-md bg-[#102F46] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1A4562]"
           >
-            Explore Projects â†’
+            Explore Projects →
           </a>
         </div>
       </section>
