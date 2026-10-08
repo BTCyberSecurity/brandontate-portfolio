@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
@@ -6,14 +6,14 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
-  { label: "About", href: "/about" },
-  { label: "Security", href: "/security" },
-  { label: "Projects", href: "/projects" },
-  { label: "Experience", href: "/experience" },
-  { label: "Writing", href: "/writing" },
-  { label: "Certifications", href: "/certifications" },
-  { label: "Contact", href: "/contact" },
-];
+    { label: "About", href: "/about" },
+    { label: "Security", href: "/security" },
+    { label: "Projects", href: "/projects" },
+    { label: "Experience", href: "/experience" },
+    { label: "Writing", href: "/writing" },
+    { label: "Certifications", href: "/certifications" },
+    { label: "Contact", href: "/contact" },
+  ];
 
   return (
     <header className="sticky inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0F3046]/95 backdrop-blur-sm">
@@ -41,12 +41,12 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop rÃ©sumÃ© */}
+        {/* Desktop résumé */}
         <a
           href="/resume.pdf"
           className="hidden rounded-md border border-white/40 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#0F2537] lg:inline-flex"
         >
-          RÃ©sumÃ© â†“
+          Résumé ↓
         </a>
 
         {/* Mobile menu button */}
@@ -104,7 +104,7 @@ export default function Header() {
                 <span>{item.label}</span>
 
                 <span className="text-[#D6A85F] transition-transform group-hover:translate-x-1">
-                  â†’
+                  →
                 </span>
               </a>
             ))}
@@ -115,11 +115,10 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
             className="mt-4 flex w-full items-center justify-center rounded-md bg-[#E5B45E] px-6 py-3.5 text-sm font-bold text-[#102F46] transition hover:bg-[#F0C574]"
           >
-            View RÃ©sumÃ© â†“
+            View Résumé ↓
           </a>
         </nav>
       </div>
     </header>
   );
 }
-
