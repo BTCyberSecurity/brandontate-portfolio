@@ -5,21 +5,25 @@ const contactMethods = [
     label: "Email",
     value: "brandontate@outlook.com",
     href: "mailto:brandontate@outlook.com",
+    action: "Send Email →",
   },
   {
     label: "LinkedIn",
     value: "linkedin.com/in/btcybersecurity",
     href: "https://www.linkedin.com/in/btcybersecurity/",
+    action: "View LinkedIn →",
   },
   {
     label: "GitHub",
     value: "github.com/BTCyberSecurity",
     href: "https://github.com/BTCyberSecurity",
+    action: "View GitHub →",
   },
   {
     label: "Résumé",
     value: "View résumé",
     href: "/resume.pdf",
+    action: "View Résumé →",
   },
 ];
 
@@ -107,11 +111,11 @@ export default function ContactPage() {
           </div>
 
           <h2 className="mt-4 text-4xl font-black tracking-tight">
-            Contact & Professional Links
+            Contact & Professional Profiles
           </h2>
 
           <p className="mt-5 max-w-3xl leading-7 text-[#5E7685]">
-            The easiest way to reach me is by email or LinkedIn. You can also
+            The easiest way to reach me is by email. You can also
             explore my technical work on GitHub or download my résumé directly.
           </p>
 
@@ -137,7 +141,7 @@ export default function ContactPage() {
                 </p>
 
                 <p className="mt-5 text-sm font-bold text-[#936D27] transition group-hover:text-[#102F46]">
-                  Open →
+                  {item.action}
                 </p>
               </a>
             ))}
