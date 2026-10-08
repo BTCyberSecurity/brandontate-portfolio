@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 
 export default function NotFound() {
   return (
@@ -8,7 +8,7 @@ export default function NotFound() {
       <section className="flex min-h-screen items-center px-6 py-32 lg:px-8">
         <div className="mx-auto w-full max-w-7xl">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#79B8AE]">
-            404 · Not Found
+            404 Â· Not Found
           </p>
 
           <div className="mt-6 max-w-4xl">
@@ -32,7 +32,7 @@ export default function NotFound() {
               </a>
 
               <a
-                href="/#projects"
+                href="/projects"
                 className="rounded-md border border-white/30 px-6 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-[#102F46]"
               >
                 View Projects

@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 
 const stack = [
   "TrueNAS",
@@ -49,7 +49,7 @@ const hardware = [
   },
   {
     label: "Storage",
-    value: "6 × 8 TB Helium HDDs",
+    value: "6 Ã— 8 TB Helium HDDs",
   },
   {
     label: "Solid State",
@@ -65,7 +65,7 @@ const hardware = [
   },
   {
     label: "Primary Use",
-    value: "Storage · Media · Containers · Lab Services",
+    value: "Storage Â· Media Â· Containers Â· Lab Services",
   },
 ];
 
@@ -220,10 +220,10 @@ export default function InfrastructureSystemsPage() {
 
         <div className="relative mx-auto max-w-7xl">
           <a
-            href="/#projects"
+            href="/projects"
             className="text-sm font-bold text-[#D6A85F] transition hover:text-white"
           >
-            ← Back to Projects
+            â† Back to Projects
           </a>
 
           <div className="mt-10 max-w-4xl">
@@ -642,10 +642,10 @@ export default function InfrastructureSystemsPage() {
           </div>
 
           <a
-            href="/#projects"
+            href="/projects"
             className="w-fit rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
           >
-            Back to Projects →
+            Back to Projects â†’
           </a>
         </div>
       </section>

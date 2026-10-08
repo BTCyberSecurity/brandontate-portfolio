@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 
 const stack = [
   "Ubuntu Server LTS",
@@ -43,10 +43,10 @@ export default function PrivateAIInfrastructurePage() {
 
         <div className="relative mx-auto max-w-7xl">
           <a
-            href="/#projects"
+            href="/projects"
             className="text-sm font-bold text-[#D6A85F] transition hover:text-white"
           >
-            ← Back to Projects
+            â† Back to Projects
           </a>
 
           <div className="mt-10 max-w-4xl">
@@ -110,7 +110,7 @@ export default function PrivateAIInfrastructurePage() {
 
             <p>
               My goal is not simply to run models locally. I want to understand
-              the full system around them — hardware, operating system,
+              the full system around them â€” hardware, operating system,
               networking, security, deployment, monitoring, and recovery.
             </p>
           </div>
@@ -223,7 +223,7 @@ export default function PrivateAIInfrastructurePage() {
 },
 {
   label: "AI Stack",
-  value: "Ollama · Docker · Open WebUI",
+  value: "Ollama Â· Docker Â· Open WebUI",
 },
               ].map((item) => (
                 <div
@@ -491,9 +491,9 @@ export default function PrivateAIInfrastructurePage() {
           {/* Bottom takeaway */}
           <div className="mt-10 border-t border-white/10 pt-7">
             <p className="max-w-3xl font-serif text-lg italic leading-8 text-white/70">
-              “The goal is not just to make the system work. It is to
+              â€œThe goal is not just to make the system work. It is to
               understand why it failed, how it recovered, and how to make
-              the next failure easier to diagnose.”
+              the next failure easier to diagnose.â€
             </p>
           </div>
         </div>
@@ -667,8 +667,8 @@ export default function PrivateAIInfrastructurePage() {
 
           <div className="mt-8 border-l-2 border-[#D6A85F] pb-2 pl-5 sm:mt-10 sm:pb-4">
   <p className="max-w-3xl font-serif text-lg italic leading-8 text-[#456174]">
-    “The objective is not to make a lab complicated. It is to make
-    every layer understandable, controllable, and recoverable.”
+    â€œThe objective is not to make a lab complicated. It is to make
+    every layer understandable, controllable, and recoverable.â€
   </p>
 </div>
         </div>
@@ -810,10 +810,10 @@ export default function PrivateAIInfrastructurePage() {
           </div>
 
           <a
-            href="/#projects"
+            href="/projects"
             className="w-fit rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
           >
-            Back to Projects →
+            Back to Projects â†’
           </a>
         </div>
       </section>

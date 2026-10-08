@@ -55,7 +55,7 @@ const responsePhases = [
 
 const lessons = [
   "Repeated MFA prompts should not automatically be treated as a routine user-support issue.",
-  "An MFA denial can still be useful evidence that someone may know the password.",
+  "Repeated unexpected MFA prompts can indicate that an attacker has reached the second stage of authentication, but sign-in evidence is needed to determine what actually occurred.",
   "Containment and investigation should happen in parallel when identity compromise is plausible.",
   "User confirmation is important, but identity logs provide the technical evidence.",
   "A resolved incident should leave behind documentation and a stronger control environment.",
@@ -73,7 +73,7 @@ export default function MfaFatigueResponsePage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0F3046] px-5 pb-16 pt-24 text-white sm:px-6 sm:pb-20 sm:pt-32 lg:px-8">
+      <section className="relative overflow-hidden bg-[#0F3046] px-5 pb-16 pt-14 text-white sm:px-6 sm:pb-20 sm:pt-16 lg:px-8">
         <div
           className="absolute inset-0 opacity-25"
           style={{
@@ -82,7 +82,7 @@ export default function MfaFatigueResponsePage() {
           }}
         />
 
-        <div className="relative mx-auto max-w-5xl">
+        <div className="relative mx-auto max-w-7xl">
           <a
             href="/writing"
             className="text-sm font-bold text-[#D6A85F] transition hover:text-white"
@@ -94,7 +94,7 @@ export default function MfaFatigueResponsePage() {
             Security Operations
           </p>
 
-          <h1 className="mt-4 text-[2.7rem] font-black leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="mt-4 max-w-4xl text-[2.7rem] font-black leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl">
             MFA Fatigue:
             <br />
             Containment and Response
@@ -127,7 +127,7 @@ export default function MfaFatigueResponsePage() {
 
       {/* Scenario */}
       <section className="px-6 py-20 lg:px-8">
-        <div className="mx-auto grid max-w-5xl gap-12 lg:grid-cols-[.75fr_1.25fr]">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.75fr_1.25fr] lg:items-center">
           <div>
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
@@ -137,14 +137,14 @@ export default function MfaFatigueResponsePage() {
               </p>
             </div>
 
-            <h2 className="mt-4 text-4xl font-black tracking-tight">
+            <h2 className="mt-4 text-3xl font-black leading-tight tracking-tight sm:text-4xl">
               The User Says:
               <br />
               “I Didn&apos;t Do That.”
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="max-w-2xl space-y-5 text-base leading-8 text-[#5E7685]">
             <p>
               A user reports receiving repeated MFA prompts even though they
               are not actively signing in. The immediate temptation may be to
@@ -153,14 +153,15 @@ export default function MfaFatigueResponsePage() {
             </p>
 
             <p>
-              But an unexpected MFA request may indicate that someone already
-              has the user&apos;s password and is attempting to complete the
-              second step of authentication.
+              But an unexpected MFA request may indicate that someone is
+              attempting to authenticate using the user&apos;s identity and has
+              reached the MFA stage of the sign-in process.
             </p>
 
             <p>
-              At that point the problem changes from authentication support to
-              potential account compromise.
+              At that point, the issue should be treated as a potential
+              identity-security incident rather than routine authentication
+              support.
             </p>
           </div>
         </div>
@@ -296,7 +297,7 @@ export default function MfaFatigueResponsePage() {
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="max-w-2xl space-y-5 text-base leading-8 text-[#5E7685]">
             <p>
               In an operational environment, an account may be tied to email,
               property systems, collaboration tools, file access, and other
@@ -351,20 +352,20 @@ export default function MfaFatigueResponsePage() {
 
       {/* Closing */}
       <section className="bg-[#102F46] px-6 py-20 text-white lg:px-8">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-7xl">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#79B8AE]">
             Takeaway
           </p>
 
-          <h2 className="mt-4 text-4xl font-black tracking-tight">
+          <h2 className="mt-4 max-w-4xl text-4xl font-black tracking-tight">
             An MFA Prompt Can Be an Incident Signal
           </h2>
 
           <p className="mt-5 max-w-3xl text-base leading-8 text-white/65">
-            MFA is an important control, but the prompt itself can become a
-            useful security signal. Unexpected authentication requests should
-            trigger validation, investigation, and a response proportional to
-            the evidence.
+            MFA is an important control, but an unexpected prompt can also
+            become a useful security signal. Authentication requests the user
+            did not initiate should trigger validation, investigation, and a
+            response proportional to the evidence.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

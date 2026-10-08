@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+﻿import Header from "@/components/Header";
 
 const stack = [
   "Microsoft Entra ID",
@@ -176,10 +176,10 @@ export default function IdentityZeroTrustPage() {
 
         <div className="relative mx-auto max-w-7xl">
           <a
-            href="/#projects"
+            href="/projects"
             className="text-sm font-bold text-[#D6A85F] transition hover:text-white"
           >
-            ← Back to Projects
+            â† Back to Projects
           </a>
 
           <div className="mt-10 max-w-4xl">
@@ -445,9 +445,9 @@ export default function IdentityZeroTrustPage() {
 
           <div className="mt-12 border-l-2 border-[#D6A85F] pl-5">
             <p className="max-w-3xl font-serif text-xl italic leading-8 text-[#456174]">
-              “Identity should answer more than who you are. It should help
+              â€œIdentity should answer more than who you are. It should help
               determine what you can reach, under what conditions, and for how
-              long.”
+              long.â€
             </p>
           </div>
         </div>
@@ -522,10 +522,10 @@ export default function IdentityZeroTrustPage() {
           </div>
 
           <a
-            href="/#projects"
+            href="/projects"
             className="w-fit rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
           >
-            Back to Projects →
+            Back to Projects â†’
           </a>
         </div>
       </section>

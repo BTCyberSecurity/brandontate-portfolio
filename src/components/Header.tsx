@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -8,15 +8,15 @@ export default function Header() {
   const navItems = [
   { label: "About", href: "/about" },
   { label: "Security", href: "/security" },
-  { label: "Projects", href: "/#projects" },
+  { label: "Projects", href: "/projects" },
   { label: "Experience", href: "/experience" },
   { label: "Writing", href: "/writing" },
   { label: "Certifications", href: "/certifications" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
   return (
-    <header className="sticky inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0F3046]/95 backdrop-blur-sm lg:absolute">
+    <header className="sticky inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0F3046]/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
         {/* Logo */}
         <a
@@ -41,12 +41,12 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop résumé */}
+        {/* Desktop rÃ©sumÃ© */}
         <a
           href="/resume.pdf"
           className="hidden rounded-md border border-white/40 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#0F2537] lg:inline-flex"
         >
-          Résumé ↓
+          RÃ©sumÃ© â†“
         </a>
 
         {/* Mobile menu button */}
@@ -89,9 +89,7 @@ export default function Header() {
       {/* Mobile menu */}
       <div
         className={`overflow-hidden border-t border-white/10 bg-[#0F3046] transition-all duration-300 lg:hidden ${
-          menuOpen
-            ? "max-h-[650px] opacity-100"
-            : "max-h-0 opacity-0"
+          menuOpen ? "max-h-[650px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <nav className="mx-auto max-w-7xl px-6 py-5">
@@ -106,7 +104,7 @@ export default function Header() {
                 <span>{item.label}</span>
 
                 <span className="text-[#D6A85F] transition-transform group-hover:translate-x-1">
-                  →
+                  â†’
                 </span>
               </a>
             ))}
@@ -117,10 +115,11 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
             className="mt-4 flex w-full items-center justify-center rounded-md bg-[#E5B45E] px-6 py-3.5 text-sm font-bold text-[#102F46] transition hover:bg-[#F0C574]"
           >
-            View Résumé ↓
+            View RÃ©sumÃ© â†“
           </a>
         </nav>
       </div>
     </header>
   );
 }
+
