@@ -143,8 +143,8 @@ export default function ProjectsPage() {
 
           <p className="mt-5 max-w-3xl leading-7 text-[#5E7685]">
             These projects document what I am actively building, testing,
-            troubleshooting, and learning. Some are mature labs, while others
-            are still in active development or research.
+troubleshooting, and learning. Some are established labs, while
+others are still in active development or research.
           </p>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
