@@ -54,6 +54,16 @@ export default function Header() {
 
         {/* Desktop actions */}
         <div className="hidden items-center gap-3 lg:flex">
+          {/* Résumé */}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-md border border-white/40 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#0F2537]"
+          >
+            Résumé ↓
+          </a>
+
           {/* Language selector */}
           <div className="relative">
             <button
@@ -83,6 +93,7 @@ export default function Header() {
                     className="flex items-center justify-between px-4 py-3 text-sm text-white/75 transition hover:bg-white/10 hover:text-white"
                   >
                     <span>{language.label}</span>
+
                     <span className="text-xs font-bold text-[#D6A85F]">
                       {language.code}
                     </span>
@@ -91,16 +102,6 @@ export default function Header() {
               </div>
             )}
           </div>
-
-          {/* Desktop résumé */}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-md border border-white/40 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#0F2537]"
-          >
-            Résumé ↓
-          </a>
         </div>
 
         {/* Mobile menu button */}
@@ -183,6 +184,7 @@ export default function Header() {
                 >
                   <div className="flex items-center justify-between gap-2">
                     <span>{language.label}</span>
+
                     <span className="text-xs font-bold text-[#D6A85F]">
                       {language.code}
                     </span>
@@ -192,6 +194,7 @@ export default function Header() {
             </div>
           </div>
 
+          {/* Mobile résumé */}
           <a
             href="/resume.pdf"
             target="_blank"
