@@ -22,7 +22,7 @@ Notebook cards link to the relevant existing article or project documentation.
 
 ## Languages
 
-All 12 content pages are available in English, Spanish, Japanese, and Russian:
+All 15 content pages are available in English, Spanish, Japanese, and Russian:
 
 - English: `/` and the existing unprefixed routes.
 - Spanish: `/es` and `/es/...`.
@@ -33,7 +33,7 @@ The language selector retains the equivalent page when switching languages.
 Internal page links retain the locale; shared assets and the English résumé
 stay at their original URLs. Each document declares its own `lang`, localized
 metadata, self-canonical URL, and language alternates. The sitemap includes
-all 48 content URLs. Content pages remain statically generated.
+all 60 content URLs. Content pages remain statically generated.
 
 The original English page files now live under `src/app/(english)`;
 this route group does not change their public URLs. Separate root layouts
@@ -53,7 +53,7 @@ and any applicable editorial overrides. For a new page, add it to `pagePaths`
 and the localized renderer's page registry. The locale check also scans the
 English source to catch new untranslated copy.
 
-After building, run `npm run check:locales` to validate catalogs and all 48
+After building, run `npm run check:locales` to validate catalogs and all 60
 production page artifacts. With a production server running, append its URL:
 
 ```powershell
@@ -82,3 +82,29 @@ The multilingual implementation subsequently passed lint, production build,
 catalog coverage, all 48 generated page checks, and HTTP checks for those
 pages, shared assets, and invalid URLs. In-app browser preview access remained
 unavailable, so visual review of translated layouts is still outstanding.
+
+## Project evidence, notebook, and performance
+
+Each project detail page now includes a logical system/workflow diagram,
+documented outcomes, implementation status, related notes, and a link to its
+published case-study source. Separate implementation repositories and authentic
+screenshots will be added when available; the publication sequence and evidence
+checklist are in `docs/project-publishing-roadmap.md`.
+
+`/writing` is the notebook index. Its three dedicated articles are:
+
+- `/writing/building-private-ai`
+- `/writing/mfa-fatigue` (the original security exercise, retained)
+- `/writing/segmented-home-lab`
+
+All articles have equivalent language routes, article metadata, and localized
+Article structured data. New build/design notes are grounded in the existing
+case studies and distinguish plans from observed results.
+
+Live mobile and desktop Lighthouse baselines, findings, and the optional
+Core Web Vitals monitoring plan are in `reports/performance/README.md`.
+Raw audit HTML/JSON and screenshots are kept locally and ignored by Git.
+The user-approved Vercel Speed Insights SDK is mounted in the shared layout.
+Enable Speed Insights in the existing Vercel project's dashboard and deploy
+to start collecting real-user performance measurements. Field results require
+enough actual visits; the Lighthouse baseline is not a field assessment.

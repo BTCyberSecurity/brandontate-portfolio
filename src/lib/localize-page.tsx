@@ -13,7 +13,7 @@ export function localizePage(node: ReactNode, locale: Locale): ReactNode {
   const element = node as ReactElement<Record<string, unknown>>;
   if (element.type === Header) return cloneElement(element, { locale });
   if (typeof element.type === "function" && !("$$typeof" in element.type)) {
-    return localizePage((element.type as (props: Record<string, unknown>) => ReactNode)(element.props), locale);
+    return localizePage((element.type as (props: Record<string, unknown>) => ReactNode)({ ...element.props, locale }), locale);
   }
   const props: Record<string, unknown> = {};
   if (typeof element.props.href === "string") props.href = localizedPath(locale, element.props.href);

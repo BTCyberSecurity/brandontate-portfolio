@@ -1,3 +1,4 @@
+import ProjectEvidence from "@/components/ProjectEvidence";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 ﻿import Header from "@/components/Header";
@@ -66,6 +67,7 @@ export default function PrivateAIInfrastructurePage() {
           </div>
         </div>
       </section>
+      <ProjectEvidence project="private-ai-infrastructure" />
 
       {/* Overview */}
       <section className="px-6 py-20 lg:px-8">
@@ -74,7 +76,7 @@ export default function PrivateAIInfrastructurePage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Overview
               </p>
             </div>
@@ -84,7 +86,7 @@ export default function PrivateAIInfrastructurePage() {
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="space-y-5 text-base leading-8 text-[#506879]">
             <p>
               I wanted a private environment where I could run local language
               models, experiment with GPU-accelerated workloads, and learn how
@@ -112,7 +114,7 @@ export default function PrivateAIInfrastructurePage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Architecture
             </p>
           </div>
@@ -156,7 +158,7 @@ export default function PrivateAIInfrastructurePage() {
                   {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </div>
@@ -166,7 +168,7 @@ export default function PrivateAIInfrastructurePage() {
           <div className="mt-8 rounded-2xl border border-[#CBD5D8] bg-white p-6 shadow-sm sm:p-8">
             <div className="flex flex-col justify-between gap-2 border-b border-[#D9E0E2] pb-5 sm:flex-row sm:items-end sm:gap-4">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#28638F]">
                   Hardware
                 </p>
 
@@ -175,7 +177,7 @@ export default function PrivateAIInfrastructurePage() {
                 </h3>
               </div>
 
-              <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[#936D27] sm:text-sm sm:normal-case sm:tracking-normal">
+              <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[#805B1F] sm:text-sm sm:normal-case sm:tracking-normal">
   Dedicated AI Server
 </span>
             </div>
@@ -219,7 +221,7 @@ export default function PrivateAIInfrastructurePage() {
                   key={item.label}
                   className="border-b border-[#E1E6E7] pb-4"
                 >
-                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#2F6F9F]">
+                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#28638F]">
                     {item.label}
                   </p>
 
@@ -242,7 +244,7 @@ export default function PrivateAIInfrastructurePage() {
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                   Implementation
                 </p>
               </div>
@@ -251,14 +253,14 @@ export default function PrivateAIInfrastructurePage() {
                 Building the Stack
               </h2>
 
-              <p className="mt-5 max-w-md leading-7 text-[#5E7685]">
+              <p className="mt-5 max-w-md leading-7 text-[#506879]">
                 The environment is built in layers so each component can be
                 tested independently and maintained without treating the system
                 as one large application.
               </p>
 
               <div className="mt-8 rounded-xl border-l-2 border-[#D6A85F] bg-[#F7F8F6] p-4 sm:p-5">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#28638F]">
                   Current State
                 </p>
 
@@ -325,8 +327,8 @@ export default function PrivateAIInfrastructurePage() {
                     <span
                       className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${
                         item.status === "Implemented"
-                          ? "bg-[#E5EBDD] text-[#55733F]"
-                          : "bg-[#F3E7CF] text-[#936D27]"
+                          ? "bg-[#E5EBDD] text-[#496535]"
+                          : "bg-[#F3E7CF] text-[#805B1F]"
                       }`}
                     >
                       {item.status}
@@ -337,7 +339,7 @@ export default function PrivateAIInfrastructurePage() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-2 text-sm leading-6 text-[#5E7685]">
+                  <p className="mt-2 text-sm leading-6 text-[#506879]">
                     {item.text}
                   </p>
                 </div>
@@ -497,7 +499,7 @@ export default function PrivateAIInfrastructurePage() {
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                   Security
                 </p>
               </div>
@@ -508,7 +510,7 @@ export default function PrivateAIInfrastructurePage() {
                 the Environment
               </h2>
 
-              <p className="mt-5 max-w-lg leading-7 text-[#5E7685]">
+              <p className="mt-5 max-w-lg leading-7 text-[#506879]">
                 I designed the environment with the expectation that remote
                 administration, local AI services, containers, and future
                 automation all create security considerations that need to be
@@ -516,7 +518,7 @@ export default function PrivateAIInfrastructurePage() {
               </p>
 
               <div className="mt-8 border-l-2 border-[#D6A85F] pl-5">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#28638F]">
                   Design Principle
                 </p>
                 
@@ -528,7 +530,7 @@ export default function PrivateAIInfrastructurePage() {
                 </p>
 
                 <div className="mt-8">
-  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F6F9F]">
+  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#28638F]">
     Security Priorities
   </p>
 
@@ -543,7 +545,7 @@ export default function PrivateAIInfrastructurePage() {
       <div key={item} className="flex items-start gap-3">
         <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#D6A85F]" />
 
-        <p className="text-sm leading-6 text-[#5E7685]">
+        <p className="text-sm leading-6 text-[#506879]">
           {item}
         </p>
       </div>
@@ -610,7 +612,7 @@ export default function PrivateAIInfrastructurePage() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                  <p className="mt-3 text-sm leading-6 text-[#506879]">
                     {item.text}
                   </p>
                 </article>
@@ -621,33 +623,33 @@ export default function PrivateAIInfrastructurePage() {
           {/* Security mindset */}
           <div className="mt-12 grid gap-5 border-t border-[#CBD5D8] pt-10 md:grid-cols-3">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#2F6F9F]">
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#28638F]">
                 Protect
               </p>
 
-              <p className="mt-2 text-sm leading-6 text-[#5E7685]">
+              <p className="mt-2 text-sm leading-6 text-[#506879]">
                 Reduce unnecessary exposure through controlled access,
                 hardened services, and network boundaries.
               </p>
             </div>
 
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#2F6F9F]">
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#28638F]">
                 Detect
               </p>
 
-              <p className="mt-2 text-sm leading-6 text-[#5E7685]">
+              <p className="mt-2 text-sm leading-6 text-[#506879]">
                 Improve visibility into authentication, service health,
                 failures, and unusual system behavior.
               </p>
             </div>
 
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#2F6F9F]">
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#28638F]">
                 Recover
               </p>
 
-              <p className="mt-2 text-sm leading-6 text-[#5E7685]">
+              <p className="mt-2 text-sm leading-6 text-[#506879]">
                 Keep the environment documented and repeatable so failed
                 components can be rebuilt with less downtime and guesswork.
               </p>
@@ -672,7 +674,7 @@ export default function PrivateAIInfrastructurePage() {
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                   Lessons Learned
                 </p>
               </div>
@@ -681,7 +683,7 @@ export default function PrivateAIInfrastructurePage() {
                 What the Build Taught Me
               </h2>
 
-              <p className="mt-4 max-w-xl leading-7 text-[#5E7685]">
+              <p className="mt-4 max-w-xl leading-7 text-[#506879]">
                 The most useful lessons came from treating the server as a
                 complete infrastructure system rather than just a machine for
                 running models.
@@ -711,7 +713,7 @@ export default function PrivateAIInfrastructurePage() {
                 ))}
               </div>
               <div className="mt-8 border-l-2 border-[#D6A85F] pl-5">
-  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F6F9F]">
+  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#28638F]">
     Key Takeaway
   </p>
 

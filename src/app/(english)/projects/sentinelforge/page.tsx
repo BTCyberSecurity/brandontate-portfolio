@@ -1,3 +1,4 @@
+import ProjectEvidence from "@/components/ProjectEvidence";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 ﻿import Header from "@/components/Header";
@@ -172,6 +173,7 @@ export default function SentinelForgePage() {
           </div>
         </div>
       </section>
+      <ProjectEvidence project="sentinelforge" />
 
       {/* Overview */}
       <section className="px-6 py-20 lg:px-8">
@@ -180,7 +182,7 @@ export default function SentinelForgePage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Overview
               </p>
             </div>
@@ -190,7 +192,7 @@ export default function SentinelForgePage() {
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="space-y-5 text-base leading-8 text-[#506879]">
             <p>
               Security teams often work with large volumes of repetitive,
               technical information. Logs, alerts, event timelines, incident
@@ -220,7 +222,7 @@ export default function SentinelForgePage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Workflow
             </p>
           </div>
@@ -241,7 +243,7 @@ export default function SentinelForgePage() {
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -257,7 +259,7 @@ export default function SentinelForgePage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Research Areas
               </p>
             </div>
@@ -266,13 +268,13 @@ export default function SentinelForgePage() {
               Questions Before Automation
             </h2>
 
-            <p className="mt-5 max-w-lg leading-7 text-[#5E7685]">
+            <p className="mt-5 max-w-lg leading-7 text-[#506879]">
               The first goal is understanding where AI adds useful assistance
               and where it adds noise, uncertainty, or unnecessary risk.
             </p>
 
             <div className="mt-8 rounded-xl border-l-2 border-[#D6A85F] bg-[#F7F8F6] p-4 sm:p-5">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#28638F]">
                 Current State
               </p>
 
@@ -293,8 +295,8 @@ export default function SentinelForgePage() {
                 <span
                   className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${
                     item.status === "Research"
-                      ? "bg-[#DDEAF3] text-[#2F6F9F]"
-                      : "bg-[#F3E7CF] text-[#936D27]"
+                      ? "bg-[#DDEAF3] text-[#28638F]"
+                      : "bg-[#F3E7CF] text-[#805B1F]"
                   }`}
                 >
                   {item.status}
@@ -304,7 +306,7 @@ export default function SentinelForgePage() {
                   {item.title}
                 </h3>
 
-                <p className="mt-2 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-2 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -369,7 +371,7 @@ export default function SentinelForgePage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Research Questions
               </p>
             </div>
@@ -378,7 +380,7 @@ export default function SentinelForgePage() {
               What I Want to Validate
             </h2>
 
-            <p className="mt-5 max-w-lg leading-7 text-[#5E7685]">
+            <p className="mt-5 max-w-lg leading-7 text-[#506879]">
               The project is useful only if the experiments produce evidence
               about where local AI actually helps.
             </p>
@@ -408,7 +410,7 @@ export default function SentinelForgePage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Infrastructure
               </p>
             </div>
@@ -418,7 +420,7 @@ export default function SentinelForgePage() {
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="space-y-5 text-base leading-8 text-[#506879]">
             <p>
               SentinelForge is intentionally connected to my Private AI
               Infrastructure project rather than being built as an isolated
@@ -434,7 +436,7 @@ export default function SentinelForgePage() {
 
             <Link
               href="/projects/private-ai-infrastructure"
-              className="inline-flex text-sm font-bold text-[#936D27] transition hover:text-[#102F46]"
+              className="inline-flex text-sm font-bold text-[#805B1F] transition hover:text-[#102F46]"
             >
               Explore Private AI Infrastructure →
             </Link>
@@ -446,7 +448,7 @@ export default function SentinelForgePage() {
       <section className="px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Direction
             </p>
 
@@ -454,7 +456,7 @@ export default function SentinelForgePage() {
               From Research to Prototype
             </h2>
 
-            <p className="mt-5 max-w-xl leading-7 text-[#5E7685]">
+            <p className="mt-5 max-w-xl leading-7 text-[#506879]">
               The next stage is moving from broad experimentation into smaller
               workflows that can be tested repeatedly against the same inputs.
             </p>

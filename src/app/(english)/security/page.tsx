@@ -191,7 +191,7 @@ export default function SecurityPage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Approach
               </p>
             </div>
@@ -201,7 +201,7 @@ export default function SecurityPage() {
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="space-y-5 text-base leading-8 text-[#506879]">
             <p>
               Security works best when it understands the environment it is
               protecting. Controls have to account for users, workflows,
@@ -230,7 +230,7 @@ export default function SecurityPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Operating Model
             </p>
           </div>
@@ -239,7 +239,7 @@ export default function SecurityPage() {
             From Fundamentals to Real-World Application
           </h2>
 
-          <p className="mt-5 max-w-3xl leading-7 text-[#5E7685]">
+          <p className="mt-5 max-w-3xl leading-7 text-[#506879]">
             I use a simple operating model to connect security theory to the
             systems and users that need to be protected.
           </p>
@@ -256,7 +256,7 @@ export default function SecurityPage() {
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -330,7 +330,7 @@ export default function SecurityPage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Current Focus
               </p>
             </div>
@@ -339,7 +339,7 @@ export default function SecurityPage() {
               Building Deeper Security Capability
             </h2>
 
-            <p className="mt-5 max-w-lg leading-7 text-[#5E7685]">
+            <p className="mt-5 max-w-lg leading-7 text-[#506879]">
               I am combining structured certification study with hands-on
               identity, infrastructure, automation, and security lab work.
             </p>
@@ -364,7 +364,7 @@ export default function SecurityPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Security Projects
             </p>
           </div>
@@ -380,7 +380,7 @@ export default function SecurityPage() {
                 href={project.href}
                 className="group rounded-2xl border border-[#CBD5D8] bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#28638F]">
                   {project.category}
                 </p>
 
@@ -388,11 +388,11 @@ export default function SecurityPage() {
                   {project.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {project.description}
                 </p>
 
-                <p className="mt-6 text-sm font-bold text-[#936D27]">
+                <p className="mt-6 text-sm font-bold text-[#805B1F]">
                   Explore Project →
                 </p>
               </Link>

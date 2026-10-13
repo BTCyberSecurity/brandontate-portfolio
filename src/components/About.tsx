@@ -44,7 +44,7 @@ export default function About() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               About Me
             </p>
           </div>
@@ -91,7 +91,7 @@ export default function About() {
                 {strength.title}
               </h3>
 
-              <p className="mt-1 text-xs text-[#5E7685]">
+              <p className="mt-1 text-xs text-[#506879]">
                 {strength.detail}
               </p>
             </div>

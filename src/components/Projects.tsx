@@ -6,13 +6,13 @@ function statusStyles(status: string) {
     case "Active Lab":
       return "bg-[#DDEFEA] text-[#28766C]";
     case "In Development":
-      return "bg-[#DDEAF3] text-[#2F6F9F]";
+      return "bg-[#DDEAF3] text-[#28638F]";
     case "Production Experience":
       return "bg-[#E7E2F2] text-[#63528A]";
     case "Completed":
-      return "bg-[#E5EBDD] text-[#55733F]";
+      return "bg-[#E5EBDD] text-[#496535]";
     default:
-      return "bg-[#F3E7CF] text-[#936D27]";
+      return "bg-[#F3E7CF] text-[#805B1F]";
   }
 }
 
@@ -26,7 +26,7 @@ export default function Projects() {
         <div className="flex items-center gap-2">
           <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
             Projects & Labs
           </p>
         </div>
@@ -37,7 +37,7 @@ export default function Projects() {
               Things I&apos;m Building
             </h2>
 
-            <p className="mt-4 max-w-2xl leading-7 text-[#5E7685]">
+            <p className="mt-4 max-w-2xl leading-7 text-[#506879]">
   Hands-on projects exploring infrastructure, security,
   identity, automation, and private AI. Each project
   documents the design, implementation, problems solved,
@@ -47,7 +47,7 @@ export default function Projects() {
 
           <Link
             href="/projects"
-            className="text-sm font-bold text-[#2F6F9F] transition hover:text-[#102F46]"
+            className="text-sm font-bold text-[#28638F] transition hover:text-[#102F46]"
           >
             View All Projects →
           </Link>
@@ -75,24 +75,24 @@ export default function Projects() {
               </div>
 
               {/* Project category */}
-              <p className="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-[#2F6F9F]">
+              <p className="mt-7 text-xs font-bold uppercase tracking-[0.2em] text-[#28638F]">
                 {project.shortTitle}
               </p>
 
               {/* Title */}
-              <h3 className="mt-2 text-2xl font-black text-[#102F46]">
+              <h3 id={`project-title-${index}`} className="mt-2 text-2xl font-black text-[#102F46]">
                 {project.title}
               </h3>
 
               {/* Description */}
-              <p className="mt-4 leading-7 text-[#5E7685]">
+              <p className="mt-4 leading-7 text-[#506879]">
                 {project.description}
               </p>
 
               {/* Evidence / proof */}
               {project.evidence && (
                 <div className="mt-5 rounded-xl border border-[#DCE4E7] bg-[#F7F8F6] px-4 py-3">
-                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#936D27]">
+                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#805B1F]">
                     Hands-On Work
                   </p>
 
@@ -119,7 +119,8 @@ export default function Projects() {
                 <div className="border-t border-[#E1E6E7] pt-5">
                   <Link
                     href={project.href}
-                    aria-label={`Explore ${project.title}`}
+                    id={`project-link-${index}`}
+                    aria-labelledby={`project-link-${index} project-title-${index}`}
                     className="inline-flex items-center gap-2 text-sm font-bold text-[#147BC1] transition group-hover:text-[#102F46]"
                   >
                     Explore Project

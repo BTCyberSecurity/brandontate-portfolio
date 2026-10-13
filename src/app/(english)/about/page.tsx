@@ -96,7 +96,7 @@ export default function AboutPage() {
           <div>
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Background
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function AboutPage() {
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="space-y-5 text-base leading-8 text-[#506879]">
             <p>
               My background is rooted in hands-on IT support and operations.
               Over time, that expanded into responsibility for infrastructure,
@@ -141,7 +141,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Capabilities
             </p>
           </div>
@@ -162,7 +162,7 @@ export default function AboutPage() {
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -177,7 +177,7 @@ export default function AboutPage() {
           <div>
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Direction
               </p>
             </div>
@@ -186,7 +186,7 @@ export default function AboutPage() {
               Where I&apos;m Going
             </h2>
 
-            <p className="mt-5 max-w-lg leading-7 text-[#5E7685]">
+            <p className="mt-5 max-w-lg leading-7 text-[#506879]">
               I&apos;m deliberately expanding from broad IT operations into
               deeper security and technology leadership.
             </p>
@@ -257,7 +257,7 @@ operations, and people.”
       <section className="px-6 py-16 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 sm:flex-row sm:items-center">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#28638F]">
               Continue
             </p>
 

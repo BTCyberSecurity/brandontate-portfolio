@@ -1,30 +1,5 @@
 import Link from "next/link";
-const entries = [
-  {
-    category: "Infrastructure",
-    title: "Building My Private AI Infrastructure",
-    description:
-      "Notes from designing a headless Linux AI environment, configuring GPU acceleration, hosting local models, and solving deployment issues.",
-    meta: "Build Log",
-    href: "/projects/private-ai-infrastructure",
-  },
-  {
-    category: "Security",
-    title: "MFA Fatigue: Containment and Response",
-    description:
-      "A practical walkthrough of containment, investigation, account protection, and lessons learned from a simulated Microsoft 365 security incident.",
-    meta: "Incident Notes",
-    href: "/writing",
-  },
-  {
-    category: "Networking",
-    title: "Designing a Segmented Home Lab Network",
-    description:
-      "Documenting segmentation, remote access, infrastructure services, troubleshooting, and the transition toward a more structured network.",
-    meta: "Lab Notes",
-    href: "/projects/infrastructure-systems",
-  },
-];
+import { notebookEntries as entries } from "@/data/notebook";
 
 export default function Notebook() {
   return (
@@ -83,7 +58,7 @@ export default function Notebook() {
                 {entry.category}
               </p>
 
-              <h3 className="mt-3 text-2xl font-black leading-tight">
+              <h3 id={`notebook-title-${index}`} className="mt-3 text-2xl font-black leading-tight">
                 {entry.title}
               </h3>
 
@@ -95,12 +70,13 @@ export default function Notebook() {
                 <div className="border-t border-white/10 pt-5">
                   <Link
                     href={entry.href}
-                    aria-label={`Read ${entry.title}`}
+                    id={`notebook-link-${index}`}
+                    aria-labelledby={`notebook-link-${index} notebook-title-${index}`}
                     className="inline-flex items-center gap-2 text-sm font-bold text-[#E5B45E]"
                   >
                     Read Entry
 
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                    <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>
                   </Link>

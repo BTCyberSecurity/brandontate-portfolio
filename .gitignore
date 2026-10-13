@@ -38,4 +38,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+reports/performance/*.report.json
+reports/performance/*.report.html
+reports/performance/*.png
 next-env.d.ts

@@ -1,3 +1,4 @@
+import ProjectEvidence from "@/components/ProjectEvidence";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 ﻿import Header from "@/components/Header";
@@ -212,6 +213,7 @@ export default function IdentityZeroTrustPage() {
           </div>
         </div>
       </section>
+      <ProjectEvidence project="identity-zero-trust" />
 
       {/* Overview */}
       <section className="px-6 py-20 lg:px-8">
@@ -220,7 +222,7 @@ export default function IdentityZeroTrustPage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Overview
               </p>
             </div>
@@ -230,7 +232,7 @@ export default function IdentityZeroTrustPage() {
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="space-y-5 text-base leading-8 text-[#506879]">
             <p>
               Many security decisions eventually become identity decisions:
               who is requesting access, what they are allowed to reach, under
@@ -260,7 +262,7 @@ export default function IdentityZeroTrustPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Identity Architecture
             </p>
           </div>
@@ -281,7 +283,7 @@ export default function IdentityZeroTrustPage() {
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -297,7 +299,7 @@ export default function IdentityZeroTrustPage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Lab Work
               </p>
             </div>
@@ -306,13 +308,13 @@ export default function IdentityZeroTrustPage() {
               What I&apos;m Building
             </h2>
 
-            <p className="mt-5 max-w-lg leading-7 text-[#5E7685]">
+            <p className="mt-5 max-w-lg leading-7 text-[#506879]">
               The lab is organized around practical identity problems rather
               than treating each Entra ID feature as an isolated exercise.
             </p>
 
             <div className="mt-8 rounded-xl border-l-2 border-[#D6A85F] bg-[#F7F8F6] p-4 sm:p-5">
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#28638F]">
                 Current State
               </p>
 
@@ -334,8 +336,8 @@ export default function IdentityZeroTrustPage() {
                 <span
                   className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${
                     item.status === "In Progress"
-                      ? "bg-[#DDEAF3] text-[#2F6F9F]"
-                      : "bg-[#F3E7CF] text-[#936D27]"
+                      ? "bg-[#DDEAF3] text-[#28638F]"
+                      : "bg-[#F3E7CF] text-[#805B1F]"
                   }`}
                 >
                   {item.status}
@@ -345,7 +347,7 @@ export default function IdentityZeroTrustPage() {
                   {item.title}
                 </h3>
 
-                <p className="mt-2 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-2 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -417,7 +419,7 @@ export default function IdentityZeroTrustPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Zero Trust
             </p>
           </div>
@@ -438,7 +440,7 @@ export default function IdentityZeroTrustPage() {
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -459,7 +461,7 @@ long.”
       <section className="px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Lessons Learned
             </p>
 

@@ -1,4 +1,7 @@
 import { notFound } from "next/navigation";
+import AIBuild, { metadata as aiBuildMetadata } from "@/app/(english)/writing/building-private-ai/page";
+import MFAArticle, { metadata as mfaMetadata } from "@/app/(english)/writing/mfa-fatigue/page";
+import SegmentationArticle, { metadata as segmentationMetadata } from "@/app/(english)/writing/segmented-home-lab/page";
 import Home, { metadata as homeMetadata } from "@/app/(english)/page";
 import About, { metadata as aboutMetadata } from "@/app/(english)/about/page";
 import Security, { metadata as securityMetadata } from "@/app/(english)/security/page";
@@ -17,6 +20,7 @@ import { translate } from "@/lib/translate";
 import { pageMetadata, pagePaths } from "@/lib/metadata";
 
 const pages = {
+  "/writing/building-private-ai": [AIBuild, aiBuildMetadata], "/writing/mfa-fatigue": [MFAArticle, mfaMetadata], "/writing/segmented-home-lab": [SegmentationArticle, segmentationMetadata],
   "/": [Home, homeMetadata], "/about": [About, aboutMetadata], "/security": [Security, securityMetadata],
   "/projects": [Projects, projectsMetadata], "/experience": [Experience, experienceMetadata], "/writing": [Writing, writingMetadata],
   "/certifications": [Certifications, certificationsMetadata], "/contact": [Contact, contactMetadata],

@@ -230,7 +230,7 @@ export default function ExperiencePage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Current Role
               </p>
             </div>
@@ -239,12 +239,12 @@ export default function ExperiencePage() {
               Area Manager of Information Technology
             </h2>
 
-            <p className="mt-3 font-bold text-[#936D27]">
+            <p className="mt-3 font-bold text-[#805B1F]">
               Hyatt / Bunkhouse Group
             </p>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="space-y-5 text-base leading-8 text-[#506879]">
             <p>
               I lead day-to-day technology operations across seven hotels and
               additional business assets and corporate partners, supporting
@@ -274,7 +274,7 @@ export default function ExperiencePage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               A Day in the Role
             </p>
           </div>
@@ -283,7 +283,7 @@ export default function ExperiencePage() {
             Ownership Beyond Individual Tickets
           </h2>
 
-          <p className="mt-5 max-w-3xl leading-7 text-[#5E7685]">
+          <p className="mt-5 max-w-3xl leading-7 text-[#506879]">
             The work moves constantly between immediate support, escalation,
             infrastructure, project coordination, security, and longer-term
             operational improvement.
@@ -301,7 +301,7 @@ export default function ExperiencePage() {
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -316,7 +316,7 @@ export default function ExperiencePage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Hospitality Technology
             </p>
           </div>
@@ -325,7 +325,7 @@ export default function ExperiencePage() {
             Supporting the Full Technology Environment
           </h2>
 
-          <div className="mt-5 max-w-4xl space-y-5 leading-7 text-[#5E7685]">
+          <div className="mt-5 max-w-4xl space-y-5 leading-7 text-[#506879]">
             <p>
               Hospitality IT crosses traditional enterprise systems and
               property-specific technology. A workstation problem may depend on
@@ -358,7 +358,7 @@ export default function ExperiencePage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Selected Initiatives
             </p>
           </div>
@@ -367,7 +367,7 @@ export default function ExperiencePage() {
             Work Beyond the Ticket Queue
           </h2>
 
-          <p className="mt-5 max-w-3xl leading-7 text-[#5E7685]">
+          <p className="mt-5 max-w-3xl leading-7 text-[#506879]">
             Much of the role is about improving the environment around support,
             not just solving isolated technical incidents.
           </p>
@@ -384,7 +384,7 @@ export default function ExperiencePage() {
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -438,7 +438,7 @@ export default function ExperiencePage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Vendor & MSP Leadership
               </p>
             </div>
@@ -448,7 +448,7 @@ export default function ExperiencePage() {
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="space-y-5 text-base leading-8 text-[#506879]">
             <p>
               Modern IT environments depend on managed providers, software
               vendors, telecommunications carriers, installers, property-system
@@ -478,7 +478,7 @@ export default function ExperiencePage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Career Progression
             </p>
           </div>
@@ -487,7 +487,7 @@ export default function ExperiencePage() {
             Growing From Support Into Leadership
           </h2>
 
-          <p className="mt-5 max-w-3xl leading-7 text-[#5E7685]">
+          <p className="mt-5 max-w-3xl leading-7 text-[#506879]">
             The common thread through my career has been increasing ownership:
             first understanding individual technical problems, then systems and
             dependencies, and eventually the broader operation around those
@@ -505,7 +505,7 @@ export default function ExperiencePage() {
                     {item.period}
                   </p>
 
-                  <p className="mt-2 text-sm font-bold text-[#2F6F9F]">
+                  <p className="mt-2 text-sm font-bold text-[#28638F]">
                     {item.company}
                   </p>
                 </div>
@@ -513,7 +513,7 @@ export default function ExperiencePage() {
                 <div>
                   <h3 className="text-xl font-black">{item.role}</h3>
 
-                  <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                  <p className="mt-3 text-sm leading-6 text-[#506879]">
                     {item.text}
                   </p>
                 </div>
@@ -529,7 +529,7 @@ export default function ExperiencePage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               How I Work
             </p>
           </div>
@@ -550,7 +550,7 @@ export default function ExperiencePage() {
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -595,7 +595,7 @@ export default function ExperiencePage() {
       <section className="px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.8fr_1.2fr]">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Operating Philosophy
             </p>
 
@@ -605,7 +605,7 @@ export default function ExperiencePage() {
           </div>
 
           <div>
-            <p className="text-base leading-8 text-[#5E7685]">
+            <p className="text-base leading-8 text-[#506879]">
               A technical issue rarely exists in isolation. The strongest
               solutions come from understanding the people, systems,
               dependencies, risks, vendors, and business processes around it.

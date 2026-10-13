@@ -107,7 +107,7 @@ export default function ContactPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Get in Touch
             </p>
           </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
             Contact & Professional Profiles
           </h2>
 
-          <p className="mt-5 max-w-3xl leading-7 text-[#5E7685]">
+          <p className="mt-5 max-w-3xl leading-7 text-[#506879]">
             The easiest way to reach me is by email. You can also
             explore my technical work on GitHub or download my résumé directly.
           </p>
@@ -134,7 +134,7 @@ export default function ContactPage() {
                 }
                 className="group rounded-2xl border border-[#CBD5D8] bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#28638F]">
                   {item.label}
                 </p>
 
@@ -142,7 +142,7 @@ export default function ContactPage() {
                   {item.value}
                 </p>
 
-                <p className="mt-5 text-sm font-bold text-[#936D27] transition group-hover:text-[#102F46]">
+                <p className="mt-5 text-sm font-bold text-[#805B1F] transition group-hover:text-[#102F46]">
                   {item.action}
                 </p>
               </a>
@@ -158,7 +158,7 @@ export default function ContactPage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Areas of Interest
               </p>
             </div>
@@ -167,7 +167,7 @@ export default function ContactPage() {
               Where I&apos;m Focused
             </h2>
 
-            <p className="mt-5 max-w-lg leading-7 text-[#5E7685]">
+            <p className="mt-5 max-w-lg leading-7 text-[#506879]">
               My work sits at the intersection of operations, infrastructure,
               security, identity, automation, and technology leadership.
             </p>
@@ -192,7 +192,7 @@ export default function ContactPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Why Connect
             </p>
           </div>
@@ -213,7 +213,7 @@ export default function ContactPage() {
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>

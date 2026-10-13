@@ -167,7 +167,7 @@ export default function CertificationsPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Completed
             </p>
           </div>
@@ -186,17 +186,17 @@ export default function CertificationsPage() {
                   <div>
                     <h3 className="text-2xl font-black">{cert.name}</h3>
 
-                    <p className="mt-1 text-sm font-semibold text-[#936D27]">
+                    <p className="mt-1 text-sm font-semibold text-[#805B1F]">
                       {cert.description}
                     </p>
                   </div>
 
-                  <span className="w-fit rounded-full bg-[#E5EBDD] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#55733F]">
+                  <span className="w-fit rounded-full bg-[#E5EBDD] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#496535]">
                     Completed
                   </span>
                 </div>
 
-                <p className="mt-5 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-5 text-sm leading-6 text-[#506879]">
                   {cert.detail}
                 </p>
               </article>
@@ -211,7 +211,7 @@ export default function CertificationsPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Roadmap
             </p>
           </div>
@@ -220,7 +220,7 @@ export default function CertificationsPage() {
             Current Certification Focus
           </h2>
 
-          <p className="mt-5 max-w-3xl leading-7 text-[#5E7685]">
+          <p className="mt-5 max-w-3xl leading-7 text-[#506879]">
             The objective is not to collect disconnected credentials. Each
             certification should reinforce a technical capability I am also
             building through labs, projects, and operational experience.
@@ -235,9 +235,9 @@ export default function CertificationsPage() {
                 <span
                   className={`w-fit rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${
                     cert.status === "Current"
-                      ? "bg-[#DDEAF3] text-[#2F6F9F]"
+                      ? "bg-[#DDEAF3] text-[#28638F]"
                       : cert.status === "Planned"
-                        ? "bg-[#F3E7CF] text-[#936D27]"
+                        ? "bg-[#F3E7CF] text-[#805B1F]"
                         : "bg-[#E6E2ED] text-[#665781]"
                   }`}
                 >
@@ -246,11 +246,11 @@ export default function CertificationsPage() {
 
                 <h3 className="mt-5 text-2xl font-black">{cert.name}</h3>
 
-                <p className="mt-2 text-sm font-semibold text-[#936D27]">
+                <p className="mt-2 text-sm font-semibold text-[#805B1F]">
                   {cert.description}
                 </p>
 
-                <p className="mt-4 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-4 text-sm leading-6 text-[#506879]">
                   {cert.focus}
                 </p>
               </article>
@@ -265,7 +265,7 @@ export default function CertificationsPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Progression
             </p>
           </div>
@@ -285,14 +285,14 @@ export default function CertificationsPage() {
                     0{index + 1}
                   </span>
 
-                  <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#2F6F9F]">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#28638F]">
                     {item.phase}
                   </span>
                 </div>
 
                 <h3 className="mt-5 text-2xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -355,7 +355,7 @@ export default function CertificationsPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Study Model
             </p>
           </div>
@@ -376,7 +376,7 @@ export default function CertificationsPage() {
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>

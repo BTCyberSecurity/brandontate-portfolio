@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import "@/app/globals.css";
 import { navigationCopy, type Locale } from "@/lib/locales";
@@ -80,6 +81,7 @@ export function SiteLayout({
   <a href="#main-content" className="skip-link">{navigationCopy[locale].skip}</a>
   {children}
   <Analytics />
+  <SpeedInsights />
 </body>
     </html>
   );

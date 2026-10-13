@@ -48,7 +48,7 @@ export default function Certifications() {
         <div className="flex items-center gap-2">
           <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
             Certifications & Learning
           </p>
         </div>
@@ -62,14 +62,14 @@ export default function Certifications() {
               Not Just Badges
             </h2>
 
-            <p className="mt-5 max-w-lg leading-7 text-[#5E7685]">
+            <p className="mt-5 max-w-lg leading-7 text-[#506879]">
               Certifications give me structure, but the real goal is
               deeper understanding. I pair formal study with labs,
               troubleshooting, documentation, and practical application.
             </p>
 
             <div className="mt-8 rounded-2xl border border-[#CBD5D8] bg-white p-6 shadow-sm">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#28638F]">
                 Completed
               </p>
 
@@ -84,12 +84,12 @@ export default function Certifications() {
                         {cert.name}
                       </p>
 
-                      <p className="mt-1 text-sm text-[#5E7685]">
+                      <p className="mt-1 text-sm text-[#506879]">
                         {cert.title}
                       </p>
                     </div>
 
-                    <span className="w-fit rounded-full bg-[#E5EBDD] px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#55733F]">
+                    <span className="w-fit rounded-full bg-[#E5EBDD] px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#496535]">
   Completed
 </span>
                   </div>
@@ -103,7 +103,7 @@ export default function Certifications() {
           <div>
             <div className="rounded-2xl border border-[#CBD5D8] bg-[#FBFCFA] p-6 shadow-sm sm:p-8">
               <div className="border-b border-[#D9E0E2] pb-5">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#28638F]">
                   Current Focus
                 </p>
 
@@ -129,12 +129,12 @@ export default function Certifications() {
                             {cert.name}
                           </h4>
 
-                          <p className="mt-1 text-sm leading-6 text-[#5E7685]">
+                          <p className="mt-1 text-sm leading-6 text-[#506879]">
                             {cert.title}
                           </p>
                         </div>
 
-                        <span className="w-fit shrink-0 rounded-full bg-[#F3E7CF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#936D27]">
+                        <span className="w-fit shrink-0 rounded-full bg-[#F3E7CF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#805B1F]">
                           {cert.status}
                         </span>
                       </div>
@@ -145,7 +145,7 @@ export default function Certifications() {
 
               {/* Learning tracks */}
               <div className="mt-8 border-t border-[#D9E0E2] pt-6">
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#28638F]">
                   Learning Tracks
                 </p>
 
@@ -169,7 +169,7 @@ export default function Certifications() {
 
               <Link
                 href="/certifications"
-                className="text-sm font-bold text-[#2F6F9F] transition hover:text-[#102F46]"
+                className="text-sm font-bold text-[#28638F] transition hover:text-[#102F46]"
               >
                 View Learning Path →
               </Link>

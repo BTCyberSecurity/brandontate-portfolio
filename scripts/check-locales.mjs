@@ -14,7 +14,7 @@ function visit(node) {
 visit(editorial);
 const currentCopy = new Set(source);
 const filesIn = directory => fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => entry.isDirectory() ? filesIn(`${directory}/${entry.name}`) : [`${directory}/${entry.name}`]);
-const copyFiles = [...filesIn('src/app/(english)').filter(file => file.endsWith('page.tsx') || file.endsWith('not-found.tsx')), ...filesIn('src/components').filter(file => file.endsWith('.tsx') && !/Header|SiteLayout/.test(file)), 'src/data/projects.ts'];
+const copyFiles = [...filesIn('src/app/(english)').filter(file => file.endsWith('page.tsx') || file.endsWith('not-found.tsx')), ...filesIn('src/components').filter(file => file.endsWith('.tsx') && !/Header|SiteLayout/.test(file)), ...filesIn('src/data').filter(file => file.endsWith('.ts'))];
 for (const file of copyFiles) {
   const tree = ts.createSourceFile(file, fs.readFileSync(file, 'utf8'), ts.ScriptTarget.Latest, true, file.endsWith('.tsx') ? ts.ScriptKind.TSX : ts.ScriptKind.TS);
   const add = text => {
@@ -25,13 +25,13 @@ for (const file of copyFiles) {
     if (ts.isJsxText(node)) add(node.getText(tree));
     if (ts.isStringLiteral(node)) {
       const parent = node.parent;
-      if (ts.isArrayLiteralExpression(parent) || (ts.isJsxExpression(parent) && ts.isJsxElement(parent.parent)) || (ts.isCallExpression(parent) && parent.expression.getText(tree) === 'pageMetadata') || (ts.isPropertyAssignment(parent) && ['title','text','description','evidence','shortTitle','category','meta','name','detail','phase','focus','label','status','value'].includes(parent.name.getText(tree)))) add(node.text);
+      if (ts.isArrayLiteralExpression(parent) || (ts.isJsxExpression(parent) && ts.isJsxElement(parent.parent)) || (ts.isCallExpression(parent) && parent.expression.getText(tree) === 'pageMetadata') || (ts.isJsxAttribute(parent) && ['aria-label','alt','title'].includes(parent.name.getText(tree))) || (ts.isPropertyAssignment(parent) && ['title','text','description','evidence','shortTitle','category','meta','name','detail','phase','focus','label','status','value','summary','caption','next','intro','kind','takeaway'].includes(parent.name.getText(tree)))) add(node.text);
     }
     ts.forEachChild(node, collect);
   };
   collect(tree);
 }
-const routes = ['/', '/about', '/security', '/projects', '/experience', '/writing', '/certifications', '/contact', '/projects/identity-zero-trust', '/projects/private-ai-infrastructure', '/projects/infrastructure-systems', '/projects/sentinelforge'];
+const routes = ['/', '/about', '/security', '/projects', '/experience', '/writing', '/certifications', '/contact', '/projects/identity-zero-trust', '/projects/private-ai-infrastructure', '/projects/infrastructure-systems', '/projects/sentinelforge', '/writing/building-private-ai', '/writing/mfa-fatigue', '/writing/segmented-home-lab'];
 const pathFor = (locale, path) => locale === 'en' ? path : `/${locale}${path === '/' ? '' : path}`;
 const baseUrl = process.argv[2];
 const decode = text => text.replace(/&#x([\da-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n,16))).replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&apos;', "'").replaceAll('&lt;', '<').replaceAll('&gt;', '>');
@@ -56,6 +56,14 @@ for (const locale of ['en','es','ja','ru']) {
     assert(html.includes(`lang="${locale}"`), `${path}: document language`);
     assert(html.includes(`rel="canonical" href="https://www.brandontate.info${path === '/' ? '' : path}"`), `${path}: canonical`);
     assert(html.includes('id="main-content"'), `${path}: skip-link target`);
+    if (route.startsWith('/writing/')) {
+      const schema = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+      assert(schema, `${path}: article structured data`);
+      const article = JSON.parse(schema[1]);
+      assert.equal(article['@type'],'Article',`${path}: schema type`);
+      assert.equal(article.inLanguage,locale,`${path}: schema language`);
+      assert.equal(article.url,`https://www.brandontate.info${path}`,`${path}: schema URL`);
+    }
     assert(!html.includes('coming soon'), `${path}: unavailable language`);
     const hrefs = [...html.matchAll(/href="([^"#]+)"/g)].map(match => decode(match[1]));
     for (const alternate of ['en','es','ja','ru']) {
@@ -78,7 +86,7 @@ for (const locale of ['en','es','ja','ru']) {
   }
 }
 const sitemap = fs.readFileSync('.next/server/app/sitemap.xml.body','utf8');
-assert.equal((sitemap.match(/<loc>/g)||[]).length,48);
+assert.equal((sitemap.match(/<loc>/g)||[]).length,routes.length * 4);
 assert(fs.existsSync('.next/server/app/opengraph-image.body'), 'Stable social-preview route');
 if (baseUrl) {
   for (const path of ['/es/not-a-page','/ja/not-a-page','/ru/not-a-page','/fr']) {

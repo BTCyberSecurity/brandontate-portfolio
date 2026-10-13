@@ -1,3 +1,4 @@
+import ProjectEvidence from "@/components/ProjectEvidence";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 ﻿import Header from "@/components/Header";
@@ -256,6 +257,7 @@ export default function InfrastructureSystemsPage() {
           </div>
         </div>
       </section>
+      <ProjectEvidence project="infrastructure-systems" />
 
       {/* Overview */}
       <section className="px-6 py-20 lg:px-8">
@@ -264,7 +266,7 @@ export default function InfrastructureSystemsPage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Overview
               </p>
             </div>
@@ -274,7 +276,7 @@ export default function InfrastructureSystemsPage() {
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="space-y-5 text-base leading-8 text-[#506879]">
             <p>
               The lab gives me an environment where storage, networking,
               applications, Linux, containers, and media services all depend
@@ -304,7 +306,7 @@ export default function InfrastructureSystemsPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Architecture
             </p>
           </div>
@@ -325,7 +327,7 @@ export default function InfrastructureSystemsPage() {
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -336,7 +338,7 @@ export default function InfrastructureSystemsPage() {
           <div className="mt-8 rounded-2xl border border-[#CBD5D8] bg-white p-6 shadow-sm sm:p-8">
             <div className="flex flex-col justify-between gap-2 border-b border-[#D9E0E2] pb-5 sm:flex-row sm:items-end sm:gap-4">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#28638F]">
                   Hardware
                 </p>
 
@@ -345,7 +347,7 @@ export default function InfrastructureSystemsPage() {
                 </h3>
               </div>
 
-              <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[#936D27] sm:text-sm sm:normal-case sm:tracking-normal">
+              <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[#805B1F] sm:text-sm sm:normal-case sm:tracking-normal">
                 Storage & Services Server
               </span>
             </div>
@@ -356,7 +358,7 @@ export default function InfrastructureSystemsPage() {
                   key={item.label}
                   className="border-b border-[#E1E6E7] pb-4"
                 >
-                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#2F6F9F]">
+                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#28638F]">
                     {item.label}
                   </p>
 
@@ -377,7 +379,7 @@ export default function InfrastructureSystemsPage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Hands-On Work
               </p>
             </div>
@@ -386,7 +388,7 @@ export default function InfrastructureSystemsPage() {
               Operating the Lab
             </h2>
 
-            <p className="mt-5 max-w-lg leading-7 text-[#5E7685]">
+            <p className="mt-5 max-w-lg leading-7 text-[#506879]">
               Real services create real dependencies. That makes the platform
               useful for learning because storage, permissions, networking,
               containers, applications, and recovery all matter.
@@ -403,7 +405,7 @@ export default function InfrastructureSystemsPage() {
                   {item.title}
                 </h3>
 
-                <p className="mt-2 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-2 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
@@ -419,7 +421,7 @@ export default function InfrastructureSystemsPage() {
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                 Storage
               </p>
             </div>
@@ -429,7 +431,7 @@ export default function InfrastructureSystemsPage() {
             </h2>
           </div>
 
-          <div className="space-y-5 text-base leading-8 text-[#5E7685]">
+          <div className="space-y-5 text-base leading-8 text-[#506879]">
             <p>
               Storage is the foundation of the lab. Media services, containers,
               application data, configuration, and long-term files all depend
@@ -535,7 +537,7 @@ export default function InfrastructureSystemsPage() {
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+                <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
                   Security
                 </p>
               </div>
@@ -544,7 +546,7 @@ export default function InfrastructureSystemsPage() {
                 Infrastructure That Can Be Controlled
               </h2>
 
-              <p className="mt-5 max-w-lg leading-7 text-[#5E7685]">
+              <p className="mt-5 max-w-lg leading-7 text-[#506879]">
                 Storage and self-hosted services create their own security
                 requirements around permissions, network exposure,
                 administrative access, and recovery.
@@ -565,7 +567,7 @@ export default function InfrastructureSystemsPage() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                  <p className="mt-3 text-sm leading-6 text-[#506879]">
                     {item.text}
                   </p>
                 </article>
@@ -579,7 +581,7 @@ export default function InfrastructureSystemsPage() {
       <section className="px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Lessons Learned
             </p>
 

@@ -43,7 +43,7 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
         <Link
           href={localizedPath(locale, "/")}
           className="text-3xl font-black tracking-tight text-white"
-          aria-label={copy.home}
+          aria-label={`BT — ${copy.home}`}
           onClick={() => {
             setMenuOpen(false);
             setLanguageOpen(false);

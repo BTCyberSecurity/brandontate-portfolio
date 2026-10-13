@@ -134,7 +134,7 @@ export default function ProjectsPage() {
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Project Index
             </p>
           </div>
@@ -143,7 +143,7 @@ export default function ProjectsPage() {
             Current Labs & Case Studies
           </h2>
 
-          <p className="mt-5 max-w-3xl leading-7 text-[#5E7685]">
+          <p className="mt-5 max-w-3xl leading-7 text-[#506879]">
             These projects document what I am actively building, testing,
 troubleshooting, and learning. Some are established labs, while
 others are still in active development or research.
@@ -157,17 +157,17 @@ others are still in active development or research.
                 className="group flex h-full flex-col rounded-2xl border border-[#CBD5D8] bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
                 <div className="flex flex-wrap items-start justify-between gap-3">
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#2F6F9F]">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#28638F]">
                     {project.category}
                   </p>
 
                   <span
                     className={`rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] ${
                       project.status === "Active Lab"
-                        ? "bg-[#E5EBDD] text-[#55733F]"
+                        ? "bg-[#E5EBDD] text-[#496535]"
                         : project.status === "In Development"
-                          ? "bg-[#DDEAF3] text-[#2F6F9F]"
-                          : "bg-[#F3E7CF] text-[#936D27]"
+                          ? "bg-[#DDEAF3] text-[#28638F]"
+                          : "bg-[#F3E7CF] text-[#805B1F]"
                     }`}
                   >
                     {project.status}
@@ -178,7 +178,7 @@ others are still in active development or research.
                   {project.title}
                 </h3>
 
-                <p className="mt-4 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-4 text-sm leading-6 text-[#506879]">
                   {project.description}
                 </p>
 
@@ -194,7 +194,7 @@ others are still in active development or research.
                 </div>
 
                 <div className="mt-auto pt-7">
-                  <p className="text-sm font-bold text-[#936D27] transition group-hover:text-[#102F46]">
+                  <p className="text-sm font-bold text-[#805B1F] transition group-hover:text-[#102F46]">
                     Explore Project →
                   </p>
                 </div>
@@ -210,7 +210,7 @@ others are still in active development or research.
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
 
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#2F6F9F]">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#28638F]">
               Project Themes
             </p>
           </div>
@@ -231,7 +231,7 @@ others are still in active development or research.
 
                 <h3 className="mt-4 text-xl font-black">{item.title}</h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#5E7685]">
+                <p className="mt-3 text-sm leading-6 text-[#506879]">
                   {item.text}
                 </p>
               </article>
