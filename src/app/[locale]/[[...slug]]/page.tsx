@@ -14,7 +14,7 @@ import Identity, { metadata as identityMetadata } from "@/app/(english)/projects
 import PrivateAI, { metadata as aiMetadata } from "@/app/(english)/projects/private-ai-infrastructure/page";
 import Infrastructure, { metadata as infrastructureMetadata } from "@/app/(english)/projects/infrastructure-systems/page";
 import SentinelForge, { metadata as sentinelMetadata } from "@/app/(english)/projects/sentinelforge/page";
-import { isTranslatedLocale, localizedPath, type TranslatedLocale } from "@/lib/locales";
+import { isTranslatedLocale, localizedPath, translatedLocales } from "@/lib/locales";
 import { localizePage } from "@/lib/localize-page";
 import { translate } from "@/lib/translate";
 import { pageMetadata, pagePaths } from "@/lib/metadata";
@@ -36,7 +36,7 @@ function resolve(params: PageParams) {
 // Unknown paths render the localized 404; known pages remain prerendered.
 export const dynamicParams = true;
 export function generateStaticParams() {
-  return (["es", "ja", "ru"] as TranslatedLocale[]).flatMap(locale => pagePaths.map(path => ({ locale, slug: path === "/" ? [] : path.slice(1).split("/") })));
+  return translatedLocales.flatMap(locale => pagePaths.map(path => ({ locale, slug: path === "/" ? [] : path.slice(1).split("/") })));
 }
 export async function generateMetadata({ params }: { params: Promise<PageParams> }) {
   const { locale, path, page } = resolve(await params);

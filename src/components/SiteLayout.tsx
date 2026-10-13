@@ -2,7 +2,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import "@/app/globals.css";
-import { navigationCopy, type Locale } from "@/lib/locales";
+import { languageTags, navigationCopy, type Locale } from "@/lib/locales";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.brandontate.info"),
@@ -74,7 +74,7 @@ export function SiteLayout({
 }>) {
   return (
     <html
-      lang={locale}
+      lang={languageTags[locale]}
       className="h-full antialiased"
     >
       <body className="min-h-full flex flex-col">

@@ -1,6 +1,45 @@
 // Editorial overrides for navigation-adjacent copy, professional terminology,
 // and metadata. Brand names and certification names remain unchanged.
-export const reviewedCopy: Record<string, { es: string; ja: string; ru: string }> = {
+import type { TranslatedLocale } from "@/lib/locales";
+
+export const additionalReviewedCopy: Record<string, Partial<Record<TranslatedLocale, string>>> = {
+  "About": { zh: "关于我", hi: "मेरे बारे में" },
+  "About Me": { zh: "关于我", hi: "मेरे बारे में" },
+  "Private AI": { zh: "私有 AI", hi: "निजी AI" },
+  "IT Operations": { zh: "IT 运维", hi: "IT संचालन" },
+  "Infrastructure": { zh: "基础设施", hi: "इन्फ्रास्ट्रक्चर" },
+  "Security": { zh: "安全", hi: "सुरक्षा" },
+  "Automation": { zh: "自动化", hi: "स्वचालन" },
+  "People": { zh: "人", hi: "लोग" },
+  "IT Leader · Builder · Problem Solver": { zh: "IT 领导者 · 系统构建者 · 问题解决者", hi: "IT नेतृत्व · सिस्टम निर्माण · समस्या समाधान" },
+  "I build, secure, automate, and operate technology environments where downtime isn't an option.": { zh: "我构建、保护、自动化并运维不容停机的技术环境。", hi: "मैं ऐसे तकनीकी परिवेश बनाता, सुरक्षित करता, स्वचालित करता और संचालित करता हूँ जहाँ काम रुकना स्वीकार्य नहीं है।" },
+  "Brandon Tate | IT Leadership, Infrastructure & Security": { zh: "Brandon Tate | IT 领导力、基础设施与安全", hi: "Brandon Tate | IT नेतृत्व, इन्फ्रास्ट्रक्चर और सुरक्षा" },
+  "Curiosity. Systems. People.": { zh: "好奇心。系统。人。", hi: "जिज्ञासा। सिस्टम। लोग।" },
+  "View My Work →": { zh: "查看我的作品 →", hi: "मेरा काम देखें →" },
+  "Engineering Notebook": { zh: "技术笔记", hi: "तकनीकी नोट्स" },
+  "Learn. Build. Document.": { zh: "学习。构建。记录。", hi: "सीखें। बनाएँ। दस्तावेज़ तैयार करें।" },
+  "Read Entry": { zh: "阅读文章", hi: "लेख पढ़ें" },
+  "Read Entry →": { zh: "阅读文章 →", hi: "लेख पढ़ें →" },
+  "Explore Project": { zh: "查看项目", hi: "परियोजना देखें" },
+  "Private AI Infrastructure": { zh: "私有 AI 基础设施", hi: "निजी AI इन्फ्रास्ट्रक्चर" },
+  "Identity & Zero Trust Lab": { zh: "身份管理与零信任实验室", hi: "पहचान प्रबंधन और Zero Trust लैब" },
+  "Infrastructure & Systems Lab": { zh: "基础设施与系统实验室", hi: "इन्फ्रास्ट्रक्चर और सिस्टम लैब" },
+  "AI-Assisted Security Operations": { zh: "AI 辅助安全运营", hi: "AI-सहायता प्राप्त सुरक्षा संचालन" },
+  "Building My Private AI Infrastructure": { zh: "构建我的私有 AI 基础设施", hi: "मेरे निजी AI इन्फ्रास्ट्रक्चर का निर्माण" },
+  "MFA Fatigue: Containment and Response": { zh: "MFA 疲劳攻击：遏制与响应", hi: "MFA फ़टीग: नियंत्रण और प्रतिक्रिया" },
+  "Designing a Segmented Home Lab Network": { zh: "设计分段式家庭实验室网络", hi: "विभाजित होम लैब नेटवर्क की रूपरेखा" },
+  "Active Lab": { zh: "运行中的实验室", hi: "सक्रिय लैब" },
+  "In Development": { zh: "开发中", hi: "विकास जारी" },
+  "Research": { zh: "研究阶段", hi: "शोध" },
+  "Completed": { zh: "已完成", hi: "पूर्ण" },
+  "Current": { zh: "当前重点", hi: "वर्तमान लक्ष्य" },
+  "Planned": { zh: "计划中", hi: "नियोजित" },
+  "View Résumé": { zh: "查看简历（英文）", hi: "रिज़्यूमे देखें (अंग्रेज़ी)" },
+  "View résumé": { zh: "查看简历（英文）", hi: "रिज़्यूमे देखें (अंग्रेज़ी)" },
+  "Résumé": { zh: "简历（英文）", hi: "रिज़्यूमे (अंग्रेज़ी)" },
+};
+
+export const reviewedCopy: Record<string, Partial<Record<TranslatedLocale, string>>> = {
   "Brandon Tate | IT Leadership, Infrastructure & Security": { es: "Brandon Tate | Liderazgo de TI, infraestructura y seguridad", ja: "Brandon Tate | ITリーダーシップ・インフラ・セキュリティ", ru: "Brandon Tate | Руководство ИТ, инфраструктура и безопасность" },
   "Portfolio of Brandon Tate — IT leader, infrastructure builder, and cybersecurity practitioner focused on operations, identity, automation, private AI, and resilient systems.": { es: "Portafolio de Brandon Tate: líder de TI, creador de infraestructura y profesional de ciberseguridad centrado en operaciones, identidad, automatización, IA privada y sistemas resilientes.", ja: "Brandon Tateのポートフォリオ。ITリーダーとしてインフラを構築し、運用、ID管理、自動化、プライベートAI、復旧力のあるシステムを中心にサイバーセキュリティに取り組んでいます。", ru: "Портфолио Brandon Tate — руководителя ИТ, создателя инфраструктуры и специалиста по кибербезопасности. Основные направления: эксплуатация, управление идентификацией, автоматизация, частный ИИ и отказоустойчивые системы." },
   "A hands-on private AI infrastructure project covering Linux, GPU acceleration, Docker, Ollama, and secure remote administration.": { es: "Proyecto práctico de infraestructura de IA privada que abarca Linux, aceleración por GPU, Docker, Ollama y administración remota segura.", ja: "Linux、GPUアクセラレーション、Docker、Ollama、安全なリモート管理を扱うプライベートAIインフラの実践プロジェクト。", ru: "Практический проект инфраструктуры частного ИИ: Linux, ускорение на GPU, Docker, Ollama и безопасное удалённое администрирование." },

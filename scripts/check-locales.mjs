@@ -2,12 +2,22 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import ts from 'typescript';
 
+// Read the same locale registry as the application without requiring Node's TS loader.
+const registry = ts.createSourceFile('locales.ts', fs.readFileSync('src/lib/locales.ts', 'utf8'), ts.ScriptTarget.Latest, true);
+let locales, languageTags;
+function readRegistry(node) {
+  if (ts.isVariableDeclaration(node) && node.name.getText(registry) === 'locales') locales = node.initializer.expression.elements.map(item => item.text);
+  if (ts.isVariableDeclaration(node) && node.name.getText(registry) === 'languageTags') languageTags = Object.fromEntries(node.initializer.properties.map(item => [item.name.getText(registry), item.initializer.text]));
+  ts.forEachChild(node, readRegistry);
+}
+readRegistry(registry);
+assert(locales?.length && languageTags, 'Locale registry');
 const source = JSON.parse(fs.readFileSync('src/i18n/source.json', 'utf8'));
 const reviewed = {};
 const editorial = ts.createSourceFile('reviewed.ts', fs.readFileSync('src/i18n/reviewed.ts', 'utf8'), ts.ScriptTarget.Latest, true);
 function visit(node) {
   if (ts.isPropertyAssignment(node) && ts.isStringLiteral(node.name) && ts.isObjectLiteralExpression(node.initializer)) {
-    reviewed[node.name.text] = Object.fromEntries(node.initializer.properties.map(property => [property.name.getText(editorial), property.initializer.text]));
+    reviewed[node.name.text] = { ...reviewed[node.name.text], ...Object.fromEntries(node.initializer.properties.map(property => [property.name.getText(editorial), property.initializer.text])) };
   }
   ts.forEachChild(node, visit);
 }
@@ -36,7 +46,7 @@ const pathFor = (locale, path) => locale === 'en' ? path : `/${locale}${path ===
 const baseUrl = process.argv[2];
 const decode = text => text.replace(/&#x([\da-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n,16))).replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&apos;', "'").replaceAll('&lt;', '<').replaceAll('&gt;', '>');
 let count = 0;
-for (const locale of ['en','es','ja','ru']) {
+for (const locale of locales) {
   const dictionary = locale === 'en' ? {} : JSON.parse(fs.readFileSync(`src/i18n/${locale}.json`, 'utf8'));
   if (locale !== 'en') for (const key of currentCopy) {
     assert((typeof dictionary[key] === 'string' && dictionary[key].trim()) || reviewed[key]?.[locale], `${locale}: missing translation for ${key}`);
@@ -51,9 +61,9 @@ for (const locale of ['en','es','ja','ru']) {
     if (baseUrl) {
       const response = await fetch(new URL(path, baseUrl));
       assert.equal(response.status, 200, `${path}: HTTP response`);
-      assert((await response.text()).includes(`lang="${locale}"`), `${path}: served language`);
+      assert((await response.text()).includes(`lang="${languageTags[locale]}"`), `${path}: served language`);
     }
-    assert(html.includes(`lang="${locale}"`), `${path}: document language`);
+    assert(html.includes(`lang="${languageTags[locale]}"`), `${path}: document language`);
     assert(html.includes(`rel="canonical" href="https://www.brandontate.info${path === '/' ? '' : path}"`), `${path}: canonical`);
     assert(html.includes('id="main-content"'), `${path}: skip-link target`);
     if (route.startsWith('/writing/')) {
@@ -61,14 +71,14 @@ for (const locale of ['en','es','ja','ru']) {
       assert(schema, `${path}: article structured data`);
       const article = JSON.parse(schema[1]);
       assert.equal(article['@type'],'Article',`${path}: schema type`);
-      assert.equal(article.inLanguage,locale,`${path}: schema language`);
+      assert.equal(article.inLanguage,languageTags[locale],`${path}: schema language`);
       assert.equal(article.url,`https://www.brandontate.info${path}`,`${path}: schema URL`);
     }
     assert(!html.includes('coming soon'), `${path}: unavailable language`);
     const hrefs = [...html.matchAll(/href="([^"#]+)"/g)].map(match => decode(match[1]));
-    for (const alternate of ['en','es','ja','ru']) {
+    for (const alternate of locales) {
       assert(hrefs.includes(pathFor(alternate,route)), `${path}: switch to equivalent ${alternate} page`);
-      assert(html.includes(`hrefLang="${alternate}"`) || html.includes(`hreflang="${alternate}"`), `${path}: language alternate`);
+      assert(html.includes(`hrefLang="${languageTags[alternate]}"`) || html.includes(`hreflang="${languageTags[alternate]}"`), `${path}: language alternate`);
     }
     if (locale !== 'en') {
       const main = html.match(/<main\b[\s\S]*?<\/main>/)?.[0] ?? '';
@@ -79,17 +89,17 @@ for (const locale of ['en','es','ja','ru']) {
         assert(!translated || translated === original, `${path}: untranslated visible text: ${original}`);
       }
       for (const href of hrefs.filter(href => href.startsWith('/') && !href.startsWith('/_next/') && !href.includes('.') && !['/opengraph-image'].includes(href))) {
-        assert(href.startsWith(`/${locale}`) || ['en','es','ja','ru'].some(alternate=>href===pathFor(alternate,route)), `${path}: link loses locale ${href}`);
+        assert(href.startsWith(`/${locale}`) || locales.some(alternate=>href===pathFor(alternate,route)), `${path}: link loses locale ${href}`);
       }
     }
     count++;
   }
 }
 const sitemap = fs.readFileSync('.next/server/app/sitemap.xml.body','utf8');
-assert.equal((sitemap.match(/<loc>/g)||[]).length,routes.length * 4);
+assert.equal((sitemap.match(/<loc>/g)||[]).length,routes.length * locales.length);
 assert(fs.existsSync('.next/server/app/opengraph-image.body'), 'Stable social-preview route');
 if (baseUrl) {
-  for (const path of ['/es/not-a-page','/ja/not-a-page','/ru/not-a-page','/fr']) {
+  for (const path of [...locales.filter(locale => locale !== 'en').map(locale => `/${locale}/not-a-page`), '/fr']) {
     const response = await fetch(new URL(path,baseUrl));
     assert.equal(response.status,404,`${path}: unknown route`);
   }
@@ -97,4 +107,4 @@ if (baseUrl) {
     assert.equal((await fetch(new URL(path,baseUrl))).status,200,`${path}: shared asset`);
   }
 }
-console.log(`PASS: ${count} page artifacts; 3 × ${source.length} catalog entries; document languages, canonicals, hreflang, equivalent-page switching, translated text, locale-preserving links, and sitemap.`);
+console.log(`PASS: ${count} page artifacts; ${locales.length - 1} × ${source.length} catalog entries; document languages, canonicals, hreflang, equivalent-page switching, translated text, locale-preserving links, and sitemap.`);

@@ -22,18 +22,21 @@ Notebook cards link to the relevant existing article or project documentation.
 
 ## Languages
 
-All 15 content pages are available in English, Spanish, Japanese, and Russian:
+All 15 content pages are available in English, Spanish, Japanese, Russian,
+Mandarin (Simplified Chinese), and Hindi:
 
 - English: `/` and the existing unprefixed routes.
 - Spanish: `/es` and `/es/...`.
 - Japanese: `/ja` and `/ja/...`.
 - Russian: `/ru` and `/ru/...`.
+- Mandarin: `/zh` and `/zh/...`, declaring `zh-Hans`.
+- Hindi: `/hi` and `/hi/...`, declaring `hi`.
 
 The language selector retains the equivalent page when switching languages.
 Internal page links retain the locale; shared assets and the English résumé
 stay at their original URLs. Each document declares its own `lang`, localized
 metadata, self-canonical URL, and language alternates. The sitemap includes
-all 60 content URLs. Content pages remain statically generated.
+all 90 content URLs. Content pages remain statically generated.
 
 The original English page files now live under `src/app/(english)`;
 this route group does not change their public URLs. Separate root layouts
@@ -41,19 +44,19 @@ allow accurate HTML language attributes without browser-side translation or
 request-dependent rendering. `globalNotFound` is enabled for the custom 404
 across those root layouts, and invalid translated paths use localized 404s.
 
-Translations in `src/i18n/es.json`, `ja.json`, and `ru.json` were drafted with
+Translations in `src/i18n/es.json`, `ja.json`, `ru.json`, `zh.json`, and `hi.json` were drafted with
 Google Translate from the public portfolio copy. `src/i18n/reviewed.ts`
 contains editorial corrections for prominent copy and terminology. Brand
 names and official certification names are preserved. Native-speaker review
 is recommended before considering the translations professionally verified.
 No translation service is called during builds or when visitors use the site.
 
-When English wording changes, update the matching keys in all three catalogs
+When English wording changes, update the matching keys in all five catalogs
 and any applicable editorial overrides. For a new page, add it to `pagePaths`
 and the localized renderer's page registry. The locale check also scans the
 English source to catch new untranslated copy.
 
-After building, run `npm run check:locales` to validate catalogs and all 60
+After building, run `npm run check:locales` to validate catalogs and all 90
 production page artifacts. With a production server running, append its URL:
 
 ```powershell

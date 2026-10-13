@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { localizedPath, navigationCopy, type Locale } from "@/lib/locales";
+import { locales, languageTags, languageNames, localizedPath, navigationCopy, type Locale } from "@/lib/locales";
 
 export default function Header({ locale = "en" }: { locale?: Locale }) {
   const copy = navigationCopy[locale];
@@ -24,12 +24,7 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
     { label: copy.contact, href: localizedPath(locale, "/contact") },
   ];
 
-  const languages = [
-    { code: "EN", label: "English", href: localizedPath("en", pagePath) },
-    { code: "ES", label: "Español", href: localizedPath("es", pagePath) },
-    { code: "JA", label: "日本語", href: localizedPath("ja", pagePath) },
-    { code: "RU", label: "Русский", href: localizedPath("ru", pagePath) },
-  ];
+  const languages = locales.map(language => ({ code: language.toUpperCase(), tag: languageTags[language], label: languageNames[language], href: localizedPath(language, pagePath) }));
 
   return (
     <header onKeyDown={(event) => {
@@ -104,8 +99,8 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
                   <Link
                     key={language.code}
                     href={language.href}
-                    hrefLang={language.code.toLowerCase()}
-                    lang={language.code.toLowerCase()}
+                    hrefLang={language.tag}
+                    lang={language.tag}
                     aria-current={language.code.toLowerCase() === locale ? "true" : undefined}
                     onClick={() => setLanguageOpen(false)}
                     className="flex items-center justify-between px-4 py-3 text-sm text-white/75 transition hover:bg-white/10 hover:text-white"
@@ -199,8 +194,8 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
                   <Link
                   key={language.code}
                   href={language.href}
-                  hrefLang={language.code.toLowerCase()}
-                  lang={language.code.toLowerCase()}
+                  hrefLang={language.tag}
+                  lang={language.tag}
                   aria-current={language.code.toLowerCase() === locale ? "true" : undefined}
                   onClick={() => setMenuOpen(false)}
                   className="rounded-md border border-white/15 bg-white/[0.04] px-3 py-3 text-sm font-semibold text-white/80 transition hover:bg-white/10 hover:text-white"

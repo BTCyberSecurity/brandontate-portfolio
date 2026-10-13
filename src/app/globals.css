@@ -38,3 +38,6 @@ header :where(a, button):focus-visible { outline-color: #E5B45E; }
 html:not([lang="en"]) main { overflow-wrap: anywhere; }
 html:not([lang="en"]) main .flex-1 { min-width: 0; }
 html[lang="ja"] main :is(h1, h2, h3, h4, p) { letter-spacing: normal; }
+html:is([lang="zh-Hans"], [lang="hi"]) main :is(h1, h2, h3, h4, p) { letter-spacing: normal; }
+html[lang="hi"] body { font-family: Arial, "Nirmala UI", "Kohinoor Devanagari", sans-serif; }
+html[lang="hi"] main h1 { line-height: 1.3; }

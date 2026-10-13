@@ -1,4 +1,4 @@
-import { localizedPath, type Locale } from "@/lib/locales";
+import { languageTags, localizedPath, type Locale } from "@/lib/locales";
 import { siteUrl } from "@/lib/metadata";
 import { translate } from "@/lib/translate";
 
@@ -7,7 +7,7 @@ export default function ArticleStructuredData({ path, title, description, locale
   const data = {
     "@context": "https://schema.org", "@type": "Article",
     headline: translate(locale, title), description: translate(locale, description),
-    inLanguage: locale, url, mainEntityOfPage: url,
+    inLanguage: languageTags[locale], url, mainEntityOfPage: url,
     author: { "@type": "Person", name: "Brandon Tate", url: siteUrl },
   };
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }} />;
