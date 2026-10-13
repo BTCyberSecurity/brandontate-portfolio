@@ -33,3 +33,8 @@ header :where(a, button):focus-visible { outline-color: #E5B45E; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+/* Allow translated headings and labels to wrap at narrow viewport widths. */
+html:not([lang="en"]) main { overflow-wrap: anywhere; }
+html:not([lang="en"]) main .flex-1 { min-width: 0; }
+html[lang="ja"] main :is(h1, h2, h3, h4, p) { letter-spacing: normal; }

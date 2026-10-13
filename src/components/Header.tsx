@@ -2,28 +2,33 @@
 
 import Link from "next/link";
 import { useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+import { localizedPath, navigationCopy, type Locale } from "@/lib/locales";
 
-export default function Header() {
+export default function Header({ locale = "en" }: { locale?: Locale }) {
+  const copy = navigationCopy[locale];
+  const pathname = usePathname();
+  const pagePath = locale === "en" ? pathname : pathname.replace(new RegExp(`^/${locale}(?=/|$)`), "") || "/";
   const menuButton = useRef<HTMLButtonElement>(null);
   const languageButton = useRef<HTMLButtonElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
 
   const navItems = [
-    { label: "About", href: "/about" },
-    { label: "Security", href: "/security" },
-    { label: "Projects", href: "/projects" },
-    { label: "Experience", href: "/experience" },
-    { label: "Writing", href: "/writing" },
-    { label: "Certifications", href: "/certifications" },
-    { label: "Contact", href: "/contact" },
+    { label: copy.about, href: localizedPath(locale, "/about") },
+    { label: copy.security, href: localizedPath(locale, "/security") },
+    { label: copy.projects, href: localizedPath(locale, "/projects") },
+    { label: copy.experience, href: localizedPath(locale, "/experience") },
+    { label: copy.writing, href: localizedPath(locale, "/writing") },
+    { label: copy.certifications, href: localizedPath(locale, "/certifications") },
+    { label: copy.contact, href: localizedPath(locale, "/contact") },
   ];
 
   const languages = [
-    { code: "EN", label: "English", href: "/" },
-    { code: "ES", label: "Español", href: null },
-    { code: "JA", label: "日本語", href: null },
-    { code: "RU", label: "Русский", href: null },
+    { code: "EN", label: "English", href: localizedPath("en", pagePath) },
+    { code: "ES", label: "Español", href: localizedPath("es", pagePath) },
+    { code: "JA", label: "日本語", href: localizedPath("ja", pagePath) },
+    { code: "RU", label: "Русский", href: localizedPath("ru", pagePath) },
   ];
 
   return (
@@ -36,9 +41,9 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
         {/* Logo */}
         <Link
-          href="/"
+          href={localizedPath(locale, "/")}
           className="text-3xl font-black tracking-tight text-white"
-          aria-label="Brandon Tate home"
+          aria-label={copy.home}
           onClick={() => {
             setMenuOpen(false);
             setLanguageOpen(false);
@@ -48,7 +53,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop navigation */}
-        <nav aria-label="Primary navigation" className="hidden items-center gap-7 text-sm text-white/75 lg:flex">
+        <nav aria-label={copy.toggleMenu} className="hidden items-center gap-4 text-sm text-white/75 xl:flex">
           {navItems.map((item) => (
             <Link
               key={item.label}
@@ -61,7 +66,7 @@ export default function Header() {
         </nav>
 
         {/* Desktop actions */}
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           {/* Résumé */}
           <a
             href="/resume.pdf"
@@ -69,7 +74,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="rounded-md border border-white/40 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#0F2537]"
           >
-            Résumé ↓
+            {copy.resume} ↓
           </a>
 
           {/* Language selector */}
@@ -80,10 +85,10 @@ export default function Header() {
               className="inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-2.5 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white"
               ref={languageButton}
               aria-controls="language-options"
-              aria-label="Select language"
+              aria-label={copy.selectLanguage}
               aria-expanded={languageOpen}
             >
-              EN
+              {locale.toUpperCase()}
               <span
                 className={`text-xs transition-transform ${
                   languageOpen ? "rotate-180" : ""
@@ -95,10 +100,13 @@ export default function Header() {
 
             {languageOpen && (
               <div id="language-options" className="absolute right-0 mt-2 w-44 overflow-hidden rounded-xl border border-white/10 bg-[#102F46] shadow-xl">
-                {languages.map((language) => language.href ? (
+                {languages.map((language) => (
                   <Link
                     key={language.code}
                     href={language.href}
+                    hrefLang={language.code.toLowerCase()}
+                    lang={language.code.toLowerCase()}
+                    aria-current={language.code.toLowerCase() === locale ? "true" : undefined}
                     onClick={() => setLanguageOpen(false)}
                     className="flex items-center justify-between px-4 py-3 text-sm text-white/75 transition hover:bg-white/10 hover:text-white"
                   >
@@ -108,11 +116,6 @@ export default function Header() {
                       {language.code}
                     </span>
                   </Link>
-                ) : (
-                  <span key={language.code} aria-disabled="true" className="flex items-center justify-between gap-2 px-4 py-3 text-sm text-white/70">
-                    <span>{language.label} <span className="text-xs">(coming soon)</span></span>
-                    <span className="text-xs font-bold text-[#D6A85F]">{language.code}</span>
-                  </span>
                 ))}
               </div>
             )}
@@ -122,10 +125,10 @@ export default function Header() {
         {/* Mobile menu button */}
         <button
           type="button"
-          className="flex h-11 w-11 items-center justify-center rounded-md border border-white/20 text-white transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#D6A85F]/60 lg:hidden"
+          className="flex h-11 w-11 items-center justify-center rounded-md border border-white/20 text-white transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#D6A85F]/60 xl:hidden"
           ref={menuButton}
           aria-controls="mobile-navigation"
-          aria-label="Toggle navigation menu"
+          aria-label={copy.toggleMenu}
           aria-expanded={menuOpen}
           onClick={() => {
             setMenuOpen((open) => !open);
@@ -165,9 +168,9 @@ export default function Header() {
       <div
         id="mobile-navigation"
         hidden={!menuOpen}
-        className="max-h-[calc(100dvh-84px)] overflow-y-auto border-t border-white/10 bg-[#0F3046] lg:hidden"
+        className="max-h-[calc(100dvh-84px)] overflow-y-auto border-t border-white/10 bg-[#0F3046] xl:hidden"
       >
-        <nav aria-label="Mobile navigation" className="mx-auto max-w-7xl px-6 py-5">
+        <nav aria-label={copy.toggleMenu} className="mx-auto max-w-7xl px-6 py-5">
           <div className="divide-y divide-white/10">
             {navItems.map((item) => (
               <Link
@@ -188,14 +191,17 @@ export default function Header() {
           {/* Mobile language selector */}
           <div className="mt-5">
             <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#79B8AE]">
-              Language
+              {copy.language}
             </p>
 
             <div className="mt-3 grid grid-cols-2 gap-2">
-              {languages.map((language) => language.href ? (
+              {languages.map((language) => (
                   <Link
                   key={language.code}
                   href={language.href}
+                  hrefLang={language.code.toLowerCase()}
+                  lang={language.code.toLowerCase()}
+                  aria-current={language.code.toLowerCase() === locale ? "true" : undefined}
                   onClick={() => setMenuOpen(false)}
                   className="rounded-md border border-white/15 bg-white/[0.04] px-3 py-3 text-sm font-semibold text-white/80 transition hover:bg-white/10 hover:text-white"
                 >
@@ -207,11 +213,6 @@ export default function Header() {
                     </span>
                   </div>
                 </Link>
-                ) : (
-                  <span key={language.code} aria-disabled="true" className="flex items-center justify-between gap-2 px-4 py-3 text-sm text-white/70">
-                    <span>{language.label} <span className="text-xs">(coming soon)</span></span>
-                    <span className="text-xs font-bold text-[#D6A85F]">{language.code}</span>
-                  </span>
                 ))}
             </div>
           </div>
@@ -224,7 +225,7 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
             className="mt-5 flex w-full items-center justify-center rounded-md bg-[#E5B45E] px-6 py-3.5 text-sm font-bold text-[#102F46] transition hover:bg-[#F0C574]"
           >
-            View Résumé ↓
+            {copy.viewResume} ↓
           </a>
         </nav>
       </div>

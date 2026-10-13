@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
+import { navigationCopy, type Locale } from "@/lib/locales";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.brandontate.info"),
@@ -63,18 +64,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export function SiteLayout({
   children,
+  locale = "en",
 }: Readonly<{
   children: React.ReactNode;
+  locale?: Locale;
 }>) {
   return (
     <html
-      lang="en"
+      lang={locale}
       className="h-full antialiased"
     >
       <body className="min-h-full flex flex-col">
-  <a href="#main-content" className="skip-link">Skip to main content</a>
+  <a href="#main-content" className="skip-link">{navigationCopy[locale].skip}</a>
   {children}
   <Analytics />
 </body>
