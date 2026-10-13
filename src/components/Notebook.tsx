@@ -1,3 +1,4 @@
+import Link from "next/link";
 const entries = [
   {
     category: "Infrastructure",
@@ -5,7 +6,7 @@ const entries = [
     description:
       "Notes from designing a headless Linux AI environment, configuring GPU acceleration, hosting local models, and solving deployment issues.",
     meta: "Build Log",
-    href: "#",
+    href: "/projects/private-ai-infrastructure",
   },
   {
     category: "Security",
@@ -13,7 +14,7 @@ const entries = [
     description:
       "A practical walkthrough of containment, investigation, account protection, and lessons learned from a simulated Microsoft 365 security incident.",
     meta: "Incident Notes",
-    href: "#",
+    href: "/writing",
   },
   {
     category: "Networking",
@@ -21,7 +22,7 @@ const entries = [
     description:
       "Documenting segmentation, remote access, infrastructure services, troubleshooting, and the transition toward a more structured network.",
     meta: "Lab Notes",
-    href: "#",
+    href: "/projects/infrastructure-systems",
   },
 ];
 
@@ -53,12 +54,12 @@ export default function Notebook() {
 </p>
           </div>
 
-          <a
+          <Link
             href="/writing"
             className="text-sm font-bold text-[#E5B45E] transition hover:text-white"
           >
             View All Notes →
-          </a>
+          </Link>
         </div>
 
         {/* Entries */}
@@ -73,7 +74,7 @@ export default function Notebook() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
-                <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/50">
+                <span className="rounded-full border border-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70">
                   {entry.meta}
                 </span>
               </div>
@@ -92,8 +93,9 @@ export default function Notebook() {
 
               <div className="mt-auto pt-8">
                 <div className="border-t border-white/10 pt-5">
-                  <a
+                  <Link
                     href={entry.href}
+                    aria-label={`Read ${entry.title}`}
                     className="inline-flex items-center gap-2 text-sm font-bold text-[#E5B45E]"
                   >
                     Read Entry
@@ -101,7 +103,7 @@ export default function Notebook() {
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </article>

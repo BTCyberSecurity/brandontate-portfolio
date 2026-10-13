@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 ﻿import Header from "@/components/Header";
 
 const platforms = [
@@ -182,15 +184,15 @@ const careerHistory = [
   },
 ];
 
-export const metadata = {
+export const metadata = pageMetadata("/experience", {
   title: "Experience",
   description:
     "Professional IT leadership and operations experience from Brandon Tate across hospitality technology, infrastructure, identity, support, security, vendors, and multi-site environments.",
-};
+});
 
 export default function ExperiencePage() {
   return (
-    <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
@@ -633,12 +635,12 @@ export default function ExperiencePage() {
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <a
+            <Link
               href="/projects"
               className="rounded-md bg-[#D6A85F] px-6 py-3 text-sm font-bold text-[#102F46] transition hover:bg-white"
             >
               Explore Projects →
-            </a>
+            </Link>
 
             <a
               href="/resume.pdf"

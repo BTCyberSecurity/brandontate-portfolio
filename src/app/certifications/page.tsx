@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 import Header from "@/components/Header";
 
 const completed = [
@@ -119,15 +121,15 @@ const roadmap = [
   },
 ];
 
-export const metadata = {
+export const metadata = pageMetadata("/certifications", {
   title: "Certifications",
   description:
     "Cybersecurity, cloud, identity, infrastructure, and professional certification development for Brandon Tate.",
-};
+});
 
 export default function CertificationsPage() {
   return (
-    <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
@@ -321,7 +323,7 @@ export default function CertificationsPage() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {tracks.map((track) => (
-              <a
+              <Link
                 key={track.title}
                 href={track.href}
                 className="group rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition hover:bg-white/[0.07]"
@@ -341,7 +343,7 @@ export default function CertificationsPage() {
                     {track.project} →
                   </p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

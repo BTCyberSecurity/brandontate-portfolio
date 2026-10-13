@@ -1,3 +1,4 @@
+import Link from "next/link";
 const completed = [
   {
     name: "CompTIA A+",
@@ -166,12 +167,12 @@ export default function Certifications() {
                 “Study gives me the map. Building gives me the terrain.”
               </p>
 
-              <a
+              <Link
                 href="/certifications"
                 className="text-sm font-bold text-[#2F6F9F] transition hover:text-[#102F46]"
               >
                 View Learning Path →
-              </a>
+              </Link>
             </div>
           </div>
         </div>

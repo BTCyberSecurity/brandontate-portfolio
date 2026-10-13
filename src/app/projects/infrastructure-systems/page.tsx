@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 ﻿import Header from "@/components/Header";
 
 const stack = [
@@ -197,15 +199,15 @@ const nextSteps = [
   "Continue storage and performance tuning",
 ];
 
-export const metadata = {
+export const metadata = pageMetadata("/projects/infrastructure-systems", {
   title: "Infrastructure & Systems Lab",
   description:
     "A hands-on infrastructure lab built around TrueNAS, ZFS, Linux, containers, media services, networking, storage, troubleshooting, and recovery.",
-};
+});
 
 export default function InfrastructureSystemsPage() {
   return (
-    <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
@@ -219,12 +221,12 @@ export default function InfrastructureSystemsPage() {
         />
 
         <div className="relative mx-auto max-w-7xl">
-          <a
+          <Link
             href="/projects"
             className="text-sm font-bold text-[#D6A85F] transition hover:text-white"
           >
             ← Back to Projects
-          </a>
+          </Link>
 
           <div className="mt-10 max-w-4xl">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#79B8AE]">
@@ -641,12 +643,12 @@ export default function InfrastructureSystemsPage() {
             </h2>
           </div>
 
-          <a
+          <Link
             href="/projects"
             className="w-fit rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
           >
             Back to Projects →
-          </a>
+          </Link>
         </div>
       </section>
     </main>

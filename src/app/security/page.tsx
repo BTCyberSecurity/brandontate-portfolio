@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 import Header from "@/components/Header";
 
 const operatingModel = [
@@ -144,15 +146,15 @@ const principles = [
   },
 ];
 
-export const metadata = {
+export const metadata = pageMetadata("/security", {
   title: "Security",
   description:
     "Brandon Tate's practical cybersecurity approach covering identity, MFA, access control, incident response, infrastructure security, segmentation, logging, and security operations.",
-};
+});
 
 export default function SecurityPage() {
   return (
-    <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
@@ -373,7 +375,7 @@ export default function SecurityPage() {
 
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {securityProjects.map((project) => (
-              <a
+              <Link
                 key={project.title}
                 href={project.href}
                 className="group rounded-2xl border border-[#CBD5D8] bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
@@ -393,7 +395,7 @@ export default function SecurityPage() {
                 <p className="mt-6 text-sm font-bold text-[#936D27]">
                   Explore Project →
                 </p>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

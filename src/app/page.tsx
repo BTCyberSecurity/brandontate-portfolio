@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 import About from "@/components/About";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
@@ -8,9 +10,11 @@ import Notebook from "@/components/Notebook";
 import Projects from "@/components/Projects";
 
 
+export const metadata = pageMetadata("/", "Brandon Tate | IT Leadership, Infrastructure & Security", "Portfolio of Brandon Tate — IT leader, infrastructure builder, and cybersecurity practitioner focused on operations, identity, automation, private AI, and resilient systems.");
+
 export default function Home() {
  return (
-    <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       {/* =========================================================
           HEADER
       ========================================================== */}
@@ -72,12 +76,12 @@ export default function Home() {
               users, and the business.
             </p>
 
-            <a
+            <Link
               href="/security"
               className="mt-7 inline-flex rounded-md border border-[#D6A85F] px-6 py-3 text-sm font-bold text-[#E5B45E] transition hover:bg-[#D6A85F] hover:text-[#102F46]"
             >
              Explore Security →
-            </a>
+            </Link>
           </div>
 
           {/* Security operating model */}

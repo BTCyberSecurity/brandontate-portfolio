@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 import Header from "@/components/Header";
 
 const contactMethods = [
@@ -61,15 +63,15 @@ const reasonsToConnect = [
   },
 ];
 
-export const metadata = {
+export const metadata = pageMetadata("/contact", {
   title: "Contact",
   description:
     "Contact Brandon Tate about IT leadership, infrastructure, cybersecurity, identity, cloud security, private AI, and technical collaboration.",
-};
+});
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
@@ -241,19 +243,19 @@ export default function ContactPage() {
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
+              <Link
                 href="/projects"
                 className="rounded-md bg-[#D6A85F] px-6 py-3 text-sm font-bold text-[#102F46] transition hover:bg-white"
               >
                 View Projects
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/writing"
                 className="rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
               >
                 Engineering Notebook
-              </a>
+              </Link>
             </div>
           </div>
         </div>

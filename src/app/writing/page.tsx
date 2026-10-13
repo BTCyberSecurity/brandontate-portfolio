@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 import Header from "@/components/Header";
 
 const immediateActions = [
@@ -61,15 +63,15 @@ const lessons = [
   "A resolved incident should leave behind documentation and a stronger control environment.",
 ];
 
-export const metadata = {
+export const metadata = pageMetadata("/writing", {
   title: "MFA Fatigue: Containment and Response",
   description:
     "A practical workflow for responding to repeated unauthorized MFA prompts, including containment, authentication review, recovery, and lessons learned.",
-};
+});
 
 export default function MfaFatigueResponsePage() {
   return (
-    <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
@@ -83,12 +85,12 @@ export default function MfaFatigueResponsePage() {
         />
 
         <div className="relative mx-auto max-w-7xl">
-          <a
+          <Link
             href="/writing"
             className="text-sm font-bold text-[#D6A85F] transition hover:text-white"
           >
             ← Back to Engineering Notebook
-          </a>
+          </Link>
 
           <p className="mt-10 text-xs font-bold uppercase tracking-[0.25em] text-[#79B8AE]">
             Security Operations
@@ -369,19 +371,19 @@ export default function MfaFatigueResponsePage() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
+            <Link
               href="/writing"
               className="rounded-md bg-[#D6A85F] px-6 py-3 text-sm font-bold text-[#102F46] transition hover:bg-white"
             >
               Engineering Notebook
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/projects/identity-zero-trust"
               className="rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
             >
               Identity & Zero Trust Lab
-            </a>
+            </Link>
           </div>
         </div>
       </section>

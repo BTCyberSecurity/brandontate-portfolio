@@ -1,3 +1,4 @@
+import Link from "next/link";
 const strengths = [
   {
     icon: "☁",
@@ -67,12 +68,12 @@ export default function About() {
             automation, and AI.
           </p>
 
-          <a
+          <Link
             href="/about"
             className="mt-7 inline-flex rounded-md border border-[#2F6F9F] px-6 py-3 text-sm font-bold text-[#102F46] transition hover:bg-[#102F46] hover:text-white"
           >
             Read My Story →
-          </a>
+          </Link>
         </div>
 
         {/* Capability grid */}

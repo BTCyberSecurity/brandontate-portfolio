@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { projects } from "@/data/projects";
 
 function statusStyles(status: string) {
@@ -44,12 +45,12 @@ export default function Projects() {
 </p>
           </div>
 
-          <a
+          <Link
             href="/projects"
             className="text-sm font-bold text-[#2F6F9F] transition hover:text-[#102F46]"
           >
             View All Projects →
-          </a>
+          </Link>
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -116,8 +117,9 @@ export default function Projects() {
               {/* Footer */}
               <div className="mt-auto pt-7">
                 <div className="border-t border-[#E1E6E7] pt-5">
-                  <a
+                  <Link
                     href={project.href}
+                    aria-label={`Explore ${project.title}`}
                     className="inline-flex items-center gap-2 text-sm font-bold text-[#147BC1] transition group-hover:text-[#102F46]"
                   >
                     Explore Project
@@ -127,7 +129,7 @@ export default function Projects() {
                     >
                       →
                     </span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </article>

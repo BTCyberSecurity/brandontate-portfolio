@@ -88,7 +88,7 @@ export default function Hero() {
                 Infrastructure · Security
               </p>
 
-              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/45">
+              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
                 Automation · Operations
               </p>
             </div>

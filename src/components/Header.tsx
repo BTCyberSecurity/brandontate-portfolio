@@ -1,8 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
+import { useRef, useState } from "react";
 
 export default function Header() {
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const languageButton = useRef<HTMLButtonElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
 
@@ -18,16 +21,21 @@ export default function Header() {
 
   const languages = [
     { code: "EN", label: "English", href: "/" },
-    { code: "ES", label: "Español", href: "/es" },
-    { code: "JA", label: "日本語", href: "/ja" },
-    { code: "RU", label: "Русский", href: "/ru" },
+    { code: "ES", label: "Español", href: null },
+    { code: "JA", label: "日本語", href: null },
+    { code: "RU", label: "Русский", href: null },
   ];
 
   return (
-    <header className="sticky inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0F3046]/95 backdrop-blur-sm">
+    <header onKeyDown={(event) => {
+      if (event.key === "Escape") {
+        if (menuOpen) { setMenuOpen(false); menuButton.current?.focus(); }
+        if (languageOpen) { setLanguageOpen(false); languageButton.current?.focus(); }
+      }
+    }} className="sticky inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0F3046]/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
         {/* Logo */}
-        <a
+        <Link
           href="/"
           className="text-3xl font-black tracking-tight text-white"
           aria-label="Brandon Tate home"
@@ -37,18 +45,18 @@ export default function Header() {
           }}
         >
           B<span className="text-[#4FA3D1]">T</span>
-        </a>
+        </Link>
 
         {/* Desktop navigation */}
-        <nav className="hidden items-center gap-7 text-sm text-white/75 lg:flex">
+        <nav aria-label="Primary navigation" className="hidden items-center gap-7 text-sm text-white/75 lg:flex">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               className="transition hover:text-white"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -70,6 +78,8 @@ export default function Header() {
               type="button"
               onClick={() => setLanguageOpen((open) => !open)}
               className="inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-2.5 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white"
+              ref={languageButton}
+              aria-controls="language-options"
               aria-label="Select language"
               aria-expanded={languageOpen}
             >
@@ -84,9 +94,9 @@ export default function Header() {
             </button>
 
             {languageOpen && (
-              <div className="absolute right-0 mt-2 w-44 overflow-hidden rounded-xl border border-white/10 bg-[#102F46] shadow-xl">
-                {languages.map((language) => (
-                  <a
+              <div id="language-options" className="absolute right-0 mt-2 w-44 overflow-hidden rounded-xl border border-white/10 bg-[#102F46] shadow-xl">
+                {languages.map((language) => language.href ? (
+                  <Link
                     key={language.code}
                     href={language.href}
                     onClick={() => setLanguageOpen(false)}
@@ -97,7 +107,12 @@ export default function Header() {
                     <span className="text-xs font-bold text-[#D6A85F]">
                       {language.code}
                     </span>
-                  </a>
+                  </Link>
+                ) : (
+                  <span key={language.code} aria-disabled="true" className="flex items-center justify-between gap-2 px-4 py-3 text-sm text-white/70">
+                    <span>{language.label} <span className="text-xs">(coming soon)</span></span>
+                    <span className="text-xs font-bold text-[#D6A85F]">{language.code}</span>
+                  </span>
                 ))}
               </div>
             )}
@@ -108,6 +123,8 @@ export default function Header() {
         <button
           type="button"
           className="flex h-11 w-11 items-center justify-center rounded-md border border-white/20 text-white transition hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#D6A85F]/60 lg:hidden"
+          ref={menuButton}
+          aria-controls="mobile-navigation"
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           onClick={() => {
@@ -146,14 +163,14 @@ export default function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`overflow-hidden border-t border-white/10 bg-[#0F3046] transition-all duration-300 lg:hidden ${
-          menuOpen ? "max-h-[850px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        id="mobile-navigation"
+        hidden={!menuOpen}
+        className="max-h-[calc(100dvh-84px)] overflow-y-auto border-t border-white/10 bg-[#0F3046] lg:hidden"
       >
-        <nav className="mx-auto max-w-7xl px-6 py-5">
+        <nav aria-label="Mobile navigation" className="mx-auto max-w-7xl px-6 py-5">
           <div className="divide-y divide-white/10">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
@@ -164,7 +181,7 @@ export default function Header() {
                 <span className="text-[#D6A85F] transition-transform group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -175,8 +192,8 @@ export default function Header() {
             </p>
 
             <div className="mt-3 grid grid-cols-2 gap-2">
-              {languages.map((language) => (
-                <a
+              {languages.map((language) => language.href ? (
+                  <Link
                   key={language.code}
                   href={language.href}
                   onClick={() => setMenuOpen(false)}
@@ -189,8 +206,13 @@ export default function Header() {
                       {language.code}
                     </span>
                   </div>
-                </a>
-              ))}
+                </Link>
+                ) : (
+                  <span key={language.code} aria-disabled="true" className="flex items-center justify-between gap-2 px-4 py-3 text-sm text-white/70">
+                    <span>{language.label} <span className="text-xs">(coming soon)</span></span>
+                    <span className="text-xs font-bold text-[#D6A85F]">{language.code}</span>
+                  </span>
+                ))}
             </div>
           </div>
 

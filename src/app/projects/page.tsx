@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 import Header from "@/components/Header";
 
 const projects = [
@@ -89,15 +91,15 @@ const themes = [
   },
 ];
 
-export const metadata = {
+export const metadata = pageMetadata("/projects", {
   title: "Projects",
   description:
     "Technical projects and hands-on labs from Brandon Tate covering identity, infrastructure, cybersecurity, private AI, and security operations.",
-};
+});
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
@@ -149,7 +151,7 @@ others are still in active development or research.
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {projects.map((project) => (
-              <a
+              <Link
                 key={project.title}
                 href={project.href}
                 className="group flex h-full flex-col rounded-2xl border border-[#CBD5D8] bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
@@ -196,7 +198,7 @@ others are still in active development or research.
                     Explore Project →
                   </p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -259,19 +261,19 @@ others are still in active development or research.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
+              <Link
                 href="/writing"
                 className="rounded-md bg-[#D6A85F] px-6 py-3 text-sm font-bold text-[#102F46] transition hover:bg-white"
               >
                 Engineering Notebook
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/security"
                 className="rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
               >
                 Security Approach
-              </a>
+              </Link>
             </div>
           </div>
         </div>

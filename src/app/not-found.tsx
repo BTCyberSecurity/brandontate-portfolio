@@ -1,8 +1,9 @@
+import Link from "next/link";
 ﻿import Header from "@/components/Header";
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen bg-[#0F3046] text-white">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#0F3046] text-white">
       <Header />
 
       <section className="flex min-h-screen items-center px-6 py-32 lg:px-8">
@@ -24,19 +25,19 @@ export default function NotFound() {
             </p>
 
             <div className="mt-10 flex flex-col gap-4 min-[380px]:flex-row">
-              <a
+              <Link
                 href="/"
                 className="rounded-md bg-[#E5B45E] px-6 py-3 text-center text-sm font-bold text-[#102F46] transition hover:bg-[#F0C574]"
               >
                 Return Home
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/projects"
                 className="rounded-md border border-white/30 px-6 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-[#102F46]"
               >
                 View Projects
-              </a>
+              </Link>
             </div>
           </div>
 

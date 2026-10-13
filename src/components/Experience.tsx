@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Experience() {
   const responsibilities = [
     "Multi-property IT operations",
@@ -123,7 +124,7 @@ export default function Experience() {
                     key={item.number}
                     className="rounded-xl border border-[#D7DEDF] bg-white p-4 sm:p-5"
                   >
-                    <span className="text-xs font-black tracking-[0.2em] text-[#D6A85F]">
+                    <span className="text-xs font-black tracking-[0.2em] text-[#936D27]">
                       {item.number}
                     </span>
 
@@ -145,12 +146,12 @@ export default function Experience() {
                 “Good IT disappears into the operation — because it works.”
               </p>
 
-              <a
+              <Link
                 href="/experience"
                 className="text-sm font-bold text-[#2F6F9F] transition hover:text-[#102F46]"
               >
                 View Experience →
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 ﻿import Header from "@/components/Header";
 
 const capabilities = [
@@ -48,15 +50,15 @@ const principles = [
   },
 ];
 
-export const metadata = {
+export const metadata = pageMetadata("/about", {
   title: "About",
   description:
     "Learn more about Brandon Tate, an IT leader focused on infrastructure, cybersecurity, identity, automation, operations, and private AI.",
-};
+});
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
@@ -264,12 +266,12 @@ operations, and people.”
             </h2>
           </div>
 
-          <a
+          <Link
             href="/projects"
             className="w-fit rounded-md bg-[#102F46] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#1A4562]"
           >
             Explore Projects →
-          </a>
+          </Link>
         </div>
       </section>
     </main>

@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 ﻿import Header from "@/components/Header";
 
 const stack = [
@@ -153,15 +155,15 @@ const nextSteps = [
   "Map lab controls to hospitality IT scenarios",
 ];
 
-export const metadata = {
+export const metadata = pageMetadata("/projects/identity-zero-trust", {
   title: "Identity & Zero Trust Lab",
   description:
     "A hands-on identity and Zero Trust lab focused on Microsoft Entra ID, MFA, Conditional Access, RBAC, least privilege, account lifecycle, and privileged access.",
-};
+});
 
 export default function IdentityZeroTrustPage() {
   return (
-    <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
@@ -175,12 +177,12 @@ export default function IdentityZeroTrustPage() {
         />
 
         <div className="relative mx-auto max-w-7xl">
-          <a
+          <Link
             href="/projects"
             className="text-sm font-bold text-[#D6A85F] transition hover:text-white"
           >
            ← Back to Projects
-          </a>
+          </Link>
 
           <div className="mt-10 max-w-4xl">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#79B8AE]">
@@ -521,12 +523,12 @@ long.”
             </h2>
           </div>
 
-          <a
+          <Link
             href="/projects"
             className="w-fit rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
           >
             Back to Projects →
-          </a>
+          </Link>
         </div>
       </section>
     </main>

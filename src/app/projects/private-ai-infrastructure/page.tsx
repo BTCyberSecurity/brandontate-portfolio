@@ -1,3 +1,5 @@
+import { pageMetadata } from "@/lib/metadata";
+import Link from "next/link";
 ﻿import Header from "@/components/Header";
 
 const stack = [
@@ -11,24 +13,11 @@ const stack = [
   "10 GbE",
 ];
 
-const lessons = [
-  "Start with a stable hardware and network baseline before adding AI services.",
-  "Treat GPU drivers, containers, model runtimes, and remote access as separate layers when troubleshooting.",
-  "Document every configuration change so failures are easier to reverse.",
-  "Build for secure remote administration from the beginning instead of adding it later.",
-];
-
-const nextSteps = [
-  "Expand model testing and benchmarking",
-  "Improve monitoring and logging",
-  "Add more security-focused automation",
-  "Document repeatable deployment workflows",
-  "Publish a video walkthrough",
-];
+export const metadata = pageMetadata("/projects/private-ai-infrastructure", "Private AI Infrastructure", "A hands-on private AI infrastructure project covering Linux, GPU acceleration, Docker, Ollama, and secure remote administration.");
 
 export default function PrivateAIInfrastructurePage() {
   return (
-    <main className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
@@ -42,12 +31,12 @@ export default function PrivateAIInfrastructurePage() {
         />
 
         <div className="relative mx-auto max-w-7xl">
-          <a
+          <Link
             href="/projects"
             className="text-sm font-bold text-[#D6A85F] transition hover:text-white"
           >
             ← Back to Projects
-          </a>
+          </Link>
 
           <div className="mt-10 max-w-4xl">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#79B8AE]">
@@ -809,12 +798,12 @@ export default function PrivateAIInfrastructurePage() {
             </h2>
           </div>
 
-          <a
+          <Link
             href="/projects"
             className="w-fit rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
           >
             Back to Projects →
-          </a>
+          </Link>
         </div>
       </section>
     </main>
