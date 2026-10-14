@@ -12,10 +12,6 @@ export default function Contact() {
     label: "Email",
     href: "mailto:brandontate@outlook.com",
   },
-  {
-    label: "Résumé",
-    href: "/resume.pdf",
-  },
 ];
 
   return (
@@ -53,13 +49,6 @@ export default function Contact() {
     className="w-full rounded-md bg-[#E5B45E] px-7 py-3.5 text-center text-sm font-bold text-[#102F46] transition hover:-translate-y-0.5 hover:bg-[#F0C574] min-[380px]:w-auto"
   >
     Get in Touch →
-  </a>
-
-  <a
-    href="/resume.pdf"
-    className="w-full rounded-md border border-white/30 px-7 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-white/10 min-[380px]:w-auto"
-  >
-    View Résumé
   </a>
 </div>
           </div>

@@ -641,15 +641,6 @@ export default function ExperiencePage() {
             >
               Explore Projects →
             </Link>
-
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
-            >
-              View Résumé
-            </a>
           </div>
         </div>
       </section>
