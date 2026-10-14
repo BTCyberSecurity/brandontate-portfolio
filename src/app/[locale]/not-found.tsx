@@ -1,5 +1,6 @@
 "use client";
 
+import RecoveryTerminal from "@/components/RecoveryTerminal";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Header from "@/components/Header";
@@ -29,6 +30,7 @@ export default function LocalizedNotFound() {
           <Link href={localizedPath(locale, "/")} className="rounded-md bg-[#E5B45E] px-6 py-3 font-bold text-[#102F46]">{text[3]}</Link>
           <Link href={localizedPath(locale, "/projects")} className="rounded-md border border-white/30 px-6 py-3 font-bold">{text[4]}</Link>
         </div>
+        <RecoveryTerminal locale={locale} />
       </div>
     </section>
   </main>;

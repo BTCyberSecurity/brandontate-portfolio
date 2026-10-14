@@ -1,3 +1,4 @@
+import RecoveryTerminal from "@/components/RecoveryTerminal";
 import Link from "next/link";
 ﻿import Header from "@/components/Header";
 
@@ -13,7 +14,7 @@ export default function NotFound() {
           </p>
 
           <div className="mt-6 max-w-4xl">
-            <h1 className="text-[4rem] font-black leading-[0.9] tracking-tight sm:text-7xl lg:text-8xl">
+            <h1 className="text-[clamp(2.25rem,8vw,4rem)] break-words font-black leading-[0.9] tracking-tight sm:text-7xl lg:text-8xl">
               Lost Route.
               <br />
               Known Destination.
@@ -40,6 +41,8 @@ export default function NotFound() {
               </Link>
             </div>
           </div>
+
+          <RecoveryTerminal />
 
           <div className="mt-20 border-t border-white/10 pt-8">
             <p className="font-mono text-xs text-white/35">

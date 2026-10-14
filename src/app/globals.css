@@ -41,3 +41,7 @@ html[lang="ja"] main :is(h1, h2, h3, h4, p) { letter-spacing: normal; }
 html:is([lang="zh-Hans"], [lang="hi"]) main :is(h1, h2, h3, h4, p) { letter-spacing: normal; }
 html[lang="hi"] body { font-family: Arial, "Nirmala UI", "Kohinoor Devanagari", sans-serif; }
 html[lang="hi"] main h1 { line-height: 1.3; }
+
+@keyframes terminal-blink { 50% { opacity: 0; } }
+.terminal-cursor { animation: terminal-blink 1.2s step-end infinite; }
+@media (prefers-reduced-motion: reduce) { .terminal-cursor { animation: none; } }

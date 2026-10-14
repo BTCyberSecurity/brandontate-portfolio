@@ -1,3 +1,4 @@
+import RecoveryTerminal from "@/components/RecoveryTerminal";
 import "server-only";
 import { cloneElement, isValidElement, type ReactNode, type ReactElement } from "react";
 import Header from "@/components/Header";
@@ -11,7 +12,7 @@ export function localizePage(node: ReactNode, locale: Locale): ReactNode {
   if (Array.isArray(node)) return node.map(child => localizePage(child, locale));
   if (!isValidElement(node)) return node;
   const element = node as ReactElement<Record<string, unknown>>;
-  if (element.type === Header) return cloneElement(element, { locale });
+  if (element.type === Header || element.type === RecoveryTerminal) return cloneElement(element, { locale });
   if (typeof element.type === "function" && !("$$typeof" in element.type)) {
     return localizePage((element.type as (props: Record<string, unknown>) => ReactNode)({ ...element.props, locale }), locale);
   }

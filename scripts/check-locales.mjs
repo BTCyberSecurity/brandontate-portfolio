@@ -24,7 +24,7 @@ function visit(node) {
 visit(editorial);
 const currentCopy = new Set(source);
 const filesIn = directory => fs.readdirSync(directory, { withFileTypes: true }).flatMap(entry => entry.isDirectory() ? filesIn(`${directory}/${entry.name}`) : [`${directory}/${entry.name}`]);
-const copyFiles = [...filesIn('src/app/(english)').filter(file => file.endsWith('page.tsx') || file.endsWith('not-found.tsx')), ...filesIn('src/components').filter(file => file.endsWith('.tsx') && !/Header|SiteLayout/.test(file)), ...filesIn('src/data').filter(file => file.endsWith('.ts'))];
+const copyFiles = [...filesIn('src/app/(english)').filter(file => file.endsWith('page.tsx') || file.endsWith('not-found.tsx')), ...filesIn('src/components').filter(file => file.endsWith('.tsx') && !/Header|SiteLayout|RecoveryTerminal/.test(file)), ...filesIn('src/data').filter(file => file.endsWith('.ts'))];
 for (const file of copyFiles) {
   const tree = ts.createSourceFile(file, fs.readFileSync(file, 'utf8'), ts.ScriptTarget.Latest, true, file.endsWith('.tsx') ? ts.ScriptKind.TSX : ts.ScriptKind.TS);
   const add = text => {
