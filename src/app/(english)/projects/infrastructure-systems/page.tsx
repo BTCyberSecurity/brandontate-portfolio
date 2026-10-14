@@ -1,3 +1,4 @@
+import ProjectSummary from "@/components/ProjectSummary";
 import ProjectEvidence from "@/components/ProjectEvidence";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
@@ -261,6 +262,7 @@ export default function InfrastructureSystemsPage() {
           </div>
         </div>
       </section>
+    <ProjectSummary slug="infrastructure-systems" />
       <ProjectEvidence project="infrastructure-systems" />
 
       {/* Overview */}

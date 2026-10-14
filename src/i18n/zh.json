@@ -988,5 +988,16 @@
   "Greenbone Community Edition (OpenVAS)": "Greenbone Community Edition (OpenVAS)",
   "Qualys Community Edition": "Qualys Community Edition",
   "OCS Inventory NG is a proposed self-hosted inventory layer for hardware and installed software. Compare its records with Action1 to identify missing devices and stale data; it does not replace vulnerability scanning or uptime monitoring.": "计划使用自托管的 OCS Inventory NG 记录硬件和已安装软件.将其记录与 Action1 对比，发现遗漏设备和过期数据；它不能替代漏洞扫描或可用性监控。",
-  "OCS Inventory NG": "OCS Inventory NG"
+  "OCS Inventory NG": "OCS Inventory NG",
+  "Outside of Work": "工作之外",
+  "Under construction": "正在建设",
+  "Coming soon": "即将上线",
+  "Family, hobbies, and life beyond technology. Coming soon.": "家庭、爱好与科技之外的生活。即将上线。",
+  "Project at a Glance": "项目概览",
+  "My Role": "我的角色",
+  "Independent lab research, design, and documentation.": "独立进行实验室研究、设计和文档编写。",
+  "Next Milestone": "下一里程碑",
+  "Case Study Source (Portfolio) ↗": "案例源代码（作品集）↗",
+  "Implementation repository: not yet published.": "实现代码仓库：尚未发布。",
+  "Documented Work": "已记录的工作"
 }

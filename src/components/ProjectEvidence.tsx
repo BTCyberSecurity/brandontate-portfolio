@@ -24,14 +24,14 @@ export default function ProjectEvidence({ project }: { project: EvidenceProject 
       </figure>
       <div className="mt-8 grid gap-8 lg:grid-cols-2">
         <div>
-          <h3 className="text-xl font-black text-[#102F46]">Documented Outcomes</h3>
+          <h3 className="text-xl font-black text-[#102F46]">Documented Work</h3>
           <ul className="mt-4 list-disc space-y-3 pl-5 leading-7 text-[#456174]">{evidence.outcomes.map(outcome => <li key={outcome}>{outcome}</li>)}</ul>
         </div>
         <div>
           <h3 className="text-xl font-black text-[#102F46]">Next Evidence to Publish</h3>
           <p className="mt-4 leading-7 text-[#456174]">{evidence.next}</p>
           <div className="mt-5 flex flex-wrap gap-4">
-            <a href={source} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-[#28638F]">View Case Study Source ↗</a>
+            <a href={source} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-[#28638F]">Case Study Source (Portfolio) ↗</a>
             <Link href={evidence.article} className="text-sm font-bold text-[#28638F]">Read Related Notes →</Link>
           </div>
           <p className="mt-3 text-xs leading-6 text-[#456174]">The source link contains this published case study, not a separate implementation repository.</p>

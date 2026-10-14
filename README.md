@@ -22,7 +22,7 @@ Notebook cards link to the relevant existing article or project documentation.
 
 ## Languages
 
-All 17 content pages are available in English, Spanish, Japanese, Russian,
+All 18 pages are available in English, Spanish, Japanese, Russian,
 Mandarin (Simplified Chinese), and Hindi:
 
 - English: `/` and the existing unprefixed routes.

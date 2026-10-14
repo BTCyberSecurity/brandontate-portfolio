@@ -92,16 +92,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="mt-16 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {new Date().getFullYear()} Brandon Tate
-          </p>
-
-          <p>
-            Infrastructure · Security · Automation · Leadership
-          </p>
-        </div>
       </div>
     </section>
   );

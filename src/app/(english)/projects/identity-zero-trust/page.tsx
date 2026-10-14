@@ -1,3 +1,4 @@
+import ProjectSummary from "@/components/ProjectSummary";
 import ProjectEvidence from "@/components/ProjectEvidence";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
@@ -213,6 +214,7 @@ export default function IdentityZeroTrustPage() {
           </div>
         </div>
       </section>
+    <ProjectSummary slug="identity-zero-trust" />
       <ProjectEvidence project="identity-zero-trust" />
 
       {/* Overview */}

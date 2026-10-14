@@ -1,3 +1,4 @@
+import { projectEvidence } from "./project-evidence";
 export type ProjectStatus =
   | "Production Experience"
   | "Active Lab"
@@ -39,8 +40,7 @@ export const projects: Project[] = [
     shortTitle: "Identity & Access",
     description:
       "Building a simulated enterprise identity environment focused on access control, MFA, Conditional Access, privileged access, lifecycle management, and Zero Trust principles.",
-    evidence:
-      "Conditional Access policies, MFA enforcement, RBAC scenarios, account lifecycle testing, and privileged access workflows.",
+    evidence: projectEvidence["identity-zero-trust"].summary,
     status: "In Development",
     technologies: [
       "Microsoft Entra ID",
@@ -56,8 +56,7 @@ export const projects: Project[] = [
     shortTitle: "AI Lab",
     description:
       "Designing and operating private AI infrastructure for local language models, GPU experimentation, remote administration, automation, and security-focused AI workflows.",
-    evidence:
-      "Headless Linux AI server, NVIDIA GPU acceleration, Ollama model hosting, Docker services, remote administration, and local LLM testing.",
+    evidence: projectEvidence["private-ai-infrastructure"].summary,
     status: "Active Lab",
     technologies: [
       "Linux",
@@ -73,8 +72,7 @@ export const projects: Project[] = [
     shortTitle: "Infrastructure",
     description:
       "A hands-on environment for storage, networking, Linux, containers, remote access, monitoring, resilience, and troubleshooting infrastructure failures.",
-    evidence:
-      "TrueNAS and ZFS storage, Linux services, container workloads, network troubleshooting, remote access, resiliency testing, and recovery work.",
+    evidence: projectEvidence["infrastructure-systems"].summary,
     status: "Active Lab",
     technologies: [
       "TrueNAS",
@@ -90,8 +88,7 @@ export const projects: Project[] = [
     shortTitle: "SentinelForge",
     description:
       "Exploring how local AI can support security operations by analyzing logs, summarizing incidents, classifying events, and assisting with response workflows.",
-    evidence:
-      "Security event classification, log summarization, incident-response assistance, local AI experimentation, and planned Python and PowerShell automation.",
+    evidence: projectEvidence.sentinelforge.summary,
     status: "Research",
     technologies: [
       "SIEM",

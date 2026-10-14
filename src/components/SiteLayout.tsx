@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
@@ -80,6 +81,7 @@ export function SiteLayout({
       <body className="min-h-full flex flex-col">
   <a href="#main-content" className="skip-link">{navigationCopy[locale].skip}</a>
   {children}
+  <Footer locale={locale} />
   <Analytics />
   <SpeedInsights />
 </body>

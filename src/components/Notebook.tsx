@@ -38,8 +38,8 @@ export default function Notebook() {
         </div>
 
         {/* Entries */}
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {entries.map((entry, index) => (
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
+          {entries.slice(0, 2).map((entry, index) => (
             <article
               key={entry.title}
               className="group flex min-h-[320px] flex-col rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition duration-300 hover:-translate-y-1 hover:border-[#D6A85F]/50 hover:bg-white/[0.06] sm:min-h-[340px] sm:p-6"
@@ -86,38 +86,6 @@ export default function Notebook() {
           ))}
         </div>
 
-        {/* Notebook philosophy */}
-        <div className="mt-10 grid gap-5 border-t border-white/10 pt-8 sm:grid-cols-3">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#79B8AE]">
-              Document
-            </p>
-
-            <p className="mt-2 text-sm leading-6 text-white/60">
-              Capture what worked, what failed, and why.
-            </p>
-          </div>
-
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#79B8AE]">
-              Understand
-            </p>
-
-            <p className="mt-2 text-sm leading-6 text-white/60">
-              Go beyond the fix and understand the system behind it.
-            </p>
-          </div>
-
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#79B8AE]">
-              Improve
-            </p>
-
-            <p className="mt-2 text-sm leading-6 text-white/60">
-              Turn every problem into reusable knowledge.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

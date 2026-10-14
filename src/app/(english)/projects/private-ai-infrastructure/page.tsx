@@ -1,3 +1,4 @@
+import ProjectSummary from "@/components/ProjectSummary";
 import ProjectEvidence from "@/components/ProjectEvidence";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
@@ -67,6 +68,7 @@ export default function PrivateAIInfrastructurePage() {
           </div>
         </div>
       </section>
+    <ProjectSummary slug="private-ai-infrastructure" />
       <ProjectEvidence project="private-ai-infrastructure" />
 
       {/* Overview */}

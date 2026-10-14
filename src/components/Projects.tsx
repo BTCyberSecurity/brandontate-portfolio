@@ -54,8 +54,8 @@ export default function Projects() {
           </Link>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {sortProjects(projects).map((project, index) => (
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {sortProjects(projects).slice(0, 3).map((project, index) => (
             <article
               key={project.title}
               className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#CCD6DA] bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7"
@@ -94,7 +94,7 @@ export default function Projects() {
               {project.evidence && (
                 <div className="mt-5 rounded-xl border border-[#DCE4E7] bg-[#F7F8F6] px-4 py-3">
                   <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#805B1F]">
-                    Hands-On Work
+                    Implementation Status
                   </p>
 
                   <p className="mt-1 text-sm leading-6 text-[#456174]">

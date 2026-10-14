@@ -1,89 +1,10 @@
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import Header from "@/components/Header";
+import { projects } from "@/data/projects";
 import { sortProjects } from "@/lib/project-order";
 
-const projects = [
-  {
-    category: "Operations",
-    title: "Household System Health Lab",
-    status: "Research",
-    description: "Planning household system health tracking through asset inventory, patch management, vulnerability assessment, and verified remediation.",
-    href: "/projects/household-system-health",
-    stack: ["OCS Inventory NG", "Action1", "Greenbone Community Edition (OpenVAS)", "Qualys Community Edition"],
-  },
-  {
-    category: "Network Security",
-    title: "Network Segmentation Lab",
-    status: "In Development",
-    description: "OPNsense installation completed; VLAN configuration, access controls, and recovery validation are planned.",
-    href: "/projects/network-segmentation",
-    stack: ["OPNsense", "VLANs", "UniFi", "Firewall Rules"],
-  },
-  {
-    category: "Identity & Access",
-    title: "Identity & Zero Trust Lab",
-    status: "In Development",
-    description:
-      "A hands-on lab focused on Microsoft Entra ID, MFA, Conditional Access, RBAC, least privilege, account lifecycle, privileged access, and Zero Trust design.",
-    href: "/projects/identity-zero-trust",
-    stack: [
-      "Microsoft Entra ID",
-      "MFA",
-      "Conditional Access",
-      "RBAC",
-      "Zero Trust",
-    ],
-  },
-  {
-    category: "Private AI",
-    title: "Private AI Infrastructure",
-    status: "Active Lab",
-    description:
-      "A locally controlled AI environment built around Linux, NVIDIA acceleration, Docker, Ollama, Open WebUI, private remote access, and iterative troubleshooting.",
-    href: "/projects/private-ai-infrastructure",
-    stack: [
-      "Ubuntu Server",
-      "NVIDIA",
-      "Docker",
-      "Ollama",
-      "Open WebUI",
-      "Tailscale",
-    ],
-  },
-  {
-    category: "Infrastructure",
-    title: "Infrastructure & Systems Lab",
-    status: "Active Lab",
-    description:
-      "Hands-on systems work across TrueNAS, ZFS, Linux, storage, containers, media services, permissions, networking, troubleshooting, and recovery.",
-    href: "/projects/infrastructure-systems",
-    stack: [
-      "TrueNAS",
-      "ZFS",
-      "Linux",
-      "Docker",
-      "Networking",
-      "Storage",
-    ],
-  },
-  {
-    category: "Security Operations Research",
-    title: "SentinelForge",
-    status: "Research",
-    description:
-      "Exploring how locally controlled AI can assist security operations through event classification, log summarization, incident-response support, and controlled automation.",
-    href: "/projects/sentinelforge",
-    stack: [
-      "Security Operations",
-      "Local AI",
-      "Log Analysis",
-      "Python",
-      "PowerShell",
-      "Automation",
-    ],
-  },
-];
+
 
 const themes = [
   {
@@ -175,7 +96,7 @@ others are still in active development or research.
               >
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#28638F]">
-                    {project.category}
+                    {project.shortTitle}
                   </p>
 
                   <span
@@ -200,7 +121,7 @@ others are still in active development or research.
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {project.stack.map((item) => (
+                  {project.technologies.map((item) => (
                     <span
                       key={item}
                       className="rounded-md bg-[#F1F3F2] px-3 py-1.5 text-xs font-semibold text-[#456174]"

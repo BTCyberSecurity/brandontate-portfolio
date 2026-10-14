@@ -1,36 +1,5 @@
 import Link from "next/link";
-const strengths = [
-  {
-    icon: "☁",
-    title: "Infrastructure",
-    detail: "Build · Deploy · Support",
-  },
-  {
-    icon: "◇",
-    title: "Identity & Access",
-    detail: "Entra ID · IAM · GRC",
-  },
-  {
-    icon: "◎",
-    title: "Automation",
-    detail: "Script · Integrate · Scale",
-  },
-  {
-    icon: "⚙",
-    title: "Operations",
-    detail: "Systems · Vendors · Teams",
-  },
-  {
-    icon: "✦",
-    title: "Problem Solving",
-    detail: "Diagnose · Fix · Improve",
-  },
-  {
-    icon: "↗",
-    title: "Continuous Learning",
-    detail: "Security · Cloud · AI",
-  },
-];
+
 
 export default function About() {
   return (
@@ -38,7 +7,7 @@ export default function About() {
       id="about"
       className="scroll-mt-24 bg-[#F4F1EA]"
     >
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-16 lg:grid-cols-[.9fr_1.1fr] lg:px-8 lg:py-16">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-16  lg:px-8 lg:py-16">
         {/* About copy */}
         <div>
           <div className="flex items-center gap-2">
@@ -76,27 +45,6 @@ export default function About() {
           </Link>
         </div>
 
-        {/* Capability grid */}
-        <div className="grid grid-cols-2 border-l border-t border-[#C9D3D8] sm:grid-cols-3">
-          {strengths.map((strength) => (
-            <div
-              key={strength.title}
-              className="flex min-h-36 flex-col items-center justify-center border-b border-r border-[#C9D3D8] px-4 text-center"
-            >
-              <span className="mb-3 text-3xl text-[#147BC1]">
-                {strength.icon}
-              </span>
-
-              <h3 className="text-sm font-bold text-[#102F46]">
-                {strength.title}
-              </h3>
-
-              <p className="mt-1 text-xs text-[#506879]">
-                {strength.detail}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

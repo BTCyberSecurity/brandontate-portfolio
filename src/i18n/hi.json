@@ -476,7 +476,7 @@
   "Explore Project →": "प्रोजेक्ट का अन्वेषण करें →",
   "Project Themes": "प्रोजेक्ट थीम्स",
   "What Connects the Work": "कार्य को क्या जोड़ता है",
-  "Purpose": "प्रयोजन",
+  "Purpose": "उद्देश्य",
   "Proof of Work, Not Just a Skills List": "कार्य का प्रमाण, केवल कौशल सूची नहीं",
   "Ubuntu Server LTS": "Ubuntu Server LTS",
   "NVIDIA RTX 5070 Ti": "NVIDIA RTX 5070 Ti",
@@ -988,5 +988,16 @@
   "Greenbone Community Edition (OpenVAS)": "Greenbone Community Edition (OpenVAS)",
   "Qualys Community Edition": "Qualys Community Edition",
   "OCS Inventory NG is a proposed self-hosted inventory layer for hardware and installed software. Compare its records with Action1 to identify missing devices and stale data; it does not replace vulnerability scanning or uptime monitoring.": "OCS Inventory NG हार्डवेयर और स्थापित सॉफ़्टवेयर के लिए प्रस्तावित स्वयं होस्ट की जाने वाली सूची प्रणाली है। लापता उपकरण और पुराने डेटा पहचानने के लिए उसके रिकॉर्ड Action1 से मिलाएँ; यह भेद्यता स्कैनिंग या उपलब्धता निगरानी का विकल्प नहीं है.",
-  "OCS Inventory NG": "OCS Inventory NG"
+  "OCS Inventory NG": "OCS Inventory NG",
+  "Outside of Work": "काम के अलावा",
+  "Under construction": "निर्माणाधीन",
+  "Coming soon": "जल्द आ रहा है",
+  "Family, hobbies, and life beyond technology. Coming soon.": "परिवार, शौक और तकनीक से परे जीवन। जल्द आ रहा है।",
+  "Project at a Glance": "परियोजना एक नज़र में",
+  "My Role": "मेरी भूमिका",
+  "Independent lab research, design, and documentation.": "स्वतंत्र लैब अनुसंधान, डिज़ाइन और दस्तावेज़ीकरण।",
+  "Next Milestone": "अगला पड़ाव",
+  "Case Study Source (Portfolio) ↗": "केस स्टडी का स्रोत (पोर्टफोलियो) ↗",
+  "Implementation repository: not yet published.": "कार्यान्वयन रिपॉज़िटरी: अभी प्रकाशित नहीं हुई है।",
+  "Documented Work": "दस्तावेज़ीकृत कार्य"
 }

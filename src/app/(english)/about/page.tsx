@@ -90,6 +90,9 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <div className="mx-auto flex max-w-7xl flex-wrap gap-6 px-6 py-6 text-sm font-bold text-[#28638F]">
+        <Link href="/security">Security</Link><Link href="/certifications">Certifications</Link><Link href="/about/outside-of-work">Outside of Work</Link>
+      </div>
       {/* Story */}
       <section className="px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.75fr_1.25fr]">

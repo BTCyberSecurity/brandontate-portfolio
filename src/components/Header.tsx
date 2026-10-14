@@ -10,25 +10,32 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
   const pathname = usePathname();
   const pagePath = locale === "en" ? pathname : pathname.replace(new RegExp(`^/${locale}(?=/|$)`), "") || "/";
   const menuButton = useRef<HTMLButtonElement>(null);
+  const aboutButton = useRef<HTMLButtonElement>(null);
+  const [aboutOpen, setAboutOpen] = useState(false);
   const languageButton = useRef<HTMLButtonElement>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
 
   const navItems = [
-    { label: copy.about, href: localizedPath(locale, "/about") },
-    { label: copy.security, href: localizedPath(locale, "/security") },
     { label: copy.projects, href: localizedPath(locale, "/projects") },
     { label: copy.experience, href: localizedPath(locale, "/experience") },
     { label: copy.writing, href: localizedPath(locale, "/writing") },
-    { label: copy.certifications, href: localizedPath(locale, "/certifications") },
     { label: copy.contact, href: localizedPath(locale, "/contact") },
   ];
 
+  const aboutItems = [
+    { label: copy.about, href: localizedPath(locale, "/about") },
+    { label: copy.security, href: localizedPath(locale, "/security") },
+    { label: copy.certifications, href: localizedPath(locale, "/certifications") },
+    { label: copy.outside, href: localizedPath(locale, "/about/outside-of-work") },
+  ];
+  const active = (href: string) => pathname === href || pathname.startsWith(href + "/");
   const languages = locales.map(language => ({ code: language.toUpperCase(), tag: languageTags[language], label: languageNames[language], href: localizedPath(language, pagePath) }));
 
   return (
-    <header onKeyDown={(event) => {
+    <header onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) { setAboutOpen(false); setLanguageOpen(false); } }} onKeyDown={(event) => {
       if (event.key === "Escape") {
+        if (aboutOpen) { setAboutOpen(false); aboutButton.current?.focus(); }
         if (menuOpen) { setMenuOpen(false); menuButton.current?.focus(); }
         if (languageOpen) { setLanguageOpen(false); languageButton.current?.focus(); }
       }
@@ -49,11 +56,18 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
 
         {/* Desktop navigation */}
         <nav aria-label={copy.toggleMenu} className="hidden items-center gap-4 text-sm text-white/75 xl:flex">
+          <div className="relative" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setAboutOpen(false); }}>
+            <button type="button" ref={aboutButton} aria-expanded={aboutOpen} aria-controls="about-navigation" onClick={() => { setAboutOpen(!aboutOpen); setLanguageOpen(false); }} className={"rounded-md px-2 py-3 font-semibold " + (aboutItems.some(item => active(item.href)) ? "text-[#E5B45E] underline underline-offset-8" : "text-white/75")}>{copy.about} ▾</button>
+            <div id="about-navigation" hidden={!aboutOpen} className="absolute left-0 top-full w-56 rounded-xl border border-white/20 bg-[#102F46] p-2 shadow-xl">
+              {aboutItems.map(item => <Link key={item.href} href={item.href} aria-current={pathname === item.href ? "page" : undefined} onClick={() => setAboutOpen(false)} className="block rounded-md px-3 py-3 hover:bg-white/10 aria-[current=page]:text-[#E5B45E] aria-[current=page]:underline">{item.label}</Link>)}
+            </div>
+          </div>
           {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="transition hover:text-white"
+              aria-current={pathname === item.href ? "page" : undefined}
+              className={`transition hover:text-white ${active(item.href) ? "text-[#E5B45E] underline underline-offset-8" : ""}`}
             >
               {item.label}
             </Link>
@@ -76,7 +90,7 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
           <div className="relative">
             <button
               type="button"
-              onClick={() => setLanguageOpen((open) => !open)}
+              onClick={() => { setLanguageOpen((open) => !open); setAboutOpen(false); }}
               className="inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-2.5 text-sm font-semibold text-white/85 transition hover:bg-white/10 hover:text-white"
               ref={languageButton}
               aria-controls="language-options"
@@ -167,12 +181,13 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
       >
         <nav aria-label={copy.toggleMenu} className="mx-auto max-w-7xl px-6 py-5">
           <div className="divide-y divide-white/10">
-            {navItems.map((item) => (
+            {[...aboutItems, ...navItems].map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
                 onClick={() => setMenuOpen(false)}
-                className="group flex items-center justify-between py-3.5 text-sm font-semibold text-white/75 transition hover:text-white"
+                className="group flex items-center justify-between py-3.5 text-sm font-semibold text-white/75 transition hover:text-white aria-[current=page]:text-[#E5B45E] aria-[current=page]:underline"
               >
                 <span>{item.label}</span>
 

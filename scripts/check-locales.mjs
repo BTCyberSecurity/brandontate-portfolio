@@ -41,7 +41,7 @@ for (const file of copyFiles) {
   };
   collect(tree);
 }
-const routes = ['/', '/about', '/security', '/projects', '/experience', '/writing', '/certifications', '/contact', '/projects/identity-zero-trust', '/projects/private-ai-infrastructure', '/projects/infrastructure-systems', '/projects/sentinelforge', '/projects/network-segmentation', '/projects/household-system-health', '/writing/building-private-ai', '/writing/mfa-fatigue', '/writing/segmented-home-lab'];
+const routes = ['/', '/about', '/about/outside-of-work', '/security', '/projects', '/experience', '/writing', '/certifications', '/contact', '/projects/identity-zero-trust', '/projects/private-ai-infrastructure', '/projects/infrastructure-systems', '/projects/sentinelforge', '/projects/network-segmentation', '/projects/household-system-health', '/writing/building-private-ai', '/writing/mfa-fatigue', '/writing/segmented-home-lab'];
 const pathFor = (locale, path) => locale === 'en' ? path : `/${locale}${path === '/' ? '' : path}`;
 const baseUrl = process.argv[2];
 const decode = text => text.replace(/&#x([\da-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n,16))).replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&apos;', "'").replaceAll('&lt;', '<').replaceAll('&gt;', '>');
@@ -65,6 +65,7 @@ for (const locale of locales) {
     }
     assert(html.includes(`lang="${languageTags[locale]}"`), `${path}: document language`);
     assert(html.includes(`rel="canonical" href="https://www.brandontate.info${path === '/' ? '' : path}"`), `${path}: canonical`);
+    if (route === '/about/outside-of-work') assert(html.includes('content="noindex, follow"'), `${path}: placeholder noindex`);
     assert(html.includes('id="main-content"'), `${path}: skip-link target`);
     if (route.startsWith('/writing/')) {
       const schema = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
@@ -74,7 +75,7 @@ for (const locale of locales) {
       assert.equal(article.inLanguage,languageTags[locale],`${path}: schema language`);
       assert.equal(article.url,`https://www.brandontate.info${path}`,`${path}: schema URL`);
     }
-    assert(!html.includes('coming soon'), `${path}: unavailable language`);
+    assert(route === '/about/outside-of-work' || !html.includes('coming soon'), `${path}: unavailable language`);
     const hrefs = [...html.matchAll(/href="([^"#]+)"/g)].map(match => decode(match[1]));
     for (const alternate of locales) {
       assert(hrefs.includes(pathFor(alternate,route)), `${path}: switch to equivalent ${alternate} page`);
@@ -96,7 +97,8 @@ for (const locale of locales) {
   }
 }
 const sitemap = fs.readFileSync('.next/server/app/sitemap.xml.body','utf8');
-assert.equal((sitemap.match(/<loc>/g)||[]).length,routes.length * locales.length);
+assert.equal((sitemap.match(/<loc>/g)||[]).length,(routes.length - 1) * locales.length);
+assert(!sitemap.includes('/about/outside-of-work'), 'Placeholder excluded from sitemap');
 assert(fs.existsSync('.next/server/app/opengraph-image.body'), 'Stable social-preview route');
 if (baseUrl) {
   for (const path of [...locales.filter(locale => locale !== 'en').map(locale => `/${locale}/not-a-page`), '/fr']) {

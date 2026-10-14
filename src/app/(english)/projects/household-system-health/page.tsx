@@ -1,3 +1,4 @@
+import ProjectSummary from "@/components/ProjectSummary";
 import Header from "@/components/Header";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/metadata";
@@ -16,6 +17,7 @@ export default function HouseholdSystemHealthPage() {
         <span className="mt-6 inline-block rounded-full border border-white/30 px-4 py-2 text-sm font-bold">Research</span>
       </div>
     </section>
+    <ProjectSummary slug="household-system-health" />
     <section className="px-6 py-16 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-3xl font-black">Implementation Status</h2>

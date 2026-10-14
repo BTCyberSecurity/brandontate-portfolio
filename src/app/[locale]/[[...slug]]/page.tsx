@@ -1,3 +1,4 @@
+import OutsideOfWork, { metadata as outsideMetadata } from "@/app/(english)/about/outside-of-work/page";
 import { notFound } from "next/navigation";
 import HouseholdHealth, { metadata as householdMetadata } from "@/app/(english)/projects/household-system-health/page";
 import NetworkSegmentation, { metadata as networkMetadata } from "@/app/(english)/projects/network-segmentation/page";
@@ -22,6 +23,7 @@ import { translate } from "@/lib/translate";
 import { pageMetadata, pagePaths } from "@/lib/metadata";
 
 const pages = {
+  "/about/outside-of-work": [OutsideOfWork, outsideMetadata],
   "/projects/household-system-health": [HouseholdHealth, householdMetadata],
   "/projects/network-segmentation": [NetworkSegmentation, networkMetadata],
   "/writing/building-private-ai": [AIBuild, aiBuildMetadata], "/writing/mfa-fatigue": [MFAArticle, mfaMetadata], "/writing/segmented-home-lab": [SegmentationArticle, segmentationMetadata],
@@ -44,7 +46,7 @@ export function generateStaticParams() {
 }
 export async function generateMetadata({ params }: { params: Promise<PageParams> }) {
   const { locale, path, page } = resolve(await params);
-  return pageMetadata(localizedPath(locale, path), { title: translate(locale, String(page[1].title)), description: translate(locale, page[1].description ?? "") });
+  return { ...pageMetadata(localizedPath(locale, path), { title: translate(locale, String(page[1].title)), description: translate(locale, page[1].description ?? "") }), ...(path === "/about/outside-of-work" ? { robots: { index: false, follow: true } } : {}) };
 }
 export default async function LocalizedPage({ params }: { params: Promise<PageParams> }) {
   const { locale, page } = resolve(await params);
