@@ -128,7 +128,7 @@ export default function PrivateAIInfrastructurePage() {
               {
   number: "01",
   title: "Compute",
-  text: "Intel Xeon E5-2699 v4 server platform with NVIDIA RTX 5070 Ti acceleration for local AI workloads.",
+  text: "AMD Ryzen 7 5800XT server platform with NVIDIA RTX 5070 Ti acceleration for local AI workloads.",
 },
               {
                 number: "02",
@@ -186,11 +186,11 @@ export default function PrivateAIInfrastructurePage() {
               {[
                 {
   label: "CPU",
-  value: "Intel Xeon E5-2699 v4",
+  value: "AMD Ryzen 7 5800XT",
 },
 {
   label: "Motherboard",
-  value: "ASUS X99-DELUXE II",
+  value: "ASUS TUF GAMING X570-PLUS (WI-FI)",
 },
 {
   label: "Memory",
@@ -265,8 +265,8 @@ export default function PrivateAIInfrastructurePage() {
                 </p>
 
                 <p className="mt-2 text-sm leading-6 text-[#456174]">
-                  The dedicated AI server is built around the ASUS
-                  X99-DELUXE II, Intel Xeon E5-2699 v4, 128 GB of DDR4
+                  The dedicated AI server is built around the AMD
+                  Ryzen 7 5800XT, 128 GB of DDR4
                   memory, and an NVIDIA RTX 5070 Ti. Core Linux, GPU
                   acceleration, model runtime, container, and remote
                   administration workflows are established, with additional
@@ -306,7 +306,7 @@ export default function PrivateAIInfrastructurePage() {
                 {
                   status: "Implemented",
                   title: "Dedicated AI Hardware",
-                  text: "Deployed the ASUS X99-DELUXE II and Intel Xeon E5-2699 v4 platform with 128 GB DDR4 and an RTX 5070 Ti.",
+                  text: "Deployed the AMD Ryzen 7 5800XT platform with 128 GB DDR4 and an RTX 5070 Ti.",
                 },
                 {
                   status: "Planned",

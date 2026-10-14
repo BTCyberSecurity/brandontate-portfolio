@@ -40,7 +40,11 @@ const architecture = [
 const hardware = [
   {
     label: "CPU",
-    value: "Ryzen 9 5900-series",
+    value: "Intel Xeon E5-2699 v4",
+  },
+  {
+    label: "Motherboard",
+    value: "ASUS X99-DELUXE II",
   },
   {
     label: "Memory",
