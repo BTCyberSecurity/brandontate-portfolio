@@ -1,6 +1,7 @@
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import Header from "@/components/Header";
+import { sortProjects } from "@/lib/project-order";
 
 const projects = [
   {
@@ -166,7 +167,7 @@ others are still in active development or research.
           </p>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {projects.map((project) => (
+            {sortProjects(projects).map((project) => (
               <Link
                 key={project.title}
                 href={project.href}

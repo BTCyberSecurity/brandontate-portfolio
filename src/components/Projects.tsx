@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { projects } from "@/data/projects";
+import { sortProjects } from "@/lib/project-order";
 
 function statusStyles(status: string) {
   switch (status) {
@@ -54,7 +55,7 @@ export default function Projects() {
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {projects.map((project, index) => (
+          {sortProjects(projects).map((project, index) => (
             <article
               key={project.title}
               className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#CCD6DA] bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7"
