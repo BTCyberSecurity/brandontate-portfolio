@@ -4,6 +4,14 @@ import Header from "@/components/Header";
 
 const projects = [
   {
+    category: "Network Security",
+    title: "Network Segmentation Lab",
+    status: "In Development",
+    description: "OPNsense installation completed; VLAN configuration, access controls, and recovery validation are planned.",
+    href: "/projects/network-segmentation",
+    stack: ["OPNsense", "VLANs", "UniFi", "Firewall Rules"],
+  },
+  {
     category: "Identity & Access",
     title: "Identity & Zero Trust Lab",
     status: "In Development",

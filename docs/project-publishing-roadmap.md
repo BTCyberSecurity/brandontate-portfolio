@@ -11,6 +11,7 @@ screenshots, benchmarks, or quantitative results are implied.
 | --- | --- | --- | --- |
 | 1 | `private-ai-infrastructure` | Documented host and service setup with example configuration | Redacted service/GPU screenshots, topology, dependency checklist, benchmark conditions and observed timings |
 | 2 | `infrastructure-systems-lab` | Network and storage dependency inventory plus a recovery runbook | Sanitized topology, permitted/denied traffic matrix, observed connectivity checks, timed restore exercise |
+| 2a | `network-segmentation-lab` | Working OPNsense/VLAN setup with sanitized examples and operating instructions | Use `network-segmentation-validation.md` to record interface detection, allowed/denied traffic, administrative access, USB reliability, and recovery results; all tests currently pending |
 | 3 | `identity-zero-trust-lab` | Role matrix and one reproducible authentication scenario | Sanitized policy exports, synthetic users, expected/observed access results, sign-in screenshots without tenant or user identifiers |
 | 4 | `sentinelforge` | Synthetic event fixtures and a baseline evaluation harness | Input schema, expected labels, model/prompt versions, quality rubric, observed accuracy and failure examples |
 

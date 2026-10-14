@@ -17,6 +17,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Network Segmentation Lab",
+    shortTitle: "Network Security",
+    description: "Building a dedicated OPNsense firewall and a segmented lab while keeping household connectivity on eero.",
+    evidence: "OPNsense installation completed; VLAN configuration, access controls, and recovery validation are planned.",
+    status: "In Development",
+    technologies: ["OPNsense", "VLANs", "UniFi", "Firewall Rules"],
+    href: "/projects/network-segmentation",
+  },
+  {
     title: "Identity & Zero Trust Lab",
     shortTitle: "Identity & Access",
     description:

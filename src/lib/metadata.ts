@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { locales, languageTags, localizedPath, isTranslatedLocale } from "./locales";
 
 export const siteUrl = "https://www.brandontate.info";
-export const pagePaths = ["/", "/about", "/security", "/projects", "/experience", "/writing", "/certifications", "/contact", "/projects/identity-zero-trust", "/projects/private-ai-infrastructure", "/projects/infrastructure-systems", "/projects/sentinelforge", "/writing/building-private-ai", "/writing/mfa-fatigue", "/writing/segmented-home-lab"];
+export const pagePaths = ["/", "/about", "/security", "/projects", "/experience", "/writing", "/certifications", "/contact", "/projects/identity-zero-trust", "/projects/private-ai-infrastructure", "/projects/infrastructure-systems", "/projects/sentinelforge", "/projects/network-segmentation", "/writing/building-private-ai", "/writing/mfa-fatigue", "/writing/segmented-home-lab"];
 
 export function pageMetadata(path: string, details: { title: string; description: string } | string, description?: string): Metadata {
   const content = typeof details === "string" ? { title: details, description: description ?? "" } : details;
