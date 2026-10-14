@@ -22,7 +22,7 @@ Notebook cards link to the relevant existing article or project documentation.
 
 ## Languages
 
-All 16 content pages are available in English, Spanish, Japanese, Russian,
+All 17 content pages are available in English, Spanish, Japanese, Russian,
 Mandarin (Simplified Chinese), and Hindi:
 
 - English: `/` and the existing unprefixed routes.
@@ -36,7 +36,7 @@ The language selector retains the equivalent page when switching languages.
 Internal page links retain the locale; shared assets and the English résumé
 stay at their original URLs. Each document declares its own `lang`, localized
 metadata, self-canonical URL, and language alternates. The sitemap includes
-all 96 content URLs. Content pages remain statically generated.
+all 102 content URLs. Content pages remain statically generated.
 
 The original English page files now live under `src/app/(english)`;
 this route group does not change their public URLs. Separate root layouts
@@ -57,7 +57,7 @@ and any applicable editorial overrides. For a new page, add it to `pagePaths`
 and the localized renderer's page registry. The locale check also scans the
 English source to catch new untranslated copy.
 
-After building, run `npm run check:locales` to validate catalogs and all 96
+After building, run `npm run check:locales` to validate catalogs and all 102
 production page artifacts. With a production server running, append its URL:
 
 ```powershell
@@ -99,6 +99,16 @@ checklist are in `docs/project-publishing-roadmap.md`.
 project. Installation and interface detection are documented as completed
 work; the topology is proposed and all validation results remain pending.
 The working evidence checklist is `docs/network-segmentation-validation.md`.
+
+`/projects/household-system-health` is a planned household inventory, patch,
+vulnerability, and health-monitoring project. Action1 is proposed for supported
+endpoints, with self-hosted Greenbone Community Edition (OpenVAS) for vulnerability
+assessment and Qualys Community Edition as an optional free cloud alternative. No enrollment,
+scans, or measured results are claimed. Product licensing and platform support
+must be confirmed when implementation starts; no agents or accounts are created
+by adding this portfolio page.
+OCS Inventory NG is proposed for self-hosted hardware/software inventory and
+comparison with Action1 records; it does not replace availability monitoring.
 
 `/writing` is the notebook index. Its three dedicated articles are:
 

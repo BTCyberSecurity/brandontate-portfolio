@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import HouseholdHealth, { metadata as householdMetadata } from "@/app/(english)/projects/household-system-health/page";
 import NetworkSegmentation, { metadata as networkMetadata } from "@/app/(english)/projects/network-segmentation/page";
 import AIBuild, { metadata as aiBuildMetadata } from "@/app/(english)/writing/building-private-ai/page";
 import MFAArticle, { metadata as mfaMetadata } from "@/app/(english)/writing/mfa-fatigue/page";
@@ -21,6 +22,7 @@ import { translate } from "@/lib/translate";
 import { pageMetadata, pagePaths } from "@/lib/metadata";
 
 const pages = {
+  "/projects/household-system-health": [HouseholdHealth, householdMetadata],
   "/projects/network-segmentation": [NetworkSegmentation, networkMetadata],
   "/writing/building-private-ai": [AIBuild, aiBuildMetadata], "/writing/mfa-fatigue": [MFAArticle, mfaMetadata], "/writing/segmented-home-lab": [SegmentationArticle, segmentationMetadata],
   "/": [Home, homeMetadata], "/about": [About, aboutMetadata], "/security": [Security, securityMetadata],

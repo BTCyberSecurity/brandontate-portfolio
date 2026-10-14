@@ -17,6 +17,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Household System Health Lab",
+    shortTitle: "Operations",
+    description: "Planning household system health tracking through asset inventory, patch management, vulnerability assessment, and verified remediation.",
+    evidence: "This project is planned. Endpoint enrollment, scans, and measured results are not documented yet.",
+    status: "Research",
+    technologies: ["OCS Inventory NG", "Action1", "Greenbone Community Edition (OpenVAS)", "Qualys Community Edition"],
+    href: "/projects/household-system-health",
+  },
+  {
     title: "Network Segmentation Lab",
     shortTitle: "Network Security",
     description: "Building a dedicated OPNsense firewall and a segmented lab while keeping household connectivity on eero.",

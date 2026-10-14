@@ -4,6 +4,14 @@ import Header from "@/components/Header";
 
 const projects = [
   {
+    category: "Operations",
+    title: "Household System Health Lab",
+    status: "Research",
+    description: "Planning household system health tracking through asset inventory, patch management, vulnerability assessment, and verified remediation.",
+    href: "/projects/household-system-health",
+    stack: ["OCS Inventory NG", "Action1", "Greenbone Community Edition (OpenVAS)", "Qualys Community Edition"],
+  },
+  {
     category: "Network Security",
     title: "Network Segmentation Lab",
     status: "In Development",

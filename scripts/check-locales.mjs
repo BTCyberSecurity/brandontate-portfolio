@@ -41,7 +41,7 @@ for (const file of copyFiles) {
   };
   collect(tree);
 }
-const routes = ['/', '/about', '/security', '/projects', '/experience', '/writing', '/certifications', '/contact', '/projects/identity-zero-trust', '/projects/private-ai-infrastructure', '/projects/infrastructure-systems', '/projects/sentinelforge', '/projects/network-segmentation', '/writing/building-private-ai', '/writing/mfa-fatigue', '/writing/segmented-home-lab'];
+const routes = ['/', '/about', '/security', '/projects', '/experience', '/writing', '/certifications', '/contact', '/projects/identity-zero-trust', '/projects/private-ai-infrastructure', '/projects/infrastructure-systems', '/projects/sentinelforge', '/projects/network-segmentation', '/projects/household-system-health', '/writing/building-private-ai', '/writing/mfa-fatigue', '/writing/segmented-home-lab'];
 const pathFor = (locale, path) => locale === 'en' ? path : `/${locale}${path === '/' ? '' : path}`;
 const baseUrl = process.argv[2];
 const decode = text => text.replace(/&#x([\da-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n,16))).replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n))).replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&apos;', "'").replaceAll('&lt;', '<').replaceAll('&gt;', '>');
