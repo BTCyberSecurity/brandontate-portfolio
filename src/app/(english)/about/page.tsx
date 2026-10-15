@@ -139,6 +139,36 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="bg-[#E9ECE8] px-6 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-4xl font-black tracking-tight">Education</h2>
+          <p className="mt-5 max-w-3xl leading-7 text-[#506879]">My WGU degree is in progress. Earlier studies at DeVry, Tenri, and LIU did not result in a degree or certificate.</p>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <article className="rounded-2xl border border-[#CBD5D8] bg-white p-6">
+              <h3 className="text-xl font-black">Western Governors University</h3>
+              <p className="mt-3 leading-7 text-[#506879]">Bachelor of Science in Cybersecurity and Information Assurance — In progress</p>
+            </article>
+            <article className="rounded-2xl border border-[#CBD5D8] bg-white p-6">
+              <h3 className="text-xl font-black">DeVry University</h3>
+              <p className="mt-3 leading-7 text-[#506879]">Long Island City, NY · 2007–2010</p>
+              <p className="mt-3 leading-7 text-[#506879]">Studies in Computer Engineering Technology</p>
+            </article>
+            <article className="rounded-2xl border border-[#CBD5D8] bg-white p-6">
+              <h3 className="text-xl font-black">Tenri Cultural Institute</h3>
+              <p className="mt-3 leading-7 text-[#506879]">New York, NY · 2008–2010</p>
+              <p className="mt-3 leading-7 text-[#506879]">Japanese Studies</p>
+            </article>
+            <article className="rounded-2xl border border-[#CBD5D8] bg-white p-6">
+              <h3 className="text-xl font-black">Long Island University, Brooklyn Campus</h3>
+              <p className="mt-3 leading-7 text-[#506879]">Brooklyn, NY · 2002–2004</p>
+              <p className="mt-3 leading-7 text-[#506879]">Studies in Computer Science and Foreign Language</p>
+            </article>
+          </div>
+          <h3 className="mt-10 text-2xl font-black">Professional Development</h3>
+          <p className="mt-3 leading-7 text-[#506879]">Technology Practitioner — Armanino LLP</p>
+        </div>
+      </section>
+
       {/* Capabilities */}
       <section className="bg-[#E9ECE8] px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">

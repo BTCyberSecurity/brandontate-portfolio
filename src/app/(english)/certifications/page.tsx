@@ -3,8 +3,9 @@ import Link from "next/link";
 import Header from "@/components/Header";
 
 const completed = [
+  { name: "ITIL", description: "IT Service Management", detail: "Service management principles and practices.", },
   {
-    name: "CompTIA A+",
+    name: "CompTIA A+ (2018)",
     description: "Hardware, Software & Troubleshooting",
     detail:
       "Foundational troubleshooting, endpoint support, hardware, software, networking, and support methodology.",

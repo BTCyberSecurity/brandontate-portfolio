@@ -75,9 +75,7 @@ export default function Experience() {
               </p>
 
               <p className="mt-4 max-w-md text-sm leading-6 text-[#506879]">
-                Supporting multi-site hospitality technology environments
-                across operational systems, infrastructure, vendors,
-                end users, and enterprise platforms.
+                Leading technology operations for 34 hotels across infrastructure, service delivery, vendors, property systems, and access management.
               </p>
             </div>
           </div>

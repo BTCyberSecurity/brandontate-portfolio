@@ -150,37 +150,37 @@ const careerHistory = [
     period: "2023–Present",
     company: "Hyatt / Bunkhouse Group",
     role: "Area Manager of Information Technology",
-    text: "Promoted from Senior IT Support Specialist into multi-property IT leadership with responsibility across operations, infrastructure, support, vendors, projects, property technology, and security-related workflows.",
+    text: "Promoted from Senior IT Support Specialist to lead technology operations for 34 hotels, coordinating infrastructure, service delivery, vendors, property systems, and access management.",
   },
   {
     period: "2019–2023",
-    company: "Holtzman Partners / Armanino",
-    role: "IT Support & Professional Services",
-    text: "Supported professional-services environments with a strong emphasis on user support, Microsoft platforms, endpoint troubleshooting, account access, and reliable business technology.",
+    company: "Holtzman Partners / Armanino LLP",
+    role: "IT Systems Specialist",
+    text: "Administered Freshservice, endpoint security, Duo MFA, and FortiClient VPN. Supported onboarding, compliance requests, KnowBe4 training, accounting applications, and meeting-room technology.",
   },
   {
     period: "2018–2019",
-    company: "ZeniMax Media / Bethesda",
-    role: "IT Support",
-    text: "Provided technical support in a technology-driven environment where user productivity, endpoints, applications, and fast issue resolution were central to the role.",
+    company: "ZeniMax Media / Bethesda Softworks",
+    role: "IT Support Specialist",
+    text: "Supported game-development teams with Xbox and PlayStation development kits, Windows workstations, 3ds Max, and Photoshop. Managed account lifecycle tasks and hardware and software inventory.",
   },
   {
     period: "2017–2018",
     company: "Cirrus Logic",
-    role: "IT Support",
-    text: "Supported users and technology in a technical corporate environment, continuing to build depth in troubleshooting, systems support, and endpoint operations.",
+    role: "IT Support Specialist",
+    text: "Provided Tier 1 and Tier 2 support for endpoints, accounts, software, and conferencing. Documented troubleshooting, maintained knowledge-base articles, and prepared technology for new hires.",
   },
   {
     period: "2016",
-    company: "HCL / NXP",
-    role: "Technical Support",
-    text: "Worked in enterprise technical support with exposure to structured support processes, user systems, hardware, software, and operational escalation.",
+    company: "HCL America / NXP Semiconductors",
+    role: "Executive Deskside Support Analyst",
+    text: "Delivered executive deskside and on-call support at home and abroad, with end-to-end issue ownership, user training, and hardware and software upgrade recommendations.",
   },
   {
     period: "2014–2016",
-    company: "Columbia University / NYSPI",
-    role: "IT Support",
-    text: "Built early professional experience supporting users, endpoints, software, and technology in an academic and institutional environment.",
+    company: "Columbia University Medical Center / NYSPI",
+    role: "Healthcare IT Technician",
+    text: "Configured an Ubuntu server running OCS inventory software to track hardware and software licensing in an environment serving more than 2,300 users. Supported imaging, virtual machines, and remote troubleshooting.",
   },
 ];
 
@@ -246,7 +246,7 @@ export default function ExperiencePage() {
 
           <div className="space-y-5 text-base leading-8 text-[#506879]">
             <p>
-              I lead day-to-day technology operations across seven hotels and
+              I lead day-to-day technology operations across 34 hotels and
               additional business assets and corporate partners, supporting
               both front-of-house and back-of-house environments.
             </p>
@@ -641,6 +641,15 @@ export default function ExperiencePage() {
             >
               Explore Projects →
             </Link>
+
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md border border-white/30 px-6 py-3 text-sm font-bold transition hover:bg-white hover:text-[#102F46]"
+            >
+              View Résumé
+            </a>
           </div>
         </div>
       </section>

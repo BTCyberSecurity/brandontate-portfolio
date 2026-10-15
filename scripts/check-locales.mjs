@@ -101,12 +101,11 @@ assert.equal((sitemap.match(/<loc>/g)||[]).length,(routes.length - 1) * locales.
 assert(!sitemap.includes('/about/outside-of-work'), 'Placeholder excluded from sitemap');
 assert(fs.existsSync('.next/server/app/opengraph-image.body'), 'Stable social-preview route');
 if (baseUrl) {
-  assert.equal((await fetch(new URL('/resume.pdf',baseUrl))).status,404,'Removed résumé unavailable');
   for (const path of [...locales.filter(locale => locale !== 'en').map(locale => `/${locale}/not-a-page`), '/fr']) {
     const response = await fetch(new URL(path,baseUrl));
     assert.equal(response.status,404,`${path}: unknown route`);
   }
-  for (const path of ['/opengraph-image','/icon.png','/apple-icon.png','/robots.txt','/sitemap.xml']) {
+  for (const path of ['/opengraph-image','/icon.png','/apple-icon.png','/resume.pdf','/robots.txt','/sitemap.xml']) {
     assert.equal((await fetch(new URL(path,baseUrl))).status,200,`${path}: shared asset`);
   }
 }

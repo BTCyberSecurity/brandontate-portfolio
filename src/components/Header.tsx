@@ -76,6 +76,15 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
 
         {/* Desktop actions */}
         <div className="hidden items-center gap-3 xl:flex">
+          {/* Résumé */}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-md border border-white/40 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#0F2537]"
+          >
+            {copy.resume} ↓
+          </a>
 
           {/* Language selector */}
           <div className="relative">
@@ -217,6 +226,17 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
                 ))}
             </div>
           </div>
+
+          {/* Mobile résumé */}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="mt-5 flex w-full items-center justify-center rounded-md bg-[#E5B45E] px-6 py-3.5 text-sm font-bold text-[#102F46] transition hover:bg-[#F0C574]"
+          >
+            {copy.viewResume} ↓
+          </a>
         </nav>
       </div>
     </header>

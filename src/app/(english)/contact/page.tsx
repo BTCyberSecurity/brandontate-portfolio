@@ -21,6 +21,12 @@ const contactMethods = [
     href: "https://github.com/BTCyberSecurity",
     action: "View GitHub →",
   },
+  {
+    label: "Résumé",
+    value: "View résumé",
+    href: "/resume.pdf",
+    action: "View Résumé →",
+  },
 ];
 
 const focusAreas = [

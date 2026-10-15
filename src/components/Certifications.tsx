@@ -1,7 +1,8 @@
 import Link from "next/link";
 const completed = [
+  { name: "ITIL", title: "IT Service Management",  },
   {
-    name: "CompTIA A+",
+    name: "CompTIA A+ (2018)",
     title: "Hardware, Software & Troubleshooting",
   },
   {
