@@ -31,10 +31,7 @@ export default function About() {
           </p>
 
           <p className="mt-4 max-w-xl text-base leading-7 text-[#456174]">
-            My career has grown from hands-on support to
-            multi-site IT operations, and I&apos;m continuing
-            to develop deeper expertise in identity, security,
-            automation, and AI.
+            Years of supporting business-critical systems shape the questions I bring to architecture: how a design handles failure, controls access, and remains supportable.
           </p>
 
           <Link

@@ -60,8 +60,7 @@ export default function ProjectsPage() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-base leading-7 text-white/70 sm:text-xl sm:leading-8">
-            Hands-on work across identity, infrastructure, cybersecurity,
-            private AI, automation, troubleshooting, and operational systems.
+            Practical architecture development through infrastructure, network security, identity, and private AI labs. Explore the design choices, constraints, troubleshooting, and validation work behind each system.
           </p>
         </div>
       </section>

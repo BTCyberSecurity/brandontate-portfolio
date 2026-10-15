@@ -42,9 +42,7 @@ export default function Contact() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-white/65">
-              I&apos;m interested in technology leadership,
-              infrastructure, cybersecurity, identity, automation,
-              and the systems that keep real-world operations moving.
+              For career opportunities or technical collaboration, email me or connect on LinkedIn.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 min-[380px]:flex-row min-[380px]:flex-wrap">

@@ -82,9 +82,7 @@ export default function AboutPage() {
 </h1>
 
             <p className="mt-6 max-w-4xl text-base leading-7 text-white/70 sm:text-xl sm:leading-8">
-              I work at the intersection of IT operations, infrastructure,
-              leadership, and security — with a growing focus on identity,
-              automation, cloud security, and private AI.
+              My foundation is hands-on support and multi-site IT leadership. I am building on that experience to develop practical architecture skills.
             </p>
           </div>
         </div>
@@ -125,15 +123,11 @@ export default function AboutPage() {
             </p>
 
             <p>
-              Today, I am building deeper expertise in cybersecurity, identity,
-              cloud security, automation, and AI while continuing to approach
-              technology from an operational perspective.
+              My labs give me room to examine design choices beyond an immediate support issue: network boundaries, identity controls, system dependencies, and recovery paths.
             </p>
 
             <p>
-              My goal is to grow into leadership roles where I can connect
-              technical architecture, security, people, and business strategy
-              instead of treating them as separate disciplines.
+              My long-term direction is senior architecture and strategic technology leadership. I am developing toward that through study, documented lab work, and operational experience.
             </p>
           </div>
         </div>
@@ -220,28 +214,19 @@ export default function AboutPage() {
             </h2>
 
             <p className="mt-5 max-w-lg leading-7 text-[#506879]">
-              I&apos;m deliberately expanding from broad IT operations into
-              deeper security and technology leadership.
+              Infrastructure Architecture, Network & Security Architecture, and Identity & Cloud Security are my core technical development areas. These labs connect that direction to practical work.
             </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             {[
-              "Identity & Access Management",
-              "Cloud Security",
-              "Security Operations",
-              "Governance & Risk",
-              "Infrastructure Security",
-              "Automation",
-              "Private AI",
-              "Technology Leadership",
+              { title: "Infrastructure & Systems Lab", href: "/projects/infrastructure-systems" },
+              { title: "Network Segmentation Lab", href: "/projects/network-segmentation" },
+              { title: "Identity & Zero Trust Lab", href: "/projects/identity-zero-trust" },
             ].map((item) => (
-              <div
-                key={item}
-                className="rounded-xl border border-[#D7DEDF] bg-white p-4 sm:p-5"
-              >
-                <p className="font-bold text-[#102F46]">{item}</p>
-              </div>
+              <Link key={item.href} href={item.href} className="rounded-xl border border-[#D7DEDF] bg-white p-4 hover:border-[#28638F] sm:p-5">
+                <p className="font-bold text-[#102F46]">{item.title}</p>
+              </Link>
             ))}
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function WritingIndex() {
       <div className="mx-auto max-w-7xl">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#D6A85F]">Engineering Notebook</p>
         <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-6xl">Learn. Build. Document.</h1>
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-white/75">Build logs, incident exercises, and design notes connecting the work to the decisions behind it.</p>
+        <p className="mt-6 max-w-3xl text-lg leading-8 text-white/75">Technical analysis, trade-offs, and lessons from the lab: why I chose an approach, what failed, and what I would change.</p>
       </div>
     </section>
     <section aria-label="Notebook articles" className="mx-auto grid max-w-7xl gap-6 px-6 py-16 lg:grid-cols-3 lg:px-8">

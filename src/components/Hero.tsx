@@ -13,7 +13,7 @@ export default function Hero() {
         {/* Hero copy */}
         <div className="max-w-2xl">
           <p className="mb-5 text-xs font-semibold uppercase tracking-[0.28em] text-[#D6A85F]">
-            IT Leader · Builder · Problem Solver
+            IT Operations & Technology Leadership
           </p>
 
           <h1 className="text-5xl font-black tracking-[-0.04em] sm:text-6xl lg:text-7xl">
@@ -24,8 +24,7 @@ export default function Hero() {
           </h1>
 
           <p className="mt-4 max-w-xl text-xl leading-relaxed text-white/90 sm:text-2xl">
-            I build, secure, automate, and operate technology
-            environments where downtime isn&apos;t an option.
+            I lead technology operations and build practical expertise in infrastructure, network, and security architecture.
           </p>
 
           <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-white/70">

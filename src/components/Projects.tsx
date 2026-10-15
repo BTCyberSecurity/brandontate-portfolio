@@ -39,10 +39,7 @@ export default function Projects() {
             </h2>
 
             <p className="mt-4 max-w-2xl leading-7 text-[#506879]">
-  Hands-on projects exploring infrastructure, security,
-  identity, automation, and private AI. Each project
-  documents the design, implementation, problems solved,
-  and lessons learned.
+  Labs where I develop architectural judgment through design choices, troubleshooting, and validation. Each case study identifies its current state and the work still to be tested.
 </p>
           </div>
 
