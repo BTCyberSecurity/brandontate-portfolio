@@ -15,7 +15,7 @@ const stack = [
   "10 GbE",
 ];
 
-export const metadata = pageMetadata("/projects/private-ai-infrastructure", "Private AI Infrastructure", "A hands-on private AI infrastructure project covering Linux, GPU acceleration, Docker, Ollama, and secure remote administration.");
+export const metadata = pageMetadata("/projects/private-ai-infrastructure", "Local LLM Architecture & Deployment", "Designing and operating local large language model (LLM) infrastructure with Ollama, GPU-accelerated inference, Docker containers, and secure remote administration.");
 
 export default function PrivateAIInfrastructurePage() {
   return (
@@ -46,13 +46,11 @@ export default function PrivateAIInfrastructurePage() {
             </p>
 
             <h1 className="mt-4 text-[2.7rem] font-black leading-[0.98] tracking-tight sm:text-6xl lg:text-7xl">
-  Building a Private AI Environment
+  Local LLM Architecture & Deployment
 </h1>
 
             <p className="mt-5 max-w-3xl text-base leading-7 text-white/70 sm:mt-6 sm:text-xl sm:leading-8">
-              A hands-on infrastructure project focused on local language
-              models, GPU acceleration, Linux administration, containers,
-              remote access, and security-minded AI workflows.
+              Designing and operating local large language model (LLM) infrastructure with Ollama, GPU-accelerated inference, Docker containers, and secure remote administration.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-2">

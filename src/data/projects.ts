@@ -52,10 +52,10 @@ export const projects: Project[] = [
     href: "/projects/identity-zero-trust",
   },
   {
-    title: "Private AI Infrastructure",
+    title: "Local LLM Architecture & Deployment",
     shortTitle: "AI Lab",
     description:
-      "Designing and operating private AI infrastructure for local language models, GPU experimentation, remote administration, automation, and security-focused AI workflows.",
+      "Designing and operating local large language model (LLM) infrastructure with Ollama, GPU-accelerated inference, Docker containers, and secure remote administration.",
     evidence: projectEvidence["private-ai-infrastructure"].summary,
     status: "Active Lab",
     technologies: [

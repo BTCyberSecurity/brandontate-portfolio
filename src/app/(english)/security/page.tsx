@@ -106,7 +106,7 @@ const securityProjects = [
   },
   {
     category: "Private AI",
-    title: "Private AI Infrastructure",
+    title: "Local LLM Architecture & Deployment",
     description:
       "A locally controlled AI environment built around Linux, NVIDIA acceleration, Docker, private remote access, controlled service exposure, and local data processing.",
     href: "/projects/private-ai-infrastructure",

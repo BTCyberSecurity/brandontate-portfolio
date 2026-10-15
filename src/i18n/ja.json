@@ -1050,5 +1050,12 @@
   "Technical analysis, trade-offs, and lessons from the lab: why I chose an approach, what failed, and what I would change.": "ラボから得た技術分析、トレードオフ、学び。その手法を選んだ理由、うまくいかなかったこと、次に変えたいことを記録します。",
   "Years of supporting business-critical systems shape the questions I bring to architecture: how a design handles failure, controls access, and remains supportable.": "業務に不可欠なシステムを長年支えてきた経験が、設計に向き合う視点を形づくっています。障害にどう対処するか、アクセスをどう制御するか、継続的にサポートできるかを考えます。",
   "For career opportunities or technical collaboration, email me or connect on LinkedIn.": "キャリアの機会や技術協業については、メールまたはLinkedInでご連絡ください。",
-  "Labs where I develop architectural judgment through design choices, troubleshooting, and validation. Each case study identifies its current state and the work still to be tested.": "設計上の選択、トラブルシューティング、検証を通じて、アーキテクチャの判断力を磨くラボです。各ケーススタディでは、現状と今後検証が必要な作業を明示しています。"
+  "Labs where I develop architectural judgment through design choices, troubleshooting, and validation. Each case study identifies its current state and the work still to be tested.": "設計上の選択、トラブルシューティング、検証を通じて、アーキテクチャの判断力を磨くラボです。各ケーススタディでは、現状と今後検証が必要な作業を明示しています。",
+  "Local LLM Architecture & Deployment": "ローカルLLMのアーキテクチャとデプロイ",
+  "Designing and operating local large language model (LLM) infrastructure with Ollama, GPU-accelerated inference, Docker containers, and secure remote administration.": "Ollama、GPU高速化推論、Dockerコンテナ、安全なリモート管理を用いたローカル大規模言語モデル（LLM）インフラの設計と運用。",
+  "Explore Local LLM Architecture & Deployment →": "ローカルLLMのアーキテクチャとデプロイを見る →",
+  "Building Local LLM Infrastructure": "ローカルLLMインフラの構築",
+  "A build log of local LLM architecture, model serving with Ollama, GPU validation, containerization, and remote administration.": "ローカルLLMのアーキテクチャ、Ollamaによるモデル提供、GPU検証、コンテナ化、リモート管理の構築記録。",
+  "Future LLM inference benchmarks should record the model, quantization, VRAM usage, prompt and output lengths, warm-up conditions, concurrent requests, software versions, hardware, and measurement method. Quantization and VRAM management are topics for further investigation; measured inference performance has not yet been published.": "今後のLLM推論ベンチマークでは、モデル、量子化、VRAM使用量、入力と出力の長さ、ウォームアップ条件、同時リクエスト数、ソフトウェアのバージョン、ハードウェア、測定方法を記録します。量子化とVRAM管理は今後の検証課題であり、推論性能の測定結果はまだ公開していません。",
+  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "ローカルLLMのアーキテクチャ、GPU高速化、Ollamaのモデル提供、コンテナ、デプロイ時のトラブルシューティングに関する記録。"
 }

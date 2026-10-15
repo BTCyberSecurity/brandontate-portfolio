@@ -1050,5 +1050,12 @@
   "Technical analysis, trade-offs, and lessons from the lab: why I chose an approach, what failed, and what I would change.": "实验室中的技术分析、设计取舍与经验：为什么选择某种方法、哪里失败了，以及我会如何改进。",
   "Years of supporting business-critical systems shape the questions I bring to architecture: how a design handles failure, controls access, and remains supportable.": "多年支持业务关键系统的经验塑造了我对架构的思考：设计如何应对故障、控制访问，并保持可维护性。",
   "For career opportunities or technical collaboration, email me or connect on LinkedIn.": "如有职业机会或技术合作意向，请通过电子邮件或 LinkedIn 与我联系。",
-  "Labs where I develop architectural judgment through design choices, troubleshooting, and validation. Each case study identifies its current state and the work still to be tested.": "在实验室中通过设计选择、故障排查和验证培养架构判断能力。每个案例都说明当前状态以及仍需测试的工作。"
+  "Labs where I develop architectural judgment through design choices, troubleshooting, and validation. Each case study identifies its current state and the work still to be tested.": "在实验室中通过设计选择、故障排查和验证培养架构判断能力。每个案例都说明当前状态以及仍需测试的工作。",
+  "Local LLM Architecture & Deployment": "本地 LLM 架构与部署",
+  "Designing and operating local large language model (LLM) infrastructure with Ollama, GPU-accelerated inference, Docker containers, and secure remote administration.": "使用 Ollama、GPU 加速推理、Docker 容器和安全远程管理，设计并运行本地大语言模型（LLM）基础设施。",
+  "Explore Local LLM Architecture & Deployment →": "探索本地 LLM 架构与部署 →",
+  "Building Local LLM Infrastructure": "构建本地 LLM 基础设施",
+  "A build log of local LLM architecture, model serving with Ollama, GPU validation, containerization, and remote administration.": "记录本地 LLM 架构、Ollama 模型服务、GPU 验证、容器化及远程管理的构建日志。",
+  "Future LLM inference benchmarks should record the model, quantization, VRAM usage, prompt and output lengths, warm-up conditions, concurrent requests, software versions, hardware, and measurement method. Quantization and VRAM management are topics for further investigation; measured inference performance has not yet been published.": "未来的 LLM 推理基准测试应记录模型、量化方式、VRAM 使用量、提示词与输出长度、预热条件、并发请求、软件版本、硬件和测量方法。量化与 VRAM 管理仍需进一步研究，目前尚未发布实测推理性能。",
+  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "关于本地 LLM 架构、GPU 加速、Ollama 模型服务、容器及部署故障排查的笔记。"
 }

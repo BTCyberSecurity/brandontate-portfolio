@@ -70,7 +70,7 @@ const tracks = [
   {
     title: "Automation",
     text: "Python, PowerShell, AI-assisted workflows, repeatable administration, and reducing repetitive operational work.",
-    project: "Private AI Infrastructure",
+    project: "Local LLM Architecture & Deployment",
     href: "/projects/private-ai-infrastructure",
   },
   {

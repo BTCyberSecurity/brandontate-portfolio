@@ -1,7 +1,7 @@
 export const articles = {
   "building-private-ai": {
-    title: "Building My Private AI Infrastructure",
-    description: "A build log connecting the documented Linux AI server, GPU validation, local models, containers, and remote administration.",
+    title: "Building Local LLM Infrastructure",
+    description: "A build log of local LLM architecture, model serving with Ollama, GPU validation, containerization, and remote administration.",
     category: "Infrastructure",
     kind: "Build Log",
     project: "/projects/private-ai-infrastructure",
@@ -11,7 +11,7 @@ export const articles = {
       { title: "Validate the GPU Before the Model", text: "The project notes record NVIDIA driver configuration and verification that the RTX 5070 Ti is available to local AI workloads. Keeping driver, runtime, and application checks separate makes a failure easier to locate. Hardware availability does not, by itself, establish model performance." },
       { title: "Separate the Service Layers", text: "Ollama provides local model hosting, while Docker and Open WebUI are part of the service environment. The useful troubleshooting question is which layer is failing: the host, the GPU stack, the container, the model runtime, or the client connection. Documenting those dependencies is more useful than treating the stack as one application." },
       { title: "Operate Before Expanding", text: "Remote administration is established in the documented build. Expanded logging, GPU utilization tracking, service-health visibility, and security automation remain areas for further development. The next evidence should show a repeatable service check and a recovery path, not simply another installed tool." },
-      { title: "What a Reproducible Benchmark Needs", text: "Future benchmark notes should record the model and quantization, prompt and output lengths, warm-up conditions, concurrent requests, software versions, hardware, and measurement method. No throughput, latency, or uptime claim is made here because measured results have not yet been published." },
+      { title: "What a Reproducible Benchmark Needs", text: "Future LLM inference benchmarks should record the model, quantization, VRAM usage, prompt and output lengths, warm-up conditions, concurrent requests, software versions, hardware, and measurement method. Quantization and VRAM management are topics for further investigation; measured inference performance has not yet been published." },
     ],
     takeaway: "Treat local AI as infrastructure: verify each layer, keep the dependencies visible, and publish measurements with enough context for someone else to reproduce them.",
     sources: [{ label: "Ollama Documentation", href: "https://docs.ollama.com/" }, { label: "Docker Documentation", href: "https://docs.docker.com/" }],

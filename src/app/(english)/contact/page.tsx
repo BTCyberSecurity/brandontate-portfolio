@@ -32,7 +32,7 @@ const focusAreas = [
   "Infrastructure Architecture",
   "Network & Security Architecture",
   "Identity & Cloud Security",
-  "Private AI & Automation",
+  "Private AI Infrastructure",
   "Systems Reliability",
   "Technology Leadership & Strategy"
 ];

@@ -440,7 +440,7 @@ export default function SentinelForgePage() {
               href="/projects/private-ai-infrastructure"
               className="inline-flex text-sm font-bold text-[#805B1F] transition hover:text-[#102F46]"
             >
-              Explore Private AI Infrastructure →
+              Explore Local LLM Architecture & Deployment →
             </Link>
           </div>
         </div>

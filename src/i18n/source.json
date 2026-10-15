@@ -1050,5 +1050,12 @@
   "Technical analysis, trade-offs, and lessons from the lab: why I chose an approach, what failed, and what I would change.",
   "Years of supporting business-critical systems shape the questions I bring to architecture: how a design handles failure, controls access, and remains supportable.",
   "For career opportunities or technical collaboration, email me or connect on LinkedIn.",
-  "Labs where I develop architectural judgment through design choices, troubleshooting, and validation. Each case study identifies its current state and the work still to be tested."
+  "Labs where I develop architectural judgment through design choices, troubleshooting, and validation. Each case study identifies its current state and the work still to be tested.",
+  "Local LLM Architecture & Deployment",
+  "Designing and operating local large language model (LLM) infrastructure with Ollama, GPU-accelerated inference, Docker containers, and secure remote administration.",
+  "Explore Local LLM Architecture & Deployment →",
+  "Building Local LLM Infrastructure",
+  "A build log of local LLM architecture, model serving with Ollama, GPU validation, containerization, and remote administration.",
+  "Future LLM inference benchmarks should record the model, quantization, VRAM usage, prompt and output lengths, warm-up conditions, concurrent requests, software versions, hardware, and measurement method. Quantization and VRAM management are topics for further investigation; measured inference performance has not yet been published.",
+  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting."
 ]
