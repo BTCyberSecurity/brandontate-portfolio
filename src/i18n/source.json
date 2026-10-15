@@ -1057,5 +1057,10 @@
   "Building Local LLM Infrastructure",
   "A build log of local LLM architecture, model serving with Ollama, GPU validation, containerization, and remote administration.",
   "Future LLM inference benchmarks should record the model, quantization, VRAM usage, prompt and output lengths, warm-up conditions, concurrent requests, software versions, hardware, and measurement method. Quantization and VRAM management are topics for further investigation; measured inference performance has not yet been published.",
-  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting."
+  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.",
+  "Documented Lab Architecture",
+  "Model Interface",
+  "Local LLM Inference",
+  "Simplified service layers from my local LLM lab.",
+  "On This Page"
 ]

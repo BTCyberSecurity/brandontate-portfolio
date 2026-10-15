@@ -1057,5 +1057,10 @@
   "Building Local LLM Infrastructure": "Создание инфраструктуры локальных LLM",
   "A build log of local LLM architecture, model serving with Ollama, GPU validation, containerization, and remote administration.": "Журнал создания локальной архитектуры LLM, обслуживания моделей через Ollama, проверки GPU, контейнеризации и удаленного администрирования.",
   "Future LLM inference benchmarks should record the model, quantization, VRAM usage, prompt and output lengths, warm-up conditions, concurrent requests, software versions, hardware, and measurement method. Quantization and VRAM management are topics for further investigation; measured inference performance has not yet been published.": "Будущие тесты инференса LLM должны фиксировать модель, квантование, использование VRAM, длину запросов и ответов, условия прогрева, параллельные запросы, версии ПО, оборудование и метод измерения. Квантование и управление VRAM требуют дальнейшего изучения; измеренные показатели инференса пока не опубликованы.",
-  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "Заметки об архитектуре локальных LLM, GPU-ускорении, обслуживании моделей через Ollama, контейнерах и устранении проблем развертывания."
+  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "Заметки об архитектуре локальных LLM, GPU-ускорении, обслуживании моделей через Ollama, контейнерах и устранении проблем развертывания.",
+  "Documented Lab Architecture": "Документированная архитектура лаборатории",
+  "Model Interface": "Интерфейс модели",
+  "Local LLM Inference": "Инференс локальных LLM",
+  "Simplified service layers from my local LLM lab.": "Упрощенные уровни сервисов моей лаборатории локальных LLM.",
+  "On This Page": "На этой странице"
 }

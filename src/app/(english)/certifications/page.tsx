@@ -130,11 +130,11 @@ export const metadata = pageMetadata("/certifications", {
 
 export default function CertificationsPage() {
   return (
-    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="portfolio-layout min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0F3046] px-5 pb-20 pt-24 text-white sm:px-6 sm:pt-32 lg:px-8">
+      <section className="page-hero relative overflow-hidden bg-[#0F3046] px-5 pb-20 pt-24 text-white sm:px-6 sm:pt-32 lg:px-8">
         <div
           className="absolute inset-0 opacity-20"
           style={{
@@ -177,7 +177,7 @@ export default function CertificationsPage() {
             Foundation
           </h2>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {completed.map((cert) => (
               <article
                 key={cert.name}

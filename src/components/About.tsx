@@ -7,7 +7,7 @@ export default function About() {
       id="about"
       className="scroll-mt-24 bg-[#F4F1EA]"
     >
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-16  lg:px-8 lg:py-16">
+      <div className="content-shell mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-16  lg:px-8 lg:py-16">
         {/* About copy */}
         <div>
           <div className="flex items-center gap-2">

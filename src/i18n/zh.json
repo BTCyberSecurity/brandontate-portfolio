@@ -1057,5 +1057,10 @@
   "Building Local LLM Infrastructure": "构建本地 LLM 基础设施",
   "A build log of local LLM architecture, model serving with Ollama, GPU validation, containerization, and remote administration.": "记录本地 LLM 架构、Ollama 模型服务、GPU 验证、容器化及远程管理的构建日志。",
   "Future LLM inference benchmarks should record the model, quantization, VRAM usage, prompt and output lengths, warm-up conditions, concurrent requests, software versions, hardware, and measurement method. Quantization and VRAM management are topics for further investigation; measured inference performance has not yet been published.": "未来的 LLM 推理基准测试应记录模型、量化方式、VRAM 使用量、提示词与输出长度、预热条件、并发请求、软件版本、硬件和测量方法。量化与 VRAM 管理仍需进一步研究，目前尚未发布实测推理性能。",
-  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "关于本地 LLM 架构、GPU 加速、Ollama 模型服务、容器及部署故障排查的笔记。"
+  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "关于本地 LLM 架构、GPU 加速、Ollama 模型服务、容器及部署故障排查的笔记。",
+  "Documented Lab Architecture": "已记录的实验室架构",
+  "Model Interface": "模型界面",
+  "Local LLM Inference": "本地 LLM 推理",
+  "Simplified service layers from my local LLM lab.": "本地 LLM 实验室的简化服务层结构。",
+  "On This Page": "本页内容"
 }

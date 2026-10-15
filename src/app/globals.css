@@ -45,3 +45,22 @@ html[lang="hi"] main h1 { line-height: 1.3; }
 @keyframes terminal-blink { 50% { opacity: 0; } }
 .terminal-cursor { animation: terminal-blink 1.2s step-end infinite; }
 @media (prefers-reduced-motion: reduce) { .terminal-cursor { animation: none; } }
+
+/* Keep prose readable without enlarging navigation, badges, or metadata. */
+.portfolio-layout p.text-sm:not(.font-bold):not(.font-semibold):not(.uppercase),
+.portfolio-layout dd.text-sm {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+.portfolio-layout p:not(.uppercase):not(.font-bold):not(.font-semibold) {
+  max-width: 72ch;
+}
+.portfolio-layout :is(section, h2)[id] { scroll-margin-top: 7rem; }
+
+@media (min-width: 1024px) {
+  /* Padded shells match the 80rem usable width of unpadded section containers. */
+  .content-shell { max-width: 84rem; }
+  .portfolio-layout .page-hero { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  .portfolio-layout .page-hero h1 { font-size: 3.75rem; }
+  .portfolio-layout section.py-20 { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+}

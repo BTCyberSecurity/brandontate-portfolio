@@ -1,3 +1,4 @@
+import SectionNavigation from "@/components/SectionNavigation";
 import ProjectSummary from "@/components/ProjectSummary";
 import ProjectEvidence from "@/components/ProjectEvidence";
 import { pageMetadata } from "@/lib/metadata";
@@ -19,11 +20,11 @@ export const metadata = pageMetadata("/projects/private-ai-infrastructure", "Loc
 
 export default function PrivateAIInfrastructurePage() {
   return (
-    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="portfolio-layout min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0F3046] px-6 pb-16 pt-24 text-white sm:pb-20 sm:pt-32 lg:px-8">
+      <section className="page-hero relative overflow-hidden bg-[#0F3046] px-6 pb-16 pt-24 text-white sm:pb-20 sm:pt-32 lg:px-8">
         <div
           className="absolute inset-0 opacity-25"
           style={{
@@ -66,11 +67,12 @@ export default function PrivateAIInfrastructurePage() {
           </div>
         </div>
       </section>
-    <ProjectSummary slug="private-ai-infrastructure" />
-      <ProjectEvidence project="private-ai-infrastructure" />
+      <SectionNavigation items={[{"label":"Overview","href":"#overview"},{"label":"Architecture","href":"#architecture"},{"label":"Implementation","href":"#implementation"},{"label":"Documented Work","href":"#project-evidence-heading"},{"label":"Troubleshooting","href":"#troubleshooting"},{"label":"Security","href":"#security"},{"label":"Lessons Learned","href":"#lessons"}]} />
+    <ProjectSummary slug="private-ai-infrastructure" includePurpose={false} />
+      <ProjectEvidence project="private-ai-infrastructure" compact />
 
       {/* Overview */}
-      <section className="px-6 py-20 lg:px-8">
+      <section id="overview" className="px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.8fr_1.2fr]">
           <div>
             <div className="flex items-center gap-2">
@@ -109,7 +111,7 @@ export default function PrivateAIInfrastructurePage() {
       </section>
 
       {/* Architecture */}
-      <section className="bg-[#E9ECE8] px-6 py-20 lg:px-8">
+      <section id="architecture" className="bg-[#E9ECE8] px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
@@ -236,7 +238,7 @@ export default function PrivateAIInfrastructurePage() {
       </section>
 
             {/* Implementation */}
-      <section className="px-6 py-20 lg:px-8">
+      <section id="implementation" className="px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[.75fr_1.25fr]">
             {/* Left column */}
@@ -350,7 +352,7 @@ export default function PrivateAIInfrastructurePage() {
       </section>
 
             {/* Troubleshooting */}
-      <section className="bg-[#102F46] px-6 py-20 text-white lg:px-8">
+      <section id="troubleshooting" className="bg-[#102F46] px-6 py-20 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           {/* Heading */}
           <div className="flex items-center gap-2">
@@ -491,7 +493,7 @@ export default function PrivateAIInfrastructurePage() {
       </section>
 
             {/* Security */}
-      <section className="bg-[#E9ECE8] px-6 py-20 lg:px-8">
+      <section id="security" className="bg-[#E9ECE8] px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
             {/* Left column */}
@@ -666,7 +668,7 @@ export default function PrivateAIInfrastructurePage() {
       </section>
 
             {/* Lessons Learned + Next Steps */}
-      <section className="px-6 py-20 lg:px-8">
+      <section id="lessons" className="px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2">
             {/* Lessons Learned */}

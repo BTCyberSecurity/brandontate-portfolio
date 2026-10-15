@@ -5,10 +5,10 @@ import { articles, type ArticleSlug } from "@/data/articles";
 
 export default function NotebookArticle({ slug }: { slug: ArticleSlug }) {
   const article = articles[slug];
-  return <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+  return <main id="main-content" tabIndex={-1} className="portfolio-layout min-h-screen bg-[#F4F1EA] text-[#102F46]">
     <Header />
     <ArticleStructuredData path={`/writing/${slug}`} title={article.title} description={article.description} />
-    <section className="bg-[#0F3046] px-6 py-16 text-white lg:px-8">
+    <section className="page-hero bg-[#0F3046] px-6 py-16 text-white lg:px-8">
       <div className="mx-auto max-w-7xl">
         <Link href="/writing" className="text-sm font-bold text-[#D6A85F]">← Back to Engineering Notebook</Link>
         <p className="mt-10 text-xs font-bold uppercase tracking-[0.2em] text-[#79B8AE]">{article.category} · {article.kind}</p>
@@ -16,7 +16,7 @@ export default function NotebookArticle({ slug }: { slug: ArticleSlug }) {
         <p className="mt-6 max-w-3xl text-lg leading-8 text-white/75">{article.intro}</p>
       </div>
     </section>
-    <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1fr_16rem] lg:px-8">
+    <div className="content-shell mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1fr_16rem] lg:px-8">
       <article className="min-w-0 space-y-12">
         {article.sections.map((section, index) => <section id={`note-${index + 1}`} key={section.title} className="scroll-mt-24">
           <h2 className="text-2xl font-black tracking-tight sm:text-3xl">{section.title}</h2>

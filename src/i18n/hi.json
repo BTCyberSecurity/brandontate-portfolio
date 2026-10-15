@@ -1057,5 +1057,10 @@
   "Building Local LLM Infrastructure": "स्थानीय LLM इन्फ्रास्ट्रक्चर का निर्माण",
   "A build log of local LLM architecture, model serving with Ollama, GPU validation, containerization, and remote administration.": "स्थानीय LLM आर्किटेक्चर, Ollama से मॉडल सेवा, GPU सत्यापन, कंटेनरीकरण और दूरस्थ प्रशासन का निर्माण विवरण।",
   "Future LLM inference benchmarks should record the model, quantization, VRAM usage, prompt and output lengths, warm-up conditions, concurrent requests, software versions, hardware, and measurement method. Quantization and VRAM management are topics for further investigation; measured inference performance has not yet been published.": "भविष्य के LLM इन्फ़रेंस बेंचमार्क में मॉडल, क्वांटाइज़ेशन, VRAM उपयोग, प्रॉम्प्ट और आउटपुट की लंबाई, वार्म-अप स्थितियाँ, समवर्ती अनुरोध, सॉफ्टवेयर संस्करण, हार्डवेयर और मापन विधि दर्ज की जानी चाहिए। क्वांटाइज़ेशन और VRAM प्रबंधन पर आगे जाँच बाकी है; मापा गया इन्फ़रेंस प्रदर्शन अभी प्रकाशित नहीं हुआ है।",
-  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "स्थानीय LLM आर्किटेक्चर, GPU त्वरण, Ollama मॉडल सेवा, कंटेनर और परिनियोजन की समस्याओं के समाधान पर नोट्स।"
+  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "स्थानीय LLM आर्किटेक्चर, GPU त्वरण, Ollama मॉडल सेवा, कंटेनर और परिनियोजन की समस्याओं के समाधान पर नोट्स।",
+  "Documented Lab Architecture": "दस्तावेज़ित लैब आर्किटेक्चर",
+  "Model Interface": "मॉडल इंटरफ़ेस",
+  "Local LLM Inference": "स्थानीय LLM इन्फ़रेंस",
+  "Simplified service layers from my local LLM lab.": "मेरी स्थानीय LLM लैब की सरलीकृत सेवा परतें।",
+  "On This Page": "इस पृष्ठ पर"
 }

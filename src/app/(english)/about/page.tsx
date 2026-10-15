@@ -58,11 +58,11 @@ export const metadata = pageMetadata("/about", {
 
 export default function AboutPage() {
   return (
-    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="portfolio-layout min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0F3046] px-5 pb-20 pt-24 text-white sm:px-6 sm:pt-32 lg:px-8">
+      <section className="page-hero relative overflow-hidden bg-[#0F3046] px-5 pb-20 pt-24 text-white sm:px-6 sm:pt-32 lg:px-8">
         <div
           className="absolute inset-0 opacity-20"
           style={{
@@ -88,7 +88,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="mx-auto flex max-w-7xl flex-wrap gap-6 px-6 py-6 text-sm font-bold text-[#28638F]">
+      <div className="content-shell mx-auto flex max-w-7xl flex-wrap gap-6 px-6 py-6 lg:px-8 text-sm font-bold text-[#28638F]">
         <Link href="/security">Security</Link><Link href="/certifications">Certifications</Link><Link href="/about/outside-of-work">Outside of Work</Link>
       </div>
       {/* Story */}

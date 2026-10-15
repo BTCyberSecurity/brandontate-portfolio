@@ -1,3 +1,4 @@
+import SectionNavigation from "@/components/SectionNavigation";
 import { pageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 ﻿import Header from "@/components/Header";
@@ -192,11 +193,11 @@ export const metadata = pageMetadata("/experience", {
 
 export default function ExperiencePage() {
   return (
-    <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+    <main id="main-content" tabIndex={-1} className="portfolio-layout min-h-screen bg-[#F4F1EA] text-[#102F46]">
       <Header />
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0F3046] px-5 pb-20 pt-16 text-white sm:px-6 sm:pt-20 lg:px-8">
+      <section className="page-hero relative overflow-hidden bg-[#0F3046] px-5 pb-20 pt-16 text-white sm:px-6 sm:pt-20 lg:px-8">
         <div
           className="absolute inset-0 opacity-20"
           style={{
@@ -222,9 +223,10 @@ export default function ExperiencePage() {
           </p>
         </div>
       </section>
+      <SectionNavigation items={[{"label":"Current Role","href":"#current-role"},{"label":"Systems","href":"#systems"},{"label":"Selected Initiatives","href":"#initiatives"},{"label":"Career Progression","href":"#career-history"},{"label":"Business Impact","href":"#impact"}]} />
 
       {/* Current Role */}
-      <section className="px-6 py-20 lg:px-8">
+      <section id="current-role" className="px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.75fr_1.25fr]">
           <div>
             <div className="flex items-center gap-2">
@@ -311,7 +313,7 @@ export default function ExperiencePage() {
       </section>
 
       {/* Systems */}
-      <section className="px-6 py-20 lg:px-8">
+      <section id="systems" className="px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
@@ -353,7 +355,7 @@ export default function ExperiencePage() {
       </section>
 
       {/* Selected Initiatives */}
-      <section className="bg-[#E9ECE8] px-6 py-20 lg:px-8">
+      <section id="initiatives" className="bg-[#E9ECE8] px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
@@ -473,7 +475,7 @@ export default function ExperiencePage() {
       </section>
 
       {/* Career Progression */}
-      <section className="bg-[#E9ECE8] px-6 py-20 lg:px-8">
+      <section id="career-history" className="bg-[#E9ECE8] px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />
@@ -560,7 +562,7 @@ export default function ExperiencePage() {
       </section>
 
       {/* Business Impact */}
-      <section className="bg-[#102F46] px-6 py-20 text-white lg:px-8">
+      <section id="impact" className="bg-[#102F46] px-6 py-20 text-white lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-[#D6A85F]" />

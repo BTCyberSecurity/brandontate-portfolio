@@ -16,9 +16,9 @@ const checks = [
 ];
 
 export default function NetworkSegmentationPage() {
-  return <main id="main-content" tabIndex={-1} className="min-h-screen bg-[#F4F1EA] text-[#102F46]">
+  return <main id="main-content" tabIndex={-1} className="portfolio-layout min-h-screen bg-[#F4F1EA] text-[#102F46]">
     <Header />
-    <section className="bg-[#0F3046] px-6 pb-16 pt-24 text-white sm:pt-32 lg:px-8">
+    <section className="page-hero bg-[#0F3046] px-6 pb-16 pt-24 text-white sm:pt-32 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <Link href="/projects" className="text-sm font-bold text-[#D6A85F]">← Back to Projects</Link>
         <p className="mt-10 text-xs font-bold uppercase tracking-[0.2em] text-[#79B8AE]">Network Security</p>

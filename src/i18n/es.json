@@ -1057,5 +1057,10 @@
   "Building Local LLM Infrastructure": "Construcción de infraestructura de LLM locales",
   "A build log of local LLM architecture, model serving with Ollama, GPU validation, containerization, and remote administration.": "Un registro de construcción sobre arquitectura de LLM locales, servicio de modelos con Ollama, validación de GPU, contenedores y administración remota.",
   "Future LLM inference benchmarks should record the model, quantization, VRAM usage, prompt and output lengths, warm-up conditions, concurrent requests, software versions, hardware, and measurement method. Quantization and VRAM management are topics for further investigation; measured inference performance has not yet been published.": "Las futuras pruebas de inferencia de LLM deben registrar el modelo, cuantización, uso de VRAM, longitud de entradas y salidas, calentamiento, solicitudes simultáneas, versiones de software, hardware y método de medición. La cuantización y la gestión de VRAM requieren más investigación; aún no se han publicado mediciones de rendimiento de inferencia.",
-  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "Notas sobre arquitectura de LLM locales, aceleración GPU, servicio de modelos con Ollama, contenedores y resolución de problemas de despliegue."
+  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "Notas sobre arquitectura de LLM locales, aceleración GPU, servicio de modelos con Ollama, contenedores y resolución de problemas de despliegue.",
+  "Documented Lab Architecture": "Arquitectura documentada del laboratorio",
+  "Model Interface": "Interfaz del modelo",
+  "Local LLM Inference": "Inferencia de LLM locales",
+  "Simplified service layers from my local LLM lab.": "Capas de servicio simplificadas de mi laboratorio de LLM locales.",
+  "On This Page": "En esta página"
 }

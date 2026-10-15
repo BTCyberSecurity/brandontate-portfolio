@@ -1057,5 +1057,10 @@
   "Building Local LLM Infrastructure": "ローカルLLMインフラの構築",
   "A build log of local LLM architecture, model serving with Ollama, GPU validation, containerization, and remote administration.": "ローカルLLMのアーキテクチャ、Ollamaによるモデル提供、GPU検証、コンテナ化、リモート管理の構築記録。",
   "Future LLM inference benchmarks should record the model, quantization, VRAM usage, prompt and output lengths, warm-up conditions, concurrent requests, software versions, hardware, and measurement method. Quantization and VRAM management are topics for further investigation; measured inference performance has not yet been published.": "今後のLLM推論ベンチマークでは、モデル、量子化、VRAM使用量、入力と出力の長さ、ウォームアップ条件、同時リクエスト数、ソフトウェアのバージョン、ハードウェア、測定方法を記録します。量子化とVRAM管理は今後の検証課題であり、推論性能の測定結果はまだ公開していません。",
-  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "ローカルLLMのアーキテクチャ、GPU高速化、Ollamaのモデル提供、コンテナ、デプロイ時のトラブルシューティングに関する記録。"
+  "Notes on local LLM architecture, GPU acceleration, Ollama model serving, containers, and deployment troubleshooting.": "ローカルLLMのアーキテクチャ、GPU高速化、Ollamaのモデル提供、コンテナ、デプロイ時のトラブルシューティングに関する記録。",
+  "Documented Lab Architecture": "記録に基づくラボ構成",
+  "Model Interface": "モデルのインターフェース",
+  "Local LLM Inference": "ローカルLLM推論",
+  "Simplified service layers from my local LLM lab.": "ローカルLLMラボのサービス層を簡略化した図です。",
+  "On This Page": "このページの内容"
 }
