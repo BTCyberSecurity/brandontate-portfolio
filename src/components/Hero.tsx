@@ -1,4 +1,3 @@
-import LabArchitectureDiagram from "./LabArchitectureDiagram";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0F3046] text-white">
@@ -71,7 +70,29 @@ export default function Hero() {
           </p>
         </div>
 
-        <LabArchitectureDiagram />
+        {/* Original BT visual */}
+        <div className="relative hidden min-h-[360px] lg:block">
+          <div className="absolute inset-6 rounded-[2rem] border border-white/10 bg-white/[0.035]" />
+
+          <div className="absolute inset-14 flex items-center justify-center rounded-[1.75rem] border border-[#79B8AE]/25 bg-[#102F46]/35">
+            <div className="text-center">
+              <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-[#79B8AE]/50 bg-[#17384D] text-3xl font-black shadow-2xl">
+                B
+                <span className="text-[#4FA3D1]">
+                  T
+                </span>
+              </div>
+
+              <p className="mt-7 text-xs font-semibold uppercase tracking-[0.25em] text-[#79B8AE]">
+                Infrastructure · Security
+              </p>
+
+              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
+                Automation · Operations
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
