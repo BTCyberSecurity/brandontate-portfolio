@@ -127,3 +127,11 @@ The user-approved Vercel Speed Insights SDK is mounted in the shared layout.
 Enable Speed Insights in the existing Vercel project's dashboard and deploy
 to start collecting real-user performance measurements. Field results require
 enough actual visits; the Lighthouse baseline is not a field assessment.
+
+## Protected résumé download
+
+Résumé links open a localized /resume page. The PDF is bundled from private/resume.pdf and served only by POST /api/resume after server-side password verification. The old public /resume.pdf file is removed.
+
+Set RESUME_ACCESS_PASSWORD to a unique, randomly generated password of at least 16 characters (maximum 256) in Vercel environment variables before deploying. Use a password manager; never use NEXT_PUBLIC_ or commit the password. For local testing, set it in ignored .env.local and restart the server. Missing or short passwords disable downloads. Change the variable and redeploy to rotate access. Share the password privately with intended recipients.
+
+The access page is noindex and downloads use no-store headers. Configure a Vercel firewall rate-limit rule for POST /api/resume before production; application memory cannot provide reliable rate limiting across serverless instances. A downloaded copy can still be shared, and this change does not revoke PDFs from previous deployments or Git history.

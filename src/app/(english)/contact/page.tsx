@@ -23,7 +23,7 @@ const contactMethods = [
   {
     label: "Résumé",
     value: "View résumé",
-    href: "/resume.pdf",
+    href: "/resume",
     action: "View Résumé →",
   },
 ];

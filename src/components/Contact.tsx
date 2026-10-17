@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Contact() {
   const links = [
   {
@@ -14,7 +15,7 @@ export default function Contact() {
   },
   {
     label: "Résumé",
-    href: "/resume.pdf",
+    href: "/resume",
   },
 ];
 
@@ -46,19 +47,19 @@ export default function Contact() {
             </p>
 
             <div className="mt-8 flex flex-col gap-4 min-[380px]:flex-row min-[380px]:flex-wrap">
-  <a
+  <Link
     href="mailto:brandontate@outlook.com"
     className="w-full rounded-md bg-[#E5B45E] px-7 py-3.5 text-center text-sm font-bold text-[#102F46] transition hover:-translate-y-0.5 hover:bg-[#F0C574] min-[380px]:w-auto"
   >
     Get in Touch →
-  </a>
+  </Link>
 
-  <a
-    href="/resume.pdf"
+  <Link
+    href="/resume"
     className="w-full rounded-md border border-white/30 px-7 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-white/10 min-[380px]:w-auto"
   >
     View Résumé
-  </a>
+  </Link>
 </div>
           </div>
 
@@ -71,7 +72,7 @@ export default function Contact() {
 
               <div className="mt-6 divide-y divide-white/10">
                 {links.map((link) => (
-<a
+<Link
   key={link.label}
   href={link.href}
   target={link.href.startsWith("http") ? "_blank" : undefined}
@@ -83,7 +84,7 @@ export default function Contact() {
   <span className="text-[#D6A85F] transition-transform duration-300 group-hover:translate-x-1">
     →
   </span>
-</a>
+</Link>
                 ))}
               </div>
             </div>

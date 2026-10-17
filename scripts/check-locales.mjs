@@ -105,7 +105,7 @@ if (baseUrl) {
     const response = await fetch(new URL(path,baseUrl));
     assert.equal(response.status,404,`${path}: unknown route`);
   }
-  for (const path of ['/opengraph-image','/icon.png','/apple-icon.png','/resume.pdf','/robots.txt','/sitemap.xml']) {
+  for (const path of ['/opengraph-image','/icon.png','/apple-icon.png','/robots.txt','/sitemap.xml']) {
     assert.equal((await fetch(new URL(path,baseUrl))).status,200,`${path}: shared asset`);
   }
 }

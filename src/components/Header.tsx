@@ -78,7 +78,7 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
         <div className="hidden items-center gap-3 xl:flex">
           {/* Résumé */}
           <a
-            href="/resume.pdf"
+            href={localizedPath(locale, "/resume")}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-md border border-white/40 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#0F2537]"
@@ -229,7 +229,7 @@ export default function Header({ locale = "en" }: { locale?: Locale }) {
 
           {/* Mobile résumé */}
           <a
-            href="/resume.pdf"
+            href={localizedPath(locale, "/resume")}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
