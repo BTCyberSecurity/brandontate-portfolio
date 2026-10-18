@@ -158,8 +158,6 @@ export default function AboutPage() {
               <p className="mt-3 leading-7 text-[#506879]">Studies in Computer Science and Foreign Language</p>
             </article>
           </div>
-          <h3 className="mt-10 text-2xl font-black">Professional Development</h3>
-          <p className="mt-3 leading-7 text-[#506879]">Technology Practitioner — Armanino LLP</p>
         </div>
       </section>
 
