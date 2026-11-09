@@ -3,7 +3,7 @@ import { projectEvidence, type EvidenceProject } from "@/data/project-evidence";
 export default function ProjectSummary({ slug, includePurpose = true }: { slug: string; includePurpose?: boolean }) {
  const project = projects.find(item => item.href === "/projects/" + slug)!;
  const evidence = projectEvidence[slug as EvidenceProject];
- const next = slug === "network-segmentation" ? "Validate isolation, administrative access, adapter reliability, and recovery before publishing results." : "Record patch success, pending reboots, and rollback steps during a controlled pilot.";
+ const next = slug === "network-segmentation" ? "Retest management access and document the remaining firewall and recovery checks." : "Record patch success, pending reboots, and rollback steps during a controlled pilot.";
  return <section aria-labelledby="project-summary" className="border-b border-[#CCD6DA] bg-white px-6 py-10 lg:px-8">
   <div className="mx-auto max-w-7xl">
    <div className="flex flex-wrap items-center justify-between gap-4"><h2 id="project-summary" className="text-2xl font-black">Project at a Glance</h2><span className="rounded-full bg-[#EEF1EF] px-4 py-2 text-sm font-bold text-[#456174]">{project.status}</span></div>

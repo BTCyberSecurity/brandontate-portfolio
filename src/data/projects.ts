@@ -29,8 +29,8 @@ export const projects: Project[] = [
   {
     title: "Network Segmentation Lab",
     shortTitle: "Network Security",
-    description: "Building a dedicated OPNsense firewall and a segmented lab while keeping household connectivity on eero.",
-    evidence: "OPNsense installation completed; VLAN configuration, access controls, and recovery validation are planned.",
+    description: "Segmenting a home network with OPNsense and UniFi while keeping household Wi-Fi on eero.",
+    evidence: "The 2.5 GbE switch cutover is complete. Guest and IoT isolation from Proxmox was verified, and LainAI moved to the servers VLAN.",
     status: "In Development",
     technologies: ["OPNsense", "VLANs", "UniFi", "Firewall Rules"],
     href: "/projects/network-segmentation",
